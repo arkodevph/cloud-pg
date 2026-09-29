@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520" role="img" aria-labelledby="title">
+  <title id="title">Account paths brought into focus</title>
+  <rect width="700" height="520" rx="28" fill="#e5f3f5"/>
+  <g fill="none" stroke="#0f3442" stroke-opacity=".12"><path d="M0 104h700M0 208h700M0 312h700M0 416h700M140 0v520M280 0v520M420 0v520M560 0v520"/></g>
+  <path d="M86 390h130c42 0 50-70 95-70h68c45 0 48-127 104-127h129" fill="none" stroke="#133d4c" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M86 390h130c42 0 50-70 95-70h68c45 0 48-127 104-127h129" fill="none" stroke="#31a8d3" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="88" cy="390" r="23" fill="#e75e2c"/><circle cx="612" cy="193" r="23" fill="#e75e2c"/>
+  <circle cx="350" cy="320" r="44" fill="#fff" stroke="#133d4c" stroke-width="3"/><path d="M330 320h40m-17-17 17 17-17 17" fill="none" stroke="#133d4c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#164052" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2"><text x="69" y="448">ACCOUNT</text><text x="536" y="150">OUTCOME</text></g>
+</svg>
