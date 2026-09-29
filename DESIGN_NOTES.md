@@ -81,6 +81,8 @@ Nine individual About-page references were opened and reviewed. They are visual 
 
 The payment navigation pill now has explicit horizontal padding and a contained arrow. The previous generic nav-link rule was more specific and had reduced its padding to zero. The homepage hero adds three small journey labels along the illustrated path and a 50+ years experience fact in the lower rail. The fact reflects the About page's existing credit-industry claim; the labels describe the visual journey rather than implying new product capabilities. The visible "Flow film placeholder" production label was removed from the page.
 
+The homepage hero now sits inside a rounded, inset card within the white navigation shell, following the framing in the user-supplied consulting reference. Cloud's blue and orange illustration remains the focal asset. The regional label uses a translucent gradient, a white edge, and backdrop blur for a restrained glass effect; it stays readable over the light card surface.
+
 `ui-design-index` routes this work to `ui-landing-patterns`. Nine finance hero references were reviewed for feature labels, trust cues, and CTA restraint; they informed the hierarchy, not the site's assets or claims:
 
 | Reference | Relevant idea |

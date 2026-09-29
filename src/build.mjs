@@ -47,23 +47,30 @@ function footer() {
   </div></footer>`;
 }
 
-const loaderMarkup = `<div class="page-loader" aria-hidden="true"><div class="page-loader__frame"><div class="page-loader__top"><span>A CLEARER PATH FORWARD</span><span>AUSTRALIA · NEW ZEALAND</span></div><div class="page-loader__content"><img class="page-loader__logo" src="/assets/cloudpg-logo-transparent.png" width="2169" height="725" alt=""><p>Making the next step clearer.</p></div><div class="page-loader__bottom"><span>LOADING PAGE</span><div class="page-loader__track"><span></span></div><span class="page-loader__arrow" aria-hidden="true">↗</span></div></div></div><span class="page-loader__status" id="page-load-status" role="status" aria-live="polite" aria-atomic="true"></span>`;
+const loaderMarkup = `<div class="page-loader" aria-hidden="true"><div class="page-loader__frame">
+  <div class="page-loader__top"><img class="page-loader__logo" src="/assets/cloudpg-logo-transparent.png" width="2169" height="725" alt=""><span>AUSTRALIA & NEW ZEALAND</span></div>
+  <div class="page-loader__content"><span class="page-loader__eyebrow">CLOUD PAYMENT GROUP <i>/</i> A CLEARER PATH FORWARD</span><p class="page-loader__headline"><span>A clearer path</span><span><em>forward.</em></span></p><p class="page-loader__subline">Making the next step clearer.</p></div>
+  <svg class="page-loader__path" viewBox="0 0 1300 340" preserveAspectRatio="none" aria-hidden="true"><path pathLength="100" d="M -40 278 C 165 307 230 105 425 162 S 685 278 805 157 S 1075 157 1340 20" fill="none" stroke="#e75e2c" stroke-width="62"/><path pathLength="100" d="M -40 278 C 165 307 230 105 425 162 S 685 278 805 157 S 1075 157 1340 20" fill="none" stroke="#85d1e8" stroke-width="54"/></svg>
+  <div class="page-loader__bottom"><span>FINDING THE WAY FORWARD</span><div class="page-loader__track"><span></span></div><span class="page-loader__arrow" aria-hidden="true">↗</span></div>
+</div></div><span class="page-loader__status" id="page-load-status" role="status" aria-live="polite" aria-atomic="true"></span>`;
 const loaderScript = `<script>
 (() => {
   const root = document.documentElement;
   root.classList.add('js');
-  let intro = true;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let intro = !reducedMotion;
   try {
-    intro = performance.getEntriesByType('navigation')[0]?.type === 'reload' || !sessionStorage.getItem('cloud-loader-seen');
+    intro = !reducedMotion && (performance.getEntriesByType('navigation')[0]?.type === 'reload' || !sessionStorage.getItem('cloud-loader-seen'));
     if (intro) sessionStorage.setItem('cloud-loader-seen', '1');
   } catch {}
   if (intro) root.classList.add('is-loading');
-  const started = performance.now();
+  let shownAt = performance.now();
   let shown = intro;
   let done = false;
-  const showTimer = intro ? null : setTimeout(() => {
+  const showTimer = intro || reducedMotion ? null : setTimeout(() => {
     if (document.readyState === 'complete') return;
     shown = true;
+    shownAt = performance.now();
     root.classList.add('is-loading');
     const status = document.getElementById('page-load-status');
     if (status) status.textContent = 'Loading page';
@@ -75,10 +82,11 @@ const loaderScript = `<script>
     if (done) return;
     done = true;
     clearTimeout(showTimer);
-    const wait = intro && ready ? Math.max(0, 900 - (performance.now() - started)) : 0;
+    const wait = shown ? Math.max(0, (intro ? 950 : 500) - (performance.now() - shownAt)) : 0;
     setTimeout(() => {
-      root.classList.remove('is-loading');
       if (shown) document.getElementById('page-load-status').textContent = ready ? 'Page ready' : 'Page available while remaining items load';
+      if (shown) root.classList.add('is-exiting');
+      setTimeout(() => root.classList.remove('is-loading', 'is-exiting'), shown && !reducedMotion ? 780 : 0);
     }, wait);
   };
   window.addEventListener('load', () => finish(true), { once: true });
