@@ -45,6 +45,9 @@ h1,h2,h3 { letter-spacing:-.065em; }
 .nav-dropdown__panel a { display:flex; align-items:center; min-height:44px; }
 .primary-nav .nav-payment { justify-content:center; gap:8px; padding:11px 16px; border:1px solid #bce3ef; border-radius:999px; background:#e8f6fa; color:#155d76; font-size:12px; font-weight:800; }
 .primary-nav .nav-payment:hover { background:#d6eef6; color:#155d76; }
+.primary-nav > a.nav-payment:not(.nav-cta) { gap:10px; min-height:46px; padding:7px 8px 7px 16px; }
+.nav-payment span { display:grid; place-items:center; width:30px; height:30px; flex:none; border-radius:50%; background:#fff; color:#155d76; font-size:15px; }
+.nav-payment:focus-visible { outline:2px solid:#087da6; outline-offset:3px; }
 .nav-cta { background:#152d38; color:#fff; border-radius:999px; box-shadow:none; }
 .nav-cta:hover { background:#28566a; }
 .nav-dropdown__panel { background:#fff; }
@@ -81,9 +84,16 @@ h1,h2,h3 { letter-spacing:-.065em; }
 .hero__float-card small { color:#6c7c82; font-size:9px; line-height:1.3; }
 .hero__float-card--one { top:4%; left:18%; transform:rotate(7deg); }
 .hero__float-card--two { right:20%; bottom:2%; border-color:#f6d9cb; transform:rotate(-5deg); }
-.hero__film-label { position:absolute; right:0; bottom:2%; z-index:4; padding:7px 10px; border:1px solid #cfdee2; border-radius:999px; background:#ffffffeb; color:#6a7d82; font-size:9px; font-weight:800; letter-spacing:.12em; }
-.hero__rail { display:flex; justify-content:space-between; align-items:center; gap:20px; min-height:73px; border-top:1px solid #d7e5e8; color:#58717b; font-size:10px; font-weight:800; letter-spacing:.12em; text-align:left; }
-.hero__rail a { color:#1a3947; letter-spacing:0; text-align:right; }
+.hero__path-tag { position:absolute; z-index:3; display:inline-flex; align-items:center; gap:6px; padding:7px 10px; border:1px solid #d6e7ec; border-radius:999px; background:#ffffffed; box-shadow:0 7px 20px #1b46521a; color:#315e6e; font-size:9px; font-weight:800; letter-spacing:.11em; white-space:nowrap; }
+.hero__path-tag::before { content:""; width:6px; height:6px; border-radius:50%; background:var(--orange); }
+.hero__path-tag--one { left:4%; top:18%; }
+.hero__path-tag--two { left:48%; bottom:7%; }
+.hero__path-tag--three { right:5%; bottom:9%; }
+.hero__rail { display:flex; justify-content:space-between; align-items:center; gap:20px; min-height:84px; padding:12px 0; border-top:1px solid #d7e5e8; color:#58717b; text-align:left; }
+.hero__rail-fact { display:flex; align-items:baseline; gap:9px; }
+.hero__rail-fact strong { color:#1a3947; font-family:var(--font-display); font-size:24px; font-weight:800; letter-spacing:-.07em; white-space:nowrap; }
+.hero__rail-fact span { max-width:155px; color:#58717b; font-size:10px; font-weight:800; letter-spacing:.08em; line-height:1.3; text-transform:uppercase; }
+.hero__rail a { color:#1a3947; font-size:12px; font-weight:800; letter-spacing:0; text-align:right; }
 .hero__rail a:hover { text-decoration:underline; text-underline-offset:4px; }
 
 .page-home .hero h1 { animation:hero-arrive .7s cubic-bezier(.2,.8,.2,1) both; }
@@ -380,9 +390,12 @@ h1,h2,h3 { letter-spacing:-.065em; }
   .hero__float-card small { display:none; }
   .hero__float-card--one { top:4%; left:3%; }
   .hero__float-card--two { right:5%; bottom:0; }
-  .hero__film-label { display:none; }
-  .hero__rail { justify-content:center; flex-wrap:wrap; gap:7px 14px; min-height:66px; padding:12px 0; text-align:center; font-size:8px; }
-  .hero__rail span:nth-child(2) { display:none; }
+  .hero__path-tag { display:none; }
+  .hero__rail { justify-content:center; flex-wrap:wrap; gap:7px 14px; min-height:66px; padding:12px 0; text-align:center; }
+  .hero__rail-fact { justify-content:center; width:100%; }
+  .hero__rail-fact:nth-child(2) { display:none; }
+  .hero__rail-fact strong { font-size:21px; }
+  .hero__rail-fact span { max-width:none; font-size:9px; }
   .hero__rail a { display:inline-flex; align-items:center; justify-content:center; width:100%; min-height:44px; color:#155d76; font-size:12px; line-height:1.35; text-align:center; }
   .page-home .intro-statement__grid { grid-template-columns:1fr; gap:16px; padding-block:65px; }
   .page-home .intro-statement p:not(.eyebrow) { font-size:clamp(35px,9vw,48px); }

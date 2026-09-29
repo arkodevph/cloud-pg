@@ -77,6 +77,24 @@ Nine individual About-page references were opened and reviewed. They are visual 
 
 ## Brand and assets
 
+## Hero detail pass
+
+The payment navigation pill now has explicit horizontal padding and a contained arrow. The previous generic nav-link rule was more specific and had reduced its padding to zero. The homepage hero adds three small journey labels along the illustrated path and a 50+ years experience fact in the lower rail. The fact reflects the About page's existing credit-industry claim; the labels describe the visual journey rather than implying new product capabilities. The visible "Flow film placeholder" production label was removed from the page.
+
+`ui-design-index` routes this work to `ui-landing-patterns`. Nine finance hero references were reviewed for feature labels, trust cues, and CTA restraint; they informed the hierarchy, not the site's assets or claims:
+
+| Reference | Relevant idea |
+|---|---|
+| [Roohi Koohi: Finance landing page](https://dribbble.com/shots/25537436-Finance-landing-page-web-UI-design) | Small credibility cues near a primary message |
+| [Fixoria: Finance landing page](https://dribbble.com/shots/26899722-Finance-Landing-Page-Design) | Calm hero hierarchy with supporting proof |
+| [Mahatir MD Ayat: Fintech hero](https://dribbble.com/shots/27150677-Modern-Fintech-Website-Hero-Section-UI-Design) | Compact feature highlights around a central claim |
+| [CC Creative: Fintech landing page](https://dribbble.com/shots/26865836-Fintech-Landing-Page-Design) | Guided feature flow without crowding the CTA |
+| [Stephan: Finance hero header](https://dribbble.com/shots/15387063-Finance-Landing-Page-Hero-Header) | Hero component spacing |
+| [Myroslava Tanasiichuk: Fintech dashboard hero](https://dribbble.com/shots/26258569--Hero-Section-Dark-Fintech-Dashboard-Landing-Page) | Clear CTA and small supporting cards |
+| [James: Finance app hero](https://dribbble.com/shots/26369223-Finance-App-Hero-Section-Clean-Modern-UI-for-Dashboard-Landing) | White space around copy and action |
+| [Fixoria: Finance hero section](https://dribbble.com/shots/26903565-Finance-Landing-Page-Hero-Section) | Trust signals following the value proposition |
+| [Shakuro: Digital banking landing page](https://dribbble.com/shots/24768485-Fintech-Website-UI-Design) | Restrained metrics and concise product cues |
+
 ## Site loader: references and behavior
 
 Flow: a visitor first opens the site or refreshes a page → the exact Cloud logo image and indeterminate blue/orange line appear immediately for at least 900 ms → a short upward reveal shows the page once loading completes. Later navigation in the same tab shows the loader only if resources are still loading after 180 ms. The indicator closes after five seconds even if a resource stalls, leaving the available page usable. The brief intro is an intentional branding pause requested for visibility; production analytics should check whether it affects task starts or abandonment.
