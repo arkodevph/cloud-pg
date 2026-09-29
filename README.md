@@ -16,3 +16,5 @@ The homepage uses original Cloud-colored line illustrations and a curved ribbon.
 Screenshots are in `previews/`. The design was checked at 1440 px desktop and 390/320 px mobile widths. The external live forms remain outside this project and must be integrated into any future production implementation.
 
 See `DESIGN_NOTES.md` for source links, design decisions, and publication checks.
+
+Vercel can import this repository with the **Other** framework preset. `vercel.json` runs the build and serves the generated `dist/` directory.
