@@ -1,0 +1,45 @@
+/* 18.11.06 recording: a centered stack with an upward perspective peel. */
+.page-home .sectors .section-heading__row { display:block; text-align:center; }
+.page-home .sectors .section-heading__row h2 { max-width:920px; margin-inline:auto; }
+.page-home .sectors .section-heading__row p { max-width:520px; margin:24px auto 0; }
+.page-home .sectors .industry-stack-track { margin-top:70px; }
+.page-home .sectors .sector-list { display:block; margin:0; border:0; }
+.page-home .sectors .sector-list a { display:flex; position:relative; width:100%; min-height:380px; margin:0 0 20px; padding:48px; border:1px solid #dbe5e7; border-radius:8px; background:#e9f5fa; transition:none; transform-origin:center top; }
+.page-home .sectors .sector-list a:nth-child(2),.page-home .sectors .sector-list a:nth-child(5) { background:#fff0e8; }
+.page-home .sectors .sector-list a:nth-child(3) { background:#e8eef9; }
+.page-home .sectors .sector-list a:hover { padding:48px; box-shadow:none; }
+.page-home .sectors .sector-list strong { font-size:clamp(38px,4.8vw,76px); max-width:75%; line-height:1.06; }
+.page-home .sectors .sector-list__detail { font-size:clamp(15px,1.4vw,21px); margin-top:auto; padding-top:35px; }
+.page-home .sectors .sector-list a>span:last-child { font-size:32px; position:absolute; right:48px; bottom:38px; }
+.page-home .sectors .industry-stack-enhanced { height:420svh; position:relative; }
+.page-home .sectors .industry-stack-enhanced .industry-stack-viewport { position:sticky; top:20svh; width:min(100%,1040px); height:57svh; max-height:570px; min-height:320px; margin-inline:auto; perspective:1100px; }
+.page-home .sectors .industry-stack-enhanced .sector-list a { position:absolute; inset:0; height:100%; min-height:0; margin:0; will-change:transform; backface-visibility:hidden; }
+.page-home .sectors .industry-stack-enhanced+.button { margin-top:50px; }
+@media(max-width:700px) {
+.page-home .sectors .industry-stack-track { margin-top:38px; }
+.page-home .sectors .sector-list a,.page-home .sectors .sector-list a:hover { padding:28px; min-height:300px; }
+.page-home .sectors .sector-list strong { font-size:clamp(34px,9vw,52px); max-width:100%; }
+.page-home .sectors .sector-list__detail { font-size:14px; padding-right:20px; }
+.page-home .sectors .sector-list a>span:last-child { right:25px; bottom:27px; font-size:24px; }
+.page-home .sectors .industry-stack-enhanced .industry-stack-viewport { top:24svh; height:48svh; min-height:280px; }
+}
+/* Reference panel detail: headline/copy at left, substantial artwork at right. */
+.page-home .sectors .sector-list a { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-items:center; padding:48px; overflow:hidden; }
+.industry-panel-copy { min-width:0; align-self:stretch; display:flex; flex-direction:column; justify-content:center; }
+.page-home .sectors .sector-list strong { display:block; max-width:100%; font-size:clamp(36px,4vw,66px); line-height:1.03; margin-bottom:25px; }
+.industry-panel-description { max-width:390px; color:#4b6671; font-size:16px; line-height:1.6; margin:0 0 22px; }
+.page-home .sectors .sector-list__detail { display:block; font-size:12px; padding:0; margin:0; color:#597681; }
+.industry-panel-link { display:flex; align-items:center; gap:22px; margin-top:32px; padding-top:20px; border-top:1px solid #14344025; width:fit-content; font-size:12px; font-weight:600; }
+.industry-panel-link>span { font-size:20px; }
+.page-home .sectors .sector-list .industry-panel-number { position:absolute; right:35px; top:27px; font-size:11px; color:#526a75; }
+.industry-panel-art { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; min-height:260px; }
+.industry-panel-art img { width:115%; max-width:none; height:85%; object-fit:contain; }
+.industry-panel-art>span { font-size:8px; letter-spacing:.12em; color:#56717d; margin-top:10px; }
+@media(max-width:700px) {
+.page-home .sectors .sector-list a,.page-home .sectors .sector-list a:hover { grid-template-columns:1fr; gap:12px; padding:28px; }
+.page-home .sectors .industry-stack-enhanced .industry-stack-viewport { height:65svh; top:17svh; }
+.page-home .sectors .sector-list strong { font-size:35px; margin-bottom:12px; padding-right:18px; }
+.industry-panel-description { font-size:13px; line-height:1.5; margin-bottom:10px; }.industry-panel-link { margin-top:15px; padding-top:10px; }
+.industry-panel-art { min-height:0; height:150px; }.industry-panel-art img { height:135px; width:90%; }.industry-panel-art>span { font-size:6px; margin-top:0; }
+.page-home .sectors .sector-list .industry-panel-number { top:18px; right:20px; }
+}

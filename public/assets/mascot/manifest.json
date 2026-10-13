@@ -1,0 +1,62 @@
+[
+  {
+    "name": "01-wave",
+    "prompt": "Edit the attached approved CloudPG mascot into ONE distinct pose: Standing, raise its left tiny arm in a friendly hello wave. Keep the other arm relaxed and the pose clear. Preserve the exact same character identity: asymmetric three-lobed black cloud head, exactly two clean white oval eyes, compact black bean body, tiny rounded arms and short feet, the same muted blue scarf. Preserve silhouette proportions and minimalist smooth black filled shapes. This is a pose variant, not a redesign. Keep exactly one character with the entire body visible, generous transparent empty space, crisp contour, no mouth, no extra facial features, no textures or extra decoration, no text, no watermark, no background, no cast shadow. The reference is the approved identity. Deliver one isolated transparent PNG, not a sheet or multiple views.",
+    "file": "cloudpg-01-wave.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "02-point",
+    "prompt": "Edit the attached approved CloudPG mascot into ONE distinct pose: Standing in a slight three-quarter view, extend one rounded arm to point toward the right, as a friendly guide. Preserve the exact same character identity: asymmetric three-lobed black cloud head, exactly two clean white oval eyes, compact black bean body, tiny rounded arms and short feet, the same muted blue scarf. Preserve silhouette proportions and minimalist smooth black filled shapes. This is a pose variant, not a redesign. Keep exactly one character with the entire body visible, generous transparent empty space, crisp contour, no mouth, no extra facial features, no textures or extra decoration, no text, no watermark, no background, no cast shadow. The reference is the approved identity. Deliver one isolated transparent PNG, not a sheet or multiple views.",
+    "file": "cloudpg-02-point.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "03-sit",
+    "prompt": "Edit the attached approved CloudPG mascot into ONE distinct pose: Sit on an invisible ledge, both short feet dangling and hands resting by the hips. Entire body visible; no ledge object drawn. Preserve the exact same character identity: asymmetric three-lobed black cloud head, exactly two clean white oval eyes, compact black bean body, tiny rounded arms and short feet, the same muted blue scarf. Preserve silhouette proportions and minimalist smooth black filled shapes. This is a pose variant, not a redesign. Keep exactly one character with the entire body visible, generous transparent empty space, crisp contour, no mouth, no extra facial features, no textures or extra decoration, no text, no watermark, no background, no cast shadow. The reference is the approved identity. Deliver one isolated transparent PNG, not a sheet or multiple views.",
+    "file": "cloudpg-03-sit.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "04-peek-right",
+    "prompt": "Edit the attached approved CloudPG mascot into ONE distinct pose: Lean its full body toward the right with a curious head tilt, one arm lifted as if peeking around a vertical edge. No actual wall or frame drawn. Preserve the exact same character identity: asymmetric three-lobed black cloud head, exactly two clean white oval eyes, compact black bean body, tiny rounded arms and short feet, the same muted blue scarf. Preserve silhouette proportions and minimalist smooth black filled shapes. This is a pose variant, not a redesign. Keep exactly one character with the entire body visible, generous transparent empty space, crisp contour, no mouth, no extra facial features, no textures or extra decoration, no text, no watermark, no background, no cast shadow. The reference is the approved identity. Deliver one isolated transparent PNG, not a sheet or multiple views.",
+    "file": "cloudpg-04-peek-right.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "05-peek-up",
+    "prompt": "Edit the attached approved CloudPG mascot into ONE distinct pose: Crouch lightly and look upward with an inquisitive tilt, both arms raised a little. Whole character visible. Preserve the exact same character identity: asymmetric three-lobed black cloud head, exactly two clean white oval eyes, compact black bean body, tiny rounded arms and short feet, the same muted blue scarf. Preserve silhouette proportions and minimalist smooth black filled shapes. This is a pose variant, not a redesign. Keep exactly one character with the entire body visible, generous transparent empty space, crisp contour, no mouth, no extra facial features, no textures or extra decoration, no text, no watermark, no background, no cast shadow. The reference is the approved identity. Deliver one isolated transparent PNG, not a sheet or multiple views.",
+    "file": "cloudpg-05-peek-up.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "06-phone",
+    "prompt": "Edit the attached approved CloudPG mascot into ONE distinct pose: Stand holding a tiny plain muted-blue smartphone in both hands at chest height, eyes looking toward it. No screen text. Preserve the exact same character identity: asymmetric three-lobed black cloud head, exactly two clean white oval eyes, compact black bean body, tiny rounded arms and short feet, the same muted blue scarf. Preserve silhouette proportions and minimalist smooth black filled shapes. This is a pose variant, not a redesign. Keep exactly one character with the entire body visible, generous transparent empty space, crisp contour, no mouth, no extra facial features, no textures or extra decoration, no text, no watermark, no background, no cast shadow. The reference is the approved identity. Deliver one isolated transparent PNG, not a sheet or multiple views.",
+    "file": "cloudpg-06-phone.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "07-document",
+    "prompt": "Edit the attached approved CloudPG mascot into ONE distinct pose: Stand holding one simple off-white account document with a few faint blue horizontal lines, no letters or logo. Arms wrap naturally around the document. Preserve the exact same character identity: asymmetric three-lobed black cloud head, exactly two clean white oval eyes, compact black bean body, tiny rounded arms and short feet, the same muted blue scarf. Preserve silhouette proportions and minimalist smooth black filled shapes. This is a pose variant, not a redesign. Keep exactly one character with the entire body visible, generous transparent empty space, crisp contour, no mouth, no extra facial features, no textures or extra decoration, no text, no watermark, no background, no cast shadow. The reference is the approved identity. Deliver one isolated transparent PNG, not a sheet or multiple views.",
+    "file": "cloudpg-07-document.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "08-support",
+    "prompt": "Edit the attached approved CloudPG mascot into ONE distinct pose: Lean gently forward with one arm offered outward in a reassuring open welcoming gesture, friendly slight head tilt. Preserve the exact same character identity: asymmetric three-lobed black cloud head, exactly two clean white oval eyes, compact black bean body, tiny rounded arms and short feet, the same muted blue scarf. Preserve silhouette proportions and minimalist smooth black filled shapes. This is a pose variant, not a redesign. Keep exactly one character with the entire body visible, generous transparent empty space, crisp contour, no mouth, no extra facial features, no textures or extra decoration, no text, no watermark, no background, no cast shadow. The reference is the approved identity. Deliver one isolated transparent PNG, not a sheet or multiple views.",
+    "file": "cloudpg-08-support.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "09-celebrate",
+    "prompt": "Edit the attached approved CloudPG mascot into ONE distinct pose: Small happy hop, both little arms raised and both short feet slightly off the ground. No confetti, stars, shadow, or extra objects. Preserve the exact same character identity: asymmetric three-lobed black cloud head, exactly two clean white oval eyes, compact black bean body, tiny rounded arms and short feet, the same muted blue scarf. Preserve silhouette proportions and minimalist smooth black filled shapes. This is a pose variant, not a redesign. Keep exactly one character with the entire body visible, generous transparent empty space, crisp contour, no mouth, no extra facial features, no textures or extra decoration, no text, no watermark, no background, no cast shadow. The reference is the approved identity. Deliver one isolated transparent PNG, not a sheet or multiple views.",
+    "file": "cloudpg-09-celebrate.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "10-rest",
+    "prompt": "Edit the attached approved CloudPG mascot into ONE distinct pose: Relaxed seated pose, head tilted slightly left and short legs extended forward, hands resting over its belly. Keep both white oval eyes open. Preserve the exact same character identity: asymmetric three-lobed black cloud head, exactly two clean white oval eyes, compact black bean body, tiny rounded arms and short feet, the same muted blue scarf. Preserve silhouette proportions and minimalist smooth black filled shapes. This is a pose variant, not a redesign. Keep exactly one character with the entire body visible, generous transparent empty space, crisp contour, no mouth, no extra facial features, no textures or extra decoration, no text, no watermark, no background, no cast shadow. The reference is the approved identity. Deliver one isolated transparent PNG, not a sheet or multiple views.",
+    "file": "cloudpg-10-rest.png",
+    "generator": "built-in imagegen"
+  }
+]

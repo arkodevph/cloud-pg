@@ -1,5 +1,16 @@
 # Cloud Payment Group redesign concept
 
+## Design instructions — required
+
+Read this section before any layout, styling, illustration, or motion change.
+
+- Follow the user's selected reference strictly. Use one reference for the requested change; never combine references unless the user explicitly authorizes it.
+- The agent has no authority to invent its own design, reinterpret the reference, or add unrequested visual ideas. Ask the user before making a design choice the reference does not establish.
+- When no reference is selected, ask the user for one or find concrete references and present them for selection before implementation.
+- Inspect the selected reference before editing. For recordings, analyze the motion frame by frame and record the observed layout, overlap, timing, scale, perspective, and transitions. Identify anything unverified rather than guessing it.
+- Apply only the feature and scope the user requests. A motion reference authorizes its motion, not a new interface, system demo, container, palette, or page redesign. Preserve the user's explicit layout requirements.
+- Compare the rendered result with the selected reference at matching viewport sizes and states. A passing build does not establish design fidelity. Report verification limits and remaining differences plainly.
+
 A standalone, dependency-free static implementation of the public Cloud Payment Group site. It is a local concept, not a replacement for the live site.
 
 ```sh

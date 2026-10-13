@@ -136,3 +136,39 @@ Core roles: deep ink `#0D2934` for dark surfaces, ink `#143440` for text, paper 
 ## Publication decisions
 
 This is a local redesign concept. Confirm current business claims, office details, final copy, legal wording, and approved imagery before publishing. No live payment or debt data is collected locally. The contact action goes to Cloud's existing live form; the debt-placement action goes to Cloud's existing live form. The article template is a concise summary linking to the original article, pending approved article content.
+
+## Supplied references: separate homepage sections (2026-10-13)
+
+The user explicitly requested both recordings, then identified the industries
+section in a screenshot as the second placement. Each section uses one reference:
+
+- `recording_2026-10-13_18.07.13.mp4` governs services (`#solutions`): a pinned
+  visual changes as the right-hand explanatory text scrolls. The user's explicit
+  adaptation is an open 70/30 overlap with copy outside the illustration area
+  and the visual fading near the text.
+  Perspective peeling is excluded from this section.
+- `recording_2026-10-13_18.11.06.mp4` governs industries (`#industry-motion`):
+  panels form an opaque stack; the front panel lifts, tilts, and exposes the next
+  panel. Frame inspection at 0.125-second intervals and timestamped contact
+  sheets at 0.25-second intervals showed the peel around 3.0–3.75 seconds,
+  settling around 4.25–5.0, and repeated transitions near 5.25 and 7.25.
+  This replaces the five-industry card grid; industry copy and destinations stay.
+
+Implementation validation: production build, JavaScript syntax, markup/link
+checks, and isolated state checks pass for forward/reverse scrolling, active
+service scenes, industry perspective transforms, and reduced-motion fallback.
+Browser rendering and motion fidelity remain unverified in this session because
+local socket creation and Chromium launch are blocked by the environment.
+Previously saved preview images/videos predate these changes.
+
+## Approved mascot replacements (2026-10-13)
+
+The approved black cloud mascot with white eyes and a muted blue scarf now has
+26 distinct transparent poses. Homepage placements use the first ten; supporting
+page heroes use poses 11–16. Poses 17–26 replace the About service illustrations
+and account editorial artwork, illustrate the five industry sections, and appear
+on Debt Placement and Insights. The separate homepage stats block was removed
+and hero characters reduced by 15% at the user’s request. Prompts and generation
+records are in `public/assets/mascot/*manifest.json`. All new assets are used,
+transparent, and resolve in the built site. Build and whitespace checks pass;
+rendered browser verification remains subject to the limitation above.

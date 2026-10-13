@@ -1,0 +1,38 @@
+[
+  {
+    "name": "11-about",
+    "prompt": "Create one pose variation of the approved CloudPG mascot in the attached reference. Pose: Stand in three-quarter view with both tiny arms gently open at waist height, like introducing the team. Turn head slightly left. Distinct from waving and straight pointing. Preserve the exact same identity, asymmetric three-lobed black cloud head, exactly two white oval eyes, compact black body, tiny rounded hands and feet, and identical muted blue scarf. Match the reference's proportions, smooth filled shapes and minimal styling. Whole body visible, centered with generous transparent space. One character only. No mouth, no new facial features, no detailed costume, no logo, no text or watermark, no background or cast shadow. Genuine transparent PNG. This is a new pose for a CloudPG webpage, not a new mascot design or a character sheet.",
+    "file": "cloudpg-11-about.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "12-recovery",
+    "prompt": "Create one pose variation of the approved CloudPG mascot in the attached reference. Pose: Stand looking down at a small off-white clipboard held in one hand while the other hand touches the top edge. Clipboard has two small muted-blue horizontal rules, no text. Preserve the exact same identity, asymmetric three-lobed black cloud head, exactly two white oval eyes, compact black body, tiny rounded hands and feet, and identical muted blue scarf. Match the reference's proportions, smooth filled shapes and minimal styling. Whole body visible, centered with generous transparent space. One character only. No mouth, no new facial features, no detailed costume, no logo, no text or watermark, no background or cast shadow. Genuine transparent PNG. This is a new pose for a CloudPG webpage, not a new mascot design or a character sheet.",
+    "file": "cloudpg-12-recovery.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "13-payment",
+    "prompt": "Create one pose variation of the approved CloudPG mascot in the attached reference. Pose: Sit with short feet forward, hold one small muted-blue payment token between both hands at belly height. Token has no symbol, lettering or logo. Distinct from the standing phone pose. Preserve the exact same identity, asymmetric three-lobed black cloud head, exactly two white oval eyes, compact black body, tiny rounded hands and feet, and identical muted blue scarf. Match the reference's proportions, smooth filled shapes and minimal styling. Whole body visible, centered with generous transparent space. One character only. No mouth, no new facial features, no detailed costume, no logo, no text or watermark, no background or cast shadow. Genuine transparent PNG. This is a new pose for a CloudPG webpage, not a new mascot design or a character sheet.",
+    "file": "cloudpg-13-payment.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "14-legal",
+    "prompt": "Create one pose variation of the approved CloudPG mascot in the attached reference. Pose: Stand in a composed thoughtful pose, one arm folded across the belly and the other raised to the underside of the head, gently considering the next step. No props or extra details. Preserve the exact same identity, asymmetric three-lobed black cloud head, exactly two white oval eyes, compact black body, tiny rounded hands and feet, and identical muted blue scarf. Match the reference's proportions, smooth filled shapes and minimal styling. Whole body visible, centered with generous transparent space. One character only. No mouth, no new facial features, no detailed costume, no logo, no text or watermark, no background or cast shadow. Genuine transparent PNG. This is a new pose for a CloudPG webpage, not a new mascot design or a character sheet.",
+    "file": "cloudpg-14-legal.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "15-industries",
+    "prompt": "Create one pose variation of the approved CloudPG mascot in the attached reference. Pose: Take one small walking step toward the left, one short foot forward, arms relaxed, head slightly turned toward the viewer. Scarf trails a little. No environment or props. Preserve the exact same identity, asymmetric three-lobed black cloud head, exactly two white oval eyes, compact black body, tiny rounded hands and feet, and identical muted blue scarf. Match the reference's proportions, smooth filled shapes and minimal styling. Whole body visible, centered with generous transparent space. One character only. No mouth, no new facial features, no detailed costume, no logo, no text or watermark, no background or cast shadow. Genuine transparent PNG. This is a new pose for a CloudPG webpage, not a new mascot design or a character sheet.",
+    "file": "cloudpg-15-industries.png",
+    "generator": "built-in imagegen"
+  },
+  {
+    "name": "16-contact",
+    "prompt": "Create one pose variation of the approved CloudPG mascot in the attached reference. Pose: Stand leaning slightly toward the viewer with one tiny rounded hand held beside the head, as if listening attentively to a person. The other hand rests over the belly. Not waving. No headset or device. Preserve the exact same identity, asymmetric three-lobed black cloud head, exactly two white oval eyes, compact black body, tiny rounded hands and feet, and identical muted blue scarf. Match the reference's proportions, smooth filled shapes and minimal styling. Whole body visible, centered with generous transparent space. One character only. No mouth, no new facial features, no detailed costume, no logo, no text or watermark, no background or cast shadow. Genuine transparent PNG. This is a new pose for a CloudPG webpage, not a new mascot design or a character sheet.",
+    "file": "cloudpg-16-contact.png",
+    "generator": "built-in imagegen"
+  }
+]
