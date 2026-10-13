@@ -172,3 +172,71 @@ and hero characters reduced by 15% at the user’s request. Prompts and generati
 records are in `public/assets/mascot/*manifest.json`. All new assets are used,
 transparent, and resolve in the built site. Build and whitespace checks pass;
 rendered browser verification remains subject to the limitation above.
+
+## Payment Hubb phone reference (2026-10-13)
+
+`recording_2026-10-13_21.16.29.mp4` alone governs the Payment Hubb replacement.
+Timestamped contact sheets sampled every 0.25 seconds show a tall tilted phone
+on the left, static copy on the right, and the account UI scrolling within the
+phone. Around 0–2 seconds payment fields scroll; 2.5–4.5 the account overview
+returns; 5–8 the balance and available actions scroll; 8–12 support and instalment
+options remain visible; 12–17 payment arrangement details scroll. The final
+recording frames include desktop overlays unrelated to the requested section.
+
+The existing homepage headline, paragraph, CTA and destination remain intact.
+A native HTML/CSS phone replaces the boxed two-column illustrative panel, with
+a slower 20-second eased screen tour, neutral bordered UI, and a keyboard-operable
+pause control. Animation pauses offscreen, when the tab is hidden, on user request,
+and under reduced-motion preferences. It is illustrative and collects no input.
+Build, syntax, content-preservation and isolated lifecycle checks pass. Chromium
+launch remains blocked, so rendered desktop/mobile fidelity is unverified.
+
+## Payment demo reference research — selection pending
+
+The user rejected the scrolling phone mockup and asked for a real animated
+payment demo with better UI. Live search and page review covered these works:
+
+- https://dribbble.com/shots/26958246-Payment-processing-animation-fintech-mobile-app-UI-design — merchant tap-to-pay; dark UI, less suited to customer account recovery.
+- https://dribbble.com/shots/12301256-Payment-Animation-Checkout — complete mobile checkout interaction candidate.
+- https://dribbble.com/shots/25562683-Checkout-payment-flow-animation — animated checkout flow candidate.
+- https://dribbble.com/shots/26011040-BNPL-App-Design-Pay-Later-App-UI-UX-Split-Payment-App-Design — instalment and schedule candidate; commerce content must not replace CloudPG content.
+- https://dribbble.com/shots/27276856-Pay-Now-Animated-Button-UI-Interaction — button-only interaction; insufficient as a primary full demo.
+- https://dribbble.com/shots/25842930-Card-Payment-Interaction — integrated payment interaction candidate.
+- https://dribbble.com/shots/25320554-Seamless-Card-Payment-Interaction-Design — documented payment method selection, card-entry feedback and confirmation; strongest functional candidate.
+- https://dribbble.com/shots/23519002-Payment-Interaction — payment prototype candidate, linked Figma prototype.
+- https://dribbble.com/shots/5995480-Apple-Payments-interaction-concept-Send-money — money transfer; wrong customer action for CloudPG.
+- https://dribbble.com/shots/27201125-Freedom-Finance-Pay-Nearby — proximity payments; wrong customer action for CloudPG.
+
+Limit: page descriptions were accessible, but full-size Dribbble images/video
+failed retrieval. These are candidates, not visually verified composition locks.
+Agent-reach Exa and direct CDN retrieval also failed DNS resolution. Do not
+claim frame analysis of these external animations or implement from descriptions
+alone. Await the user's selected reference, then obtain inspectable media before
+replacing the rejected mockup. Preserve the existing section copy and phone demo
+placement; demonstrate actual payment choices and steps rather than scrolling
+marketing content.
+
+## Payment demo correction — video remains primary
+
+The user explicitly authorized applying any suitable reference provided it aligns
+with their attached video, then requested the phone face the other direction and
+additional motion on the static side. This supersedes the pending-selection note.
+The supplied 21.16.29 recording still controls the portal demo: account reference
+and balance, card payment fields, account actions, instalment choices and selected
+plan summary. The rejected scrolling marketing copy has been replaced with six
+portal screens. CloudPG typography, neutral surfaces, legible field labels and blue
+actions provide the UI treatment; no inaccessible Dribbble animation is claimed
+as inspected or copied. Sample account values are explicitly illustrative.
+
+The phone now faces right (positive Y/Z rotation). Six-second screen holds use
+eased transitions; card digits reveal, tap indicators pulse, weekly/fortnightly
+selection changes with its summary, and account navigation follows each scene.
+A gentle device float, eyebrow-dot pulse and CTA-arrow movement add motion to
+the static parts. Pausing freezes the screen timeline; offscreen, hidden-tab and
+reduced-motion states stop playback. Build, syntax and isolated six-screen lifecycle
+checks pass. Rendered browser fidelity remains unverified due to launch restrictions.
+
+The user then requested the approved mascot peek beside/under the phone for
+depth. Pose 05 sits behind the lower-left device edge with a soft contact shadow
+and a small peeking motion tied to the demo playback/pause state. Phone content
+and right-side copy remain intact.
