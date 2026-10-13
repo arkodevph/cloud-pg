@@ -240,3 +240,11 @@ The user then requested the approved mascot peek beside/under the phone for
 depth. Pose 05 sits behind the lower-left device edge with a soft contact shadow
 and a small peeking motion tied to the demo playback/pause state. Phone content
 and right-side copy remain intact.
+
+The user rejected the oversized reused pose and requested a newly generated
+character physically interacting with the phone. Built-in imagegen created pose
+27, with both hands extended left to grip the device edge and its body leaning
+toward the phone. This replaces pose 05. The asset is positioned inside the phone
+wrapper, so contact points share the device tilt and float; explicit scoped width
+rules set 180px desktop, 120px mobile, 100px narrow mobile. The phone demo and
+right-hand content remain unchanged.

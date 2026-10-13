@@ -52,12 +52,11 @@
 }
 @media(prefers-reduced-motion:reduce) { .hubb-page { transition:none; }.hubb-tap { display:none; } }
 
-/* Approved mascot peeks from behind the lower left device edge. */
+/* Fresh gripping asset attaches to the actual device, sharing its tilt and float. */
 .hubb-motion { isolation:isolate; }
 .hubb-device { z-index:2; }
-.hubb-peeking-mascot { position:absolute; z-index:1; width:180px; height:auto; max-width:none; left:calc(50% - 235px); bottom:80px; pointer-events:none; filter:drop-shadow(-4px 10px 7px #14344020); transform:rotate(-8deg); transform-origin:65% 85%; }
+.page-home .payment-highlight .hubb-device .hubb-gripping-mascot { position:absolute; z-index:4; width:180px; height:auto; max-width:none; left:calc(100% - 52px); top:47%; pointer-events:none; filter:drop-shadow(3px 5px 3px #14344020); }
 .hubb-motion__caption { position:relative; z-index:3; }
-.hubb-motion:after { content:""; position:absolute; z-index:0; width:300px; height:22px; left:calc(50% - 175px); bottom:62px; border-radius:50%; background:#14344016; filter:blur(10px); pointer-events:none; }
-@media(prefers-reduced-motion:no-preference) { .hubb-peeking-mascot { animation:hubb-mascot-peek 9s ease-in-out infinite; animation-play-state:paused; } .hubb-playing .hubb-peeking-mascot { animation-play-state:running; } @keyframes hubb-mascot-peek { 0%,100% { transform:rotate(-8deg) translateY(0); } 45%,60% { transform:rotate(-4deg) translateY(-7px); } } }
-@media(max-width:860px) { .hubb-peeking-mascot { width:155px; left:calc(50% - 205px); bottom:78px; } }
-@media(max-width:380px) { .hubb-peeking-mascot { width:125px; left:calc(50% - 177px); bottom:79px; } }
+.hubb-motion:after { content:""; position:absolute; z-index:0; width:290px; height:20px; left:calc(50% - 140px); bottom:62px; border-radius:50%; background:#14344016; filter:blur(10px); pointer-events:none; }
+@media(max-width:600px) { .hubb-device { left:-24px; } .page-home .payment-highlight .hubb-device .hubb-gripping-mascot { width:120px; left:calc(100% - 34px); top:54%; } }
+@media(max-width:380px) { .page-home .payment-highlight .hubb-device .hubb-gripping-mascot { width:100px; left:calc(100% - 29px); } }
