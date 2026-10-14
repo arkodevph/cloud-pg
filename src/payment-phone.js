@@ -8,6 +8,7 @@
     const nav = [...demo.querySelectorAll('[data-phone-nav]')];
     const preference = matchMedia('(prefers-reduced-motion: reduce)');
     const sequence = ['account', 'payment', 'review', 'options', 'arrangement', 'support'];
+    const playbackRate = 1.2;
     let visible = false, paused = false, frame = 0, elapsed = 0, last = null, current = -1;
     const render = (time) => {
       const step = Math.floor(time / 6000) % sequence.length;
@@ -36,7 +37,7 @@
       demo.classList.toggle('hubb-tapping', Boolean(target) && local >= 4400 && local < 5300);
     };
     const tick = (now) => {
-      if (last !== null) elapsed += now - last;
+      if (last !== null) elapsed += (now - last) * playbackRate;
       last = now;
       render(elapsed);
       frame = requestAnimationFrame(tick);

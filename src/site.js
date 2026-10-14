@@ -1,6 +1,14 @@
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#primary-nav');
 
+document.querySelectorAll('[data-contact-preview]').forEach(form => {
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    form.querySelector('.contact-paper__status').textContent = 'Preview complete. No enquiry has been sent.';
+  });
+  form.querySelector('button[type="submit"]').disabled = false;
+});
+
 if (menuButton && navigation) {
   menuButton.addEventListener('click', () => {
     const open = menuButton.getAttribute('aria-expanded') !== 'true';

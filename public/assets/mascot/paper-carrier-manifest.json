@@ -1,0 +1,6 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "cloudpg-08-support.png",
+  "output": "cloudpg-29-paper-carrier.png",
+  "prompt": "Use case: identity-preserve. Asset type: transparent mascot asset to sit at the LEFT edge of a real HTML paper contact form. Preserve the attached CloudPG mascot identity exactly: oversized black cloud-shaped head, two white oval eyes, no mouth, tiny matte black body, blue scarf, soft subtle texture. Create a new full-body pose of the mascot carrying a large paper sheet to its RIGHT. IMPORTANT: do NOT draw the paper itself; it will be added as a real form in the website. Pose the character standing facing the viewer with both little arms reaching out to the RIGHT, hands curled naturally as if grasping the left edge of a tall vertical sheet. One hand near chest height and one near waist. Head tilted gently toward the sheet, both feet planted, supportive welcoming feel. Keep the head silhouette and character proportions from reference. Entire character visible, centered, generous transparent margins, isolated transparent background. No props, no paper, no text, no extra characters."
+}
