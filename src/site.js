@@ -50,6 +50,32 @@ if (heroScene && !window.matchMedia('(prefers-reduced-motion: reduce)').matches)
   scheduleHeroCards();
 }
 
+const featureBook = document.querySelector('.page-home .feature-dark__right');
+if (featureBook) {
+  const preference = matchMedia('(prefers-reduced-motion: reduce)');
+  let scheduled = false;
+  const update = () => {
+    scheduled = false;
+    const top = featureBook.getBoundingClientRect().top;
+    const progress = preference.matches || featureBook.matches(':focus-within') ? 1
+      : Math.max(0, Math.min(1, (innerHeight * .92 - top) / (innerHeight * .6)));
+    const eased = progress * progress * (3 - 2 * progress);
+    featureBook.style.setProperty('--book-fold', String(1 - eased));
+    featureBook.style.setProperty('--book-pop', String(Math.sin(eased * Math.PI)));
+  };
+  const schedule = () => {
+    if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+  };
+  featureBook.classList.add('feature-book');
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  window.addEventListener('load', schedule, { once: true });
+  featureBook.addEventListener('focusin', schedule);
+  featureBook.addEventListener('focusout', schedule);
+  preference.addEventListener('change', schedule);
+  update();
+}
+
 // 18.07.13: pinned visual, active copy, and softly changing illustration.
 const journey = document.querySelector('.service-journey');
 if (journey) {

@@ -1,0 +1,6 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "cloudpg-10-rest.png",
+  "output": "cloudpg-28-medical-bed.png",
+  "prompt": "Use case: identity-preserve. Asset type: transparent website mascot illustration for the Medical industry card. Edit target: attached existing CloudPG mascot. Preserve EXACT character identity: large black cloud-shaped head, two white oval eyes, no mouth, tiny black body, blue scarf, soft matte subtly textured illustrative style. Change pose and scene to the mascot comfortably confined as a recovering patient in a small hospital bed, head upright on a white pillow, body tucked under a light blue blanket, one little black hand resting above blanket, blue scarf visible at neck. Include a simple pale white hospital bed with subtle blue trim and a small IV stand alongside it to clearly communicate hospitalization. Calm reassuring mood, not distressed. Three-quarter front view, entire character and bed visible, centered compact composition with generous transparent margin, no background, no text, no logos, no additional characters. Keep head unmistakably the same silhouette and proportions as reference."
+}
