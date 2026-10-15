@@ -1,0 +1,26 @@
+<section class="login-split" aria-labelledby="login-title">
+  <div class="login-form-panel">
+    <a class="login-brand" href="/" aria-label="Cloud Payment Group, home"><img src="/assets/cloudpg-logo-transparent.png" width="2169" height="725" alt="Cloud Payment Group"></a>
+    <div class="login-form-content">
+      <p class="eyebrow"><span class="eyebrow__dot"></span>CLIENT WORKSPACE</p>
+      <h1 id="login-title">Welcome back.</h1>
+      <p class="login-intro">A clearer view of your accounts starts here.</p>
+      <form data-login-preview>
+        <label for="login-email">Email address<input id="login-email" name="email" type="email" autocomplete="username" placeholder="you@company.com" required></label>
+        <div class="login-password-label"><label for="login-password">Password</label><button class="login-text-button" type="button" data-login-forgot>Forgot password?</button></div>
+        <div class="login-password-field"><input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required><button type="button" data-login-show aria-pressed="false" aria-controls="login-password">Show</button></div>
+        <button class="button button--dark login-submit" type="submit" disabled>Sign in <span aria-hidden="true">↗</span></button>
+        <button class="login-demo-button" type="button" data-admin-demo>Enter admin demo <span aria-hidden="true">↗</span></button>
+        <p class="login-preview-note">Frontend mockup. Enter the admin demo without filling in any details.</p>
+        <p class="login-status" role="status" aria-live="polite"></p>
+      </form>
+      <div class="login-live-link"><span>Already a Cloud client?</span><a href="{{clientUrl}}" target="_blank" rel="noopener noreferrer">Open the existing client portal <span aria-hidden="true">↗</span></a></div>
+    </div>
+    <a class="login-back" href="/">← Back to Cloud</a>
+  </div>
+  <div class="login-visual-panel" data-login-visual>
+    <div class="login-visual-top"><span>CLOUD PAYMENT GROUP</span><span>AU + NZ</span></div>
+    <div class="login-logo-stage" data-login-logo><img class="login-logo-fallback" src="/assets/3d/cloudpg-globe-render.png" width="1254" height="1254" alt="Three-dimensional blue and orange Cloud ribbon globe"><canvas aria-hidden="true"></canvas></div>
+    <div class="login-visual-bottom"><div><p>CONNECTED BY CLOUD</p><h2>A clearer path<br><em>forward.</em></h2></div><button class="login-motion-toggle" type="button" aria-pressed="false" hidden>Pause rotation <span aria-hidden="true">Ⅱ</span></button></div>
+  </div>
+</section>

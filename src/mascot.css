@@ -1,4 +1,7 @@
 /* Approved CloudPG identity: each homepage placement has a distinct pose. */
+:root { --mascot-brand-filter:url("#cloudpg-brand-colors"); }
+.mascot-color-definitions { position:absolute; pointer-events:none; overflow:hidden; }
+img[src*="/assets/mascot/"] { filter:var(--mascot-brand-filter); }
 .page-home .hero__vignette { background:none; filter:none; }
 .hero__vignette .cloudpg-mascot { display:block; width:100%; height:100%; object-fit:contain; transform:scale(1.25); }
 .page-home .feature-dark__art .feature-mascot { width:100%; height:330px; object-fit:contain; max-height:330px; margin:14px 0; }

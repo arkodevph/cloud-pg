@@ -1,0 +1,17 @@
+<svg class="mascot-color-definitions" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+  <filter id="cloudpg-brand-colors" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+    <!-- Select dark shapes and blue accessories; preserve paper, eyes and existing warm props. -->
+    <feColorMatrix in="SourceGraphic" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -3 -3 -3 0 2" result="dark"/>
+    <feColorMatrix in="SourceGraphic" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -4 0 4 0 0" result="blue"/>
+    <feComposite in="dark" in2="blue" operator="arithmetic" k2="1" k3="1" result="selection"/>
+    <feColorMatrix in="SourceGraphic" values="0.9956 0 0 0 0.0043  0.3957 0 0 0 0.5925  0.2348 0 0 0 0.7502  0 0 0 1 0" result="body"/>
+    <feFlood flood-color="#f26532" result="orange"/>
+    <feComposite in="orange" in2="SourceGraphic" operator="in" result="scarf"/>
+    <feComposite in="scarf" in2="blue" operator="in" result="orange-detail"/>
+    <feComposite in="body" in2="blue" operator="out" result="blue-body"/>
+    <feComposite in="orange-detail" in2="blue-body" operator="arithmetic" k2="1" k3="1" result="brand"/>
+    <feComposite in="brand" in2="selection" operator="in" result="recolored"/>
+    <feComposite in="SourceGraphic" in2="selection" operator="out" result="unchanged"/>
+    <feComposite in="recolored" in2="unchanged" operator="arithmetic" k2="1" k3="1"/>
+  </filter>
+</defs></svg>

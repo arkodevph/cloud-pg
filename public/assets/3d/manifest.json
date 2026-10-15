@@ -1,0 +1,7 @@
+{
+  "model": "cloudpg-ribbon-globe.glb",
+  "modelGenerator": "src/create-login-logo.mjs",
+  "render": "cloudpg-globe-render.png",
+  "renderTool": "built-in image_gen",
+  "renderPrompt": "Use case: product-mockup. Asset type: transparent 3D brand artwork for a login screen fallback image. Reference image: existing Cloud Payment Group logo. Create ONLY the spherical symbol from the LEFT of the reference, with NO WORDMARK and NO LETTERS. Preserve its identity: a globe formed from five wide diagonal cyan-blue/silver curved ribbons with narrow orange diagonal bands between them. Turn it into a polished tangible three-dimensional sculptural globe, floating, with real ribbon thickness and visible gaps, satin ceramic and softly brushed metallic finish, front three-quarter view, soft studio lighting. Cyan #00addb to pale silver-blue gradients on outer bands, vivid coral-orange inner bands. Centered sphere occupying 75% of a square canvas with comfortable transparent margins. No pedestal, no background, no text, no watermark, no extra objects. Output genuinely transparent."
+}

@@ -1,11 +1,13 @@
 import { cpSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
+import { buildSync } from 'esbuild';
 
 const root = resolve(import.meta.dirname, '..');
 const out = join(root, 'dist');
 const homeHero = readFileSync(join(root, 'src', 'home-hero.html'), 'utf8');
 const serviceJourney = readFileSync(join(root, 'src', 'service-journey.html'), 'utf8');
 const paymentPhone = readFileSync(join(root, 'src', 'payment-phone.html'), 'utf8');
+const mascotColorFilter = readFileSync(join(root, 'src', 'mascot-color-filter.html'), 'utf8');
 const paymentUrl = 'https://www.debtview.net.au/DebtrakCustomer/Login/Login';
 const clientUrl = 'https://www.debtview.net.au/DebtrakClient/Login/Login';
 const liveContact = 'https://cloudpg.com.au/contact-us/';
@@ -23,13 +25,14 @@ function header(active) {
   return `<a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" id="top">
     <div class="container main-nav"><a class="brand" href="/" aria-label="Cloud Payment Group, home"><img src="/assets/cloudpg-logo-transparent.png" width="2169" height="725" alt="Cloud Payment Group"></a>
-      <a class="mobile-pay" href="${paymentUrl}"${external}>Make a payment</a>
+      <a class="mobile-pay mobile-login" href="/client-login/">Client login</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
       <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
         ${navLink('/about-us/', 'About', 'about')}
         <details class="nav-dropdown"${['collection', 'payment', 'legal'].includes(active) ? ' data-current="true"' : ''}><summary>Services <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown__panel">${navLink('/debt-collection/', 'Debt collection', 'collection')}${navLink('/payment-management/', 'Payment management', 'payment')}${navLink('/legal-services/', 'Legal services', 'legal')}</div></details>
         ${navLink('/industries/', 'Industries', 'industries')}${navLink('/blog/', 'Insights', 'blog')}
-        <details class="nav-dropdown nav-dropdown--client"><summary>Client tools <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown__panel"><a href="/debt-placement/">Debt placement</a><a href="${clientUrl}"${external}>Client login ${arrow}</a></div></details>
+        <details class="nav-dropdown nav-dropdown--client"><summary>Client tools <span aria-hidden="true">⌄</span></summary><div class="nav-dropdown__panel"><a href="/debt-placement/">Debt placement</a></div></details>
+        <a class="nav-login" href="/client-login/">Client login ${arrow}</a>
         <a class="nav-payment" href="${paymentUrl}"${external}>Make a payment ${arrow}</a>
         <a class="nav-cta" href="/contact-us/">Talk to our team ${arrow}</a>
       </nav>
@@ -42,8 +45,8 @@ function footer() {
     <div class="footer-top"><div>${eyebrow('NEXT', 'LET’S TALK')}<h2>Find a clearer way forward.</h2></div>${button('/contact-us/', 'Talk to our team', 'dark')}</div>
     <div class="footer-grid"><div class="footer-brand"><img src="/assets/cloudpg-logo-transparent.png" width="2169" height="725" alt="Cloud Payment Group"><p>Debt collection and payment management for organisations across Australia and New Zealand.</p></div>
       <div><h3>Explore</h3><a href="/about-us/">About us</a><a href="/debt-collection/">Debt collection</a><a href="/payment-management/">Payment management</a><a href="/legal-services/">Legal services</a><a href="/industries/">Industries</a></div>
-      <div><h3>Get things done</h3><a href="/contact-us/">Contact us</a><a href="/debt-placement/">Debt placement</a><a href="${paymentUrl}"${external}>Make a payment</a><a href="${clientUrl}"${external}>Client login</a><a href="/blog/">Insights</a></div>
-      <div><h3>Contact</h3><a href="tel:1300549192">1300 549 192</a><a href="mailto:info@cloudpg.com.au">info@cloudpg.com.au</a><p>Perth · Sydney · Melbourne · Queensland · Auckland</p></div>
+      <div><h3>Get things done</h3><a href="/contact-us/">Contact us</a><a href="/debt-placement/">Debt placement</a><a href="${paymentUrl}"${external}>Make a payment</a><a href="/client-login/">Client login</a><a href="/blog/">Insights</a></div>
+      <div class="footer-contact"><section class="footer-office" aria-label="Perth office"><h3>Perth</h3><address>Level 2, 2 Edward Street<br>East Perth WA 6004<br>PO Box 8229 Perth WA 6849</address><a href="tel:1300549192">1300 549 192</a><a href="mailto:info@cloudpg.com.au">info@cloudpg.com.au</a></section><section class="footer-office" aria-label="Sydney office"><h3>Sydney</h3><a href="tel:1300549192">1300 549 192</a><a href="mailto:info@cloudpg.com.au">info@cloudpg.com.au</a></section><p>Also in Melbourne, Queensland and Auckland.</p></div>
     </div>
     <div class="footer-bottom"><span>© ${new Date().getFullYear()} Cloud Payment Group.</span><div><a href="${privacyUrl}"${external}>Privacy policy</a><a href="#top">Back to top ↑</a></div></div>
   </div></footer>`;
@@ -99,7 +102,7 @@ const loaderScript = `<script>
 
 function page({ title, description, active = '', body, slug = '' }) {
   const canonical = `https://cloudpg.com.au/${slug ? `${slug}/` : ''}`;
-  return `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f7f4"><meta name="description" content="${description}"><title>${title} | Cloud Payment Group</title>${loaderScript}<link rel="icon" href="/assets/favicon.svg?v=2" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/modern.css"><link rel="stylesheet" href="/assets/mascot.css"><link rel="stylesheet" href="/assets/contact-paper.css">${slug ? '' : '<link rel="stylesheet" href="/assets/service-journey.css"><link rel="stylesheet" href="/assets/industry-motion.css"><link rel="stylesheet" href="/assets/payment-phone.css">'}<link rel="canonical" href="${canonical}"></head><body class="${slug ? 'page-inner' : 'page-home'}">${loaderMarkup}${header(active)}<main id="main">${body}</main>${footer()}<script src="/assets/site.js" defer></script>${slug ? '' : '<script src="/assets/payment-phone.js" defer></script>'}</body></html>`;
+  return `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f7f4"><meta name="description" content="${description}"><title>${title} | Cloud Payment Group</title>${loaderScript}<link rel="icon" href="/assets/favicon.svg?v=2" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/modern.css"><link rel="stylesheet" href="/assets/mascot.css"><link rel="stylesheet" href="/assets/contact-paper.css">${slug === 'client-login' ? '<link rel="stylesheet" href="/assets/client-login.css">' : ''}${slug ? '' : '<link rel="stylesheet" href="/assets/service-journey.css"><link rel="stylesheet" href="/assets/industry-motion.css"><link rel="stylesheet" href="/assets/payment-phone.css">'}<link rel="canonical" href="${canonical}"></head><body class="${slug ? 'page-inner' : 'page-home'}${slug === 'client-login' ? ' page-login' : ''}">${mascotColorFilter}${loaderMarkup}${slug === 'client-login' ? '' : header(active)}<main id="main">${body}</main>${slug === 'client-login' ? '' : footer()}<script src="/assets/site.js" defer></script>${slug === 'client-login' ? '<script type="module" src="/assets/client-login.js"></script>' : ''}${slug ? '' : '<script src="/assets/payment-phone.js" defer></script>'}</body></html>`;
 }
 
 function innerHero(kicker, title, intro, className = '', art = '') {
@@ -193,10 +196,15 @@ const article = page({ title: 'Debt recovery in modern business', description: '
   <article><section class="article-hero"><div class="container"><a class="back-link" href="/blog/">← Back to insights</a>${eyebrow('INSIGHTS', 'DEBT RECOVERY')}<h1>Debt recovery in<br><em>modern business.</em></h1><p>A short introduction to Cloud’s perspective on managing overdue accounts.</p></div></section><div class="container article-body"><div class="article-body__meta">CLOUD PAYMENT GROUP<br>ARTICLE SUMMARY</div><div class="prose"><p>Overdue accounts can put pressure on an organisation’s cash flow and its customer relationships. Cloud presents debt collection and payment management as connected ways to address those accounts.</p><h2>Technology supports a clearer process</h2><p>The company describes digital reporting and customer payment options alongside experienced staff. Its services are tailored to different sectors rather than presented as one approach for every account.</p><h2>Keep the next step practical</h2><p>Organisations can speak with Cloud about their specific situation, while people managing an account can use the existing customer portal to review available payment options.</p><p class="article-source">This is a short design-concept summary. Read the full article on <a href="https://cloudpg.com.au/debt-recovery-in-modern-business/"${external}>Cloud’s current website ${arrow}</a>.</p></div></div></article>${contactBand()}
 ` });
 
+const login = page({ title:'Client login', description:'Preview the Cloud Payment Group client login.', slug:'client-login', body:readFileSync(join(root, 'src', 'client-login.html'), 'utf8').replace('{{clientUrl}}', clientUrl) });
+
+const admin = `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Admin workspace | Cloud Payment Group</title><link rel="icon" href="/assets/favicon.svg"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/admin.css"></head><body class="page-admin">${readFileSync(join(root, 'src', 'admin.html'), 'utf8')}<script src="/assets/admin.js" defer></script></body></html>`;
+
 const pages = new Map([
   ['', home], ['about-us', about], ['debt-collection', collection], ['payment-management', payment],
   ['legal-services', legal], ['industries', industries], ['contact-us', contact], ['debt-placement', placement],
   ['blog', blog], ['blog/debt-recovery-in-modern-business', article],
+  ['client-login', login], ['admin', admin],
 ]);
 
 mkdirSync(out, { recursive: true });
@@ -207,6 +215,10 @@ cpSync(join(root, 'src', 'service-journey.css'), join(out, 'assets', 'service-jo
 cpSync(join(root, 'src', 'industry-motion.css'), join(out, 'assets', 'industry-motion.css'));
 cpSync(join(root, 'src', 'mascot.css'), join(out, 'assets', 'mascot.css'));
 cpSync(join(root, 'src', 'contact-paper.css'), join(out, 'assets', 'contact-paper.css'));
+cpSync(join(root, 'src', 'client-login.css'), join(out, 'assets', 'client-login.css'));
+cpSync(join(root, 'src', 'admin.css'), join(out, 'assets', 'admin.css'));
+writeFileSync(join(out, 'assets', 'admin.js'), readFileSync(join(root, 'src', 'admin-scenes.js'), 'utf8') + '\n' + readFileSync(join(root, 'src', 'admin.js'), 'utf8'));
+buildSync({ entryPoints:[join(root, 'src', 'client-login.js')], outfile:join(out, 'assets', 'client-login.js'), bundle:true, minify:true, format:'esm', target:'es2022' });
 cpSync(join(root, 'src', 'payment-phone.css'), join(out, 'assets', 'payment-phone.css'));
 cpSync(join(root, 'src', 'payment-phone.js'), join(out, 'assets', 'payment-phone.js'));
 cpSync(join(root, 'src', 'site.js'), join(out, 'assets', 'site.js'));

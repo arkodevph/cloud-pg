@@ -52,7 +52,8 @@ h1,h2,h3 { letter-spacing:-.065em; }
 .button--dark:hover { background:#28566a; }
 
 /* A light, simple navigation lets the brand's blue and orange carry the page. */
-.site-header { position:relative; top:auto; z-index:40; margin:16px 18px 0; padding:0; border:0; border-radius:18px 18px 0 0; background:#fff; }
+.site-header { position:sticky; top:0; z-index:40; margin:16px 18px 0; padding:0; border:0; border-radius:18px 18px 0 0; background:#fff; }
+html { scroll-padding-top:100px; }
 .main-nav { width:min(100% - 60px,1420px); min-height:78px; padding:0; border:0; border-radius:0; background:transparent; box-shadow:none; -webkit-backdrop-filter:none; backdrop-filter:none; }
 .brand { width:178px; mix-blend-mode:normal; }
 .brand img { display:block; }
@@ -68,6 +69,8 @@ h1,h2,h3 { letter-spacing:-.065em; }
 .nav-cta { background:#152d38; color:#fff; border-radius:999px; box-shadow:none; }
 .nav-cta:hover { background:#28566a; }
 .nav-dropdown__panel { background:#fff; }
+.primary-nav > a.nav-login { justify-content:center; gap:8px; padding:9px 14px; border:1px solid #b8cbd3; border-radius:999px; }
+.primary-nav > a.nav-login:hover { background:#f1f7f9; }
 
 /* Home hero: bold type, floating labels, and a wide original illustration. */
 .page-home { background:radial-gradient(circle at 8% 0%,#ffe5d4,transparent 26%),radial-gradient(circle at 88% 5%,#d8f1fa,transparent 30%),#f4f7f7; }
@@ -380,6 +383,9 @@ h1,h2,h3 { letter-spacing:-.065em; }
 .footer-grid a { display:block; width:max-content; max-width:100%; min-height:28px; margin-bottom:7px; color:#526a74; }
 .footer-grid a:hover { color:#087da6; }
 .footer-grid div:last-child p { color:#526a74; line-height:1.6; }
+.footer-office address { margin-bottom:12px; color:#526a74; font-size:14px; font-style:normal; line-height:1.6; }
+.footer-office+.footer-office { margin-top:26px; }
+.footer-contact>p { margin-top:18px; }
 .footer-bottom { min-height:68px; border-color:#d8e5e9; color:#5d7580; }
 .footer-bottom a:hover { color:#087da6; }
 
@@ -387,7 +393,8 @@ h1,h2,h3 { letter-spacing:-.065em; }
   .main-nav { min-height:70px; }
   .mobile-pay { display:inline-flex; align-items:center; min-height:37px; background:#e8f6fa; border-color:#bce3ef; color:#155d76; }
   .primary-nav { background:#fff; }
-  .primary-nav > a.nav-payment:not(.nav-cta) { display:none; }
+  .primary-nav > a.nav-payment:not(.nav-cta) { display:flex; margin-top:14px; }
+  .primary-nav > a.nav-login:not(.nav-cta) { display:none; }
   .primary-nav>a:not(.nav-cta),.nav-dropdown>summary { min-height:46px; }
   .primary-nav .nav-dropdown,.primary-nav .nav-dropdown>summary { width:100%; }
   .primary-nav .nav-dropdown>summary { display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }

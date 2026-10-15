@@ -55,8 +55,71 @@
 /* Fresh gripping asset attaches to the actual device, sharing its tilt and float. */
 .hubb-motion { isolation:isolate; }
 .hubb-device { z-index:2; }
-.page-home .payment-highlight .hubb-device .hubb-gripping-mascot { position:absolute; z-index:4; width:180px; height:auto; max-width:none; left:calc(100% - 52px); top:47%; pointer-events:none; filter:drop-shadow(3px 5px 3px #14344020); }
+.page-home .payment-highlight .hubb-device .hubb-gripping-mascot { position:absolute; z-index:4; width:180px; height:auto; max-width:none; left:calc(100% - 52px); top:47%; pointer-events:none; filter:var(--mascot-brand-filter) drop-shadow(3px 5px 3px #14344020); }
 .hubb-motion__caption { position:relative; z-index:3; }
 .hubb-motion:after { content:""; position:absolute; z-index:0; width:290px; height:20px; left:calc(50% - 140px); bottom:62px; border-radius:50%; background:#14344016; filter:blur(10px); pointer-events:none; }
 @media(max-width:600px) { .hubb-device { left:-24px; } .page-home .payment-highlight .hubb-device .hubb-gripping-mascot { width:120px; left:calc(100% - 34px); top:54%; } }
 @media(max-width:380px) { .page-home .payment-highlight .hubb-device .hubb-gripping-mascot { width:100px; left:calc(100% - 29px); } }
+
+.hubb-device { height:620px; }
+.hubb-device__screen { background:#f2f2f7; font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif; font-size:12px; line-height:1.35; }
+.hubb-device__notch { top:15px; width:78px; height:21px; border-radius:999px; background:#080c10; }
+.hubb-device__notch::after { content:""; position:absolute; right:8px; top:8px; width:5px; height:5px; border-radius:50%; background:#182a3b; box-shadow:inset 0 0 0 1px #233a51; }
+.hubb-status { height:44px; padding:17px 20px 10px; font-size:11px; letter-spacing:-.02em; }
+.hubb-status__icons { gap:4px!important; }
+.hubb-battery { position:relative; width:19px; height:9px; border-radius:2.5px; }
+.hubb-battery::after { content:""; position:absolute; right:-3px; top:2px; width:2px; height:3px; border-radius:0 1px 1px 0; background:currentColor; opacity:.5; }
+.hubb-brand { height:44px; background:#ffffffb8; }
+.hubb-brand>span { font-weight:600; }
+.hubb-screen-window { position:absolute; top:88px; bottom:74px; width:100%; height:auto; }
+.hubb-page { padding:16px; transform:translateX(24px); transition:opacity .35s ease,transform .5s cubic-bezier(.2,.8,.2,1),visibility .35s; }
+.hubb-page.is-active { transform:translateX(0); }
+.page-home .payment-highlight .hubb-page h3 { margin:10px 0 6px; font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif; font-size:23px; letter-spacing:-.035em; }
+.page-home .payment-highlight .hubb-page[data-phone-page="account"] h3 { font-size:25px; }
+.page-home .payment-highlight .hubb-page>p { margin-bottom:12px; line-height:1.4; }
+.hubb-balance,.hubb-review-total,.hubb-option-card,.hubb-plan { border-color:#e1e3e9; border-radius:16px; }
+.hubb-balance>strong,.hubb-review-total>strong { font-variant-numeric:tabular-nums; font-weight:700; letter-spacing:-.04em; }
+.hubb-balance { padding:12px; gap:5px; }
+.page-home .payment-highlight .hubb-page h4 { margin-top:12px; }
+.hubb-action { min-height:39px; border-radius:11px; font-weight:600; }
+.hubb-reference { margin-top:12px; }
+.hubb-menu-row { padding:9px 10px; background:#fff; border-color:#e7e7ec; }
+.hubb-page h4+.hubb-menu-row { border-radius:12px 12px 0 0; }
+.hubb-menu-row:last-child { border-radius:0 0 12px 12px; border-bottom:0; }
+.hubb-field { padding:9px 11px; gap:5px; margin-bottom:8px; border-color:#e1e3e9; border-radius:11px; }
+.hubb-option-card { padding:14px 12px; }
+.hubb-payment-total { margin-block:14px; padding-block:10px; }
+.hubb-review-note { margin-block:18px; }
+.hubb-review-row { padding-block:12px; }
+.hubb-plan { padding:10px; margin-bottom:8px; }
+.hubb-plan small { display:block; line-height:1.4; }
+.page-home .payment-highlight .hubb-plan p { margin:6px 0 3px; line-height:1.2; }
+.hubb-plan-summary { margin-top:10px; }
+.hubb-footnote { margin-top:10px; }
+.hubb-plan--selected { border-color:#197b9b; }
+.hubb-plan--selected .hubb-radio { border-color:#197b9b; }
+.hubb-support-message { min-height:80px; border-radius:11px; border-color:#e1e3e9; }
+.page-home .payment-highlight .hubb-support-message p { font-size:10px; margin-top:8px; }
+.hubb-device__footer { bottom:17px; padding:9px 14px 10px; background:#fffffff0; border-color:#dcdde3; backdrop-filter:blur(16px); }
+.hubb-device__footer>span { display:flex; flex-direction:column; align-items:center; gap:4px; width:33.333%; font-size:8px; font-weight:500; }
+.hubb-device__footer svg { width:19px; height:19px; }
+.hubb-device__footer>span.is-active { color:#197b9b; }
+.hubb-home-indicator { width:94px; height:4px; bottom:7px; background:#102028; }
+@media(max-width:860px) { .hubb-device { width:270px; height:600px; } }
+@media(prefers-reduced-motion:reduce) { .hubb-page { transition:none; } }
+
+.hubb-device { height:654px; }
+.hubb-screen-window { top:112px; bottom:84px; }
+.hubb-device__footer { top:88px; bottom:auto; height:24px; padding:0 16px; background:#fff; backdrop-filter:none; border-top:0; border-bottom:1px solid #e1e3e9; }
+.hubb-device__footer>span { justify-content:center; gap:0; height:24px; font-size:9px; }
+.hubb-device__footer>span.is-active { border-bottom:2px solid #197b9b; }
+.hubb-device__footer svg { display:none; }
+.hubb-safari { position:absolute; bottom:14px; left:0; right:0; height:68px; padding:6px 12px 0; background:#f5f5f9ed; border-top:1px solid #dcdde3; backdrop-filter:blur(16px); color:#3e454b; }
+.hubb-safari__address { display:flex; align-items:center; justify-content:space-between; height:30px; padding:0 10px; border-radius:10px; background:#fff; box-shadow:0 2px 7px #1426320b; font-size:11px; }
+.hubb-safari__text-size { font-size:10px; font-weight:500; }
+.hubb-safari__domain { display:flex; align-items:center; gap:4px; }
+.hubb-safari__domain svg { color:#858990; }
+.hubb-safari__tools { display:flex; align-items:center; justify-content:space-between; height:26px; padding-top:5px; color:#1685cf; }
+.hubb-safari__tools svg { width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.hubb-safari__tools .hubb-safari__disabled { color:#b8bdc3; }
+@media(max-width:860px) { .hubb-device { height:634px; } }
