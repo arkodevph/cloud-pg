@@ -4,8 +4,9 @@
     <feColorMatrix in="SourceGraphic" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -3 -3 -3 0 2" result="dark"/>
     <feColorMatrix in="SourceGraphic" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -4 0 4 0 0" result="blue"/>
     <feComposite in="dark" in2="blue" operator="arithmetic" k2="1" k3="1" result="selection"/>
-    <feColorMatrix in="SourceGraphic" values="0.9956 0 0 0 0.0043  0.3957 0 0 0 0.5925  0.2348 0 0 0 0.7502  0 0 0 1 0" result="body"/>
-    <feFlood flood-color="#f26532" result="orange"/>
+    <!-- Muted blue-teal (#477f92 at the source midtone) bridges the logo and pastel panels. -->
+    <feColorMatrix in="SourceGraphic" values="0.7783 0 0 0 0.2174  0.5348 0 0 0 0.4561  0.4522 0 0 0 0.5371  0 0 0 1 0" result="body"/>
+    <feFlood flood-color="#cf7c54" result="orange"/>
     <feComposite in="orange" in2="SourceGraphic" operator="in" result="scarf"/>
     <feComposite in="scarf" in2="blue" operator="in" result="orange-detail"/>
     <feComposite in="body" in2="blue" operator="out" result="blue-body"/>

@@ -27,7 +27,7 @@ On `/client-login/`, **Enter admin demo** opens `/admin/` without entering crede
 
 The editable logo asset is `public/assets/3d/cloudpg-ribbon-globe.glb`. Regenerate it with `npm run build:logo`. The transparent rendered fallback and its Imagegen prompt are in the same directory.
 
-Mascot colours are applied at render time through the shared CSS filter in `src/mascot.css` and inline SVG colour definition in `src/mascot-color-filter.html`: Cloud blue body, orange scarf, original white eyes and transparency. The original PNG poses remain unchanged.
+Mascot colours are applied at render time through the shared CSS filter in `src/mascot.css` and inline SVG colour definition in `src/mascot-color-filter.html`: muted blue-teal body (`#477f92` midtone), terracotta scarf (`#cf7c54`), original white eyes and transparency. The softer palette connects the logo colours with the peach, cream and gold section backgrounds. The original PNG poses remain unchanged.
 
 The homepage uses original Cloud-colored line illustrations and a curved ribbon. Its visual scene is a placeholder for the planned Google Flow film; frame and motion prompts are in [GOOGLE_FLOW_PROMPTS.md](GOOGLE_FLOW_PROMPTS.md).
 
