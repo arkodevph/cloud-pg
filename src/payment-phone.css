@@ -4,7 +4,7 @@
 .hubb-motion { position:relative; display:flex; flex-direction:column; align-items:center; padding:16px 0 0; perspective:1100px; }
 .hubb-device { position:relative; width:290px; height:584px; padding:8px; border:1px solid #526168; border-radius:44px; background:linear-gradient(110deg,#536066,#152b34 12%,#0c1b22 86%,#6c777c); box-shadow:17px 28px 40px -15px #14344038,2px 3px 0 #06181c; transform:rotateY(12deg) rotateZ(5deg); }
 .hubb-device:before,.hubb-device:after { content:""; position:absolute; left:-3px; width:3px; height:34px; background:#34454c; border-radius:3px 0 0 3px; top:120px; }.hubb-device:after { top:164px; height:48px; }
-.hubb-device__screen { position:relative; height:100%; overflow:hidden; border-radius:36px; background:#f8faf9; color:#183440; }
+.hubb-device__screen { position:relative; height:100%; overflow:hidden; border-radius:36px; clip-path:inset(0 round 36px); background:#f8faf9; color:#183440; }
 .hubb-device__notch { position:absolute; top:9px; left:50%; transform:translateX(-50%); width:94px; height:23px; border-radius:0 0 16px 16px; background:#10232b; }
 .hubb-status { display:flex; justify-content:space-between; align-items:center; padding:15px 20px 12px; font-size:10px; font-weight:700; }.hubb-status>span:last-child { display:flex; gap:6px; align-items:center; font-size:8px; }
 .hubb-battery { width:15px; height:7px; border:1px solid currentColor; border-radius:2px; background:linear-gradient(90deg,currentColor 80%,transparent 80%); }
@@ -59,7 +59,7 @@
 .hubb-motion:after { content:""; position:absolute; z-index:0; width:290px; height:20px; left:calc(50% - 140px); bottom:62px; border-radius:50%; background:#14344016; filter:blur(10px); pointer-events:none; }
 
 .hubb-device { height:620px; }
-.hubb-device__screen { background:#f2f2f7; font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif; font-size:12px; line-height:1.35; }
+.hubb-device__screen { background:#f2f2f7; font-family:'Switzer',sans-serif; font-size:12px; line-height:1.35; }
 .hubb-device__notch { top:15px; width:78px; height:21px; border-radius:999px; background:#080c10; }
 .hubb-device__notch::after { content:""; position:absolute; right:8px; top:8px; width:5px; height:5px; border-radius:50%; background:#182a3b; box-shadow:inset 0 0 0 1px #233a51; }
 .hubb-status { height:44px; padding:17px 20px 10px; font-size:11px; letter-spacing:-.02em; }
@@ -71,7 +71,7 @@
 .hubb-screen-window { position:absolute; top:88px; bottom:74px; width:100%; height:auto; }
 .hubb-page { padding:16px; transform:translateX(24px); transition:opacity .35s ease,transform .5s cubic-bezier(.2,.8,.2,1),visibility .35s; }
 .hubb-page.is-active { transform:translateX(0); }
-.page-home .payment-highlight .hubb-page h3 { margin:10px 0 6px; font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif; font-size:23px; letter-spacing:-.035em; }
+.page-home .payment-highlight .hubb-page h3 { margin:10px 0 6px; font-family:'Switzer',sans-serif; font-size:23px; letter-spacing:-.035em; }
 .page-home .payment-highlight .hubb-page[data-phone-page="account"] h3 { font-size:25px; }
 .page-home .payment-highlight .hubb-page>p { margin-bottom:12px; line-height:1.4; }
 .hubb-balance,.hubb-review-total,.hubb-option-card,.hubb-plan { border-color:#e1e3e9; border-radius:16px; }

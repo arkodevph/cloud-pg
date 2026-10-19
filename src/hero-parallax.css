@@ -1,0 +1,12 @@
+/* Independent translate preserves the original message entrance transforms. */
+[data-hero-parallax] .hero-film__video { scale:1.06; animation:hero-layer-arrive .8s cubic-bezier(.25,.1,.25,1) both; }
+[data-hero-parallax] .hero-film__copy { z-index:2; }
+[data-hero-parallax] .hero-film__messages { z-index:1; }
+@keyframes hero-layer-arrive {
+  from { opacity:0; filter:blur(20px); }
+  to { opacity:1; filter:blur(0); }
+}
+@media (hover:none), (pointer:coarse), (prefers-reduced-motion:reduce) {
+  [data-hero-parallax] .hero-film__video { scale:1; animation:none; }
+  [data-hero-parallax] [data-hero-depth] { translate:none !important; }
+}

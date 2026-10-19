@@ -1,0 +1,93 @@
+{
+  "status": "Implemented user-selected Aceternity layered parallax",
+  "scope": "Depth only within current handshake-video hero; retain Cloud brand, fonts, text, CTAs and message examples.",
+  "reviewed": [
+    {
+      "name": "01-parallax-hero",
+      "url": "https://ui.aceternity.com/components/parallax-hero-images",
+      "title": "Parallax Hero Images | Aceternity UI"
+    },
+    {
+      "name": "02-3d-card",
+      "url": "https://ui.aceternity.com/components/3d-card-effect",
+      "title": "3D Card Hover Tilt Effect for React | Aceternity UI"
+    },
+    {
+      "name": "03-spotlight",
+      "url": "https://ui.aceternity.com/components/spotlight-new",
+      "title": "Spotlight New | Aceternity UI"
+    },
+    {
+      "name": "04-hero-parallax",
+      "url": "https://ui.aceternity.com/components/hero-parallax",
+      "title": "Hero Parallax | Aceternity UI"
+    },
+    {
+      "name": "05-container-scroll",
+      "url": "https://ui.aceternity.com/components/container-scroll-animation",
+      "title": "Container Scroll Animation | Aceternity UI"
+    },
+    {
+      "name": "06-hero-highlight",
+      "url": "https://ui.aceternity.com/components/hero-highlight",
+      "title": "Hero Highlight | Aceternity UI"
+    },
+    {
+      "name": "07-invisible-north",
+      "url": "https://www.awwwards.com/sites/invisible-north",
+      "title": "Invisible North - Awwwards Honorable Mention"
+    },
+    {
+      "name": "08-cinematic-film",
+      "url": "https://dribbble.com/shots/26664545-Designed-a-cinematic-hero-section",
+      "title": ""
+    },
+    {
+      "name": "09-finance-typography",
+      "url": "https://dribbble.com/shots/26979764-Finance-Hero-Section-with-Typography",
+      "title": ""
+    },
+    {
+      "name": "10-creativeart",
+      "url": "https://dribbble.com/shots/26730455-CreativeArt-Modern-Hero-Section-for-Digital-Agency-Website",
+      "title": "CreativeArt \u2013 Modern Hero Section for Digital Agency Website by WRTeam Design on Dribbble"
+    }
+  ],
+  "recommended": {
+    "url": "https://ui.aceternity.com/components/parallax-hero-images",
+    "mapping": {
+      "far": "Existing handshake video; subtle bounded movement.",
+      "middle": "Existing center heading, intro and CTAs.",
+      "near": "Existing message cards at distinct distances, with stronger restrained shadows."
+    }
+  },
+  "alternatives": [
+    "https://ui.aceternity.com/components/3d-card-effect",
+    "https://ui.aceternity.com/components/spotlight-new"
+  ],
+  "limits": [
+    "Two Dribbble pages did not render their content in the browser; their search/cached text is not visual verification.",
+    "Primary parallax images are pointer-triggered; initial static capture does not show the active motion state.",
+    "No hero design changes have been made before the user selects the reference."
+  ],
+  "selected": "https://ui.aceternity.com/components/parallax-hero-images",
+  "implementation": {
+    "files": [
+      "src/home-hero.html",
+      "src/hero-parallax.js",
+      "src/hero-parallax.css",
+      "src/build.mjs"
+    ],
+    "depths": {
+      "video": 0.25,
+      "accountHolder": 0.85,
+      "cloudSupport": 0.9
+    },
+    "spring": {
+      "stiffness": 120,
+      "damping": 25
+    },
+    "maxOffset": 40,
+    "accessibility": "Static on touch/coarse pointer and reduced motion; fixed copy and buttons"
+  }
+}

@@ -127,18 +127,20 @@ if (journey) {
   motion();
 }
 
-// 18.11.06: opaque, layered industry panels peel upward in perspective.
+// User-selected original upward peel: the current card lifts away to reveal the next.
 const industryTrack = document.querySelector('[data-industry-track]');
 if (industryTrack) {
   const panels = [...industryTrack.querySelectorAll('[data-industry-panel]')];
-  const viewport = industryTrack.querySelector('.industry-stack-viewport');
+  const stage = industryTrack.querySelector('.industry-stack-stage');
+  const photos = [...industryTrack.querySelectorAll('.industry-stage-photo')];
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
   let scheduled = false;
   const render = position => {
     const front = Math.min(panels.length - 1, Math.floor(position));
     const progress = Math.max(0, Math.min(1, (position - front - .35) / .65));
     const eased = progress * progress * (3 - 2 * progress);
-    const height = viewport.clientHeight;
+    const height = industryTrack.querySelector('.industry-stack-viewport').clientHeight;
+    const selected = Math.min(panels.length - 1, front + (progress > .65 ? 1 : 0));
     panels.forEach((panel, index) => {
       const depth = index - front;
       const past = depth < 0;
@@ -148,34 +150,29 @@ if (industryTrack) {
       panel.style.transform = `perspective(1100px) translateY(${y}px) rotateX(${tilt}deg) scale(${scale})`;
       panel.style.zIndex = String(panels.length - index);
       panel.style.visibility = past ? 'hidden' : 'visible';
-      panel.style.pointerEvents = depth === 0 || (depth === 1 && progress > .8) ? 'auto' : 'none';
+      panel.style.pointerEvents = index === selected ? 'auto' : 'none';
+      panel.inert = index !== selected;
     });
+    photos.forEach((photo, index) => photo.classList.toggle('is-active', index === selected));
+    industryTrack.dataset.activeIndustry = String(selected);
   };
   const update = () => {
     scheduled = false;
     if (preference.matches) return;
-    const rect = industryTrack.getBoundingClientRect();
-    const top = parseFloat(getComputedStyle(viewport).top) || 0;
-    const travel = Math.max(1, industryTrack.offsetHeight - viewport.offsetHeight - top);
-    const position = Math.max(0, Math.min(1, (top - rect.top) / travel)) * (panels.length - 1);
+    const top = parseFloat(getComputedStyle(stage).top) || 0;
+    const travel = Math.max(1, industryTrack.offsetHeight - stage.offsetHeight - top);
+    const position = Math.max(0, Math.min(1, (top - industryTrack.getBoundingClientRect().top) / travel)) * (panels.length - 1);
     render(position);
   };
   const schedule = () => { if (!scheduled) { scheduled = true; requestAnimationFrame(update); } };
   const motion = () => {
     industryTrack.classList.toggle('industry-stack-enhanced', !preference.matches);
-    panels.forEach(panel => { panel.style.transform = ''; panel.style.visibility = ''; panel.style.pointerEvents = ''; });
+    panels.forEach(panel => { panel.style.transform = ''; panel.style.visibility = ''; panel.style.pointerEvents = ''; panel.inert = false; });
     schedule();
   };
-  panels.forEach((panel, index) => panel.addEventListener('focus', () => {
-    if (preference.matches) return;
-    const top = parseFloat(getComputedStyle(viewport).top) || 0;
-    const travel = Math.max(1, industryTrack.offsetHeight - viewport.offsetHeight - top);
-    window.scrollTo({ top: scrollY + industryTrack.getBoundingClientRect().top - top + travel * index / (panels.length - 1), behavior: 'instant' });
-    render(index);
-  }));
-  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('scroll', schedule, { passive:true });
   window.addEventListener('resize', schedule);
-  window.addEventListener('load', schedule, { once: true });
+  window.addEventListener('load', schedule, { once:true });
   preference.addEventListener('change', motion);
   motion();
 }

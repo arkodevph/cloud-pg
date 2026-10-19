@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "state": {
+    "stage": false,
+    "phone": true,
+    "clip": "inset(0px round 36px)",
+    "overflow": false,
+    "playing": true
+  },
+  "errors": []
+}

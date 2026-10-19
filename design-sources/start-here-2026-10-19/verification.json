@@ -1,0 +1,144 @@
+{
+  "passed": true,
+  "states": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "oldStatement": false,
+      "heading": "What brings you to Cloud?",
+      "panels": [
+        {
+          "x": 132.5,
+          "y": 309.84375,
+          "width": 570,
+          "height": 350.15625
+        },
+        {
+          "x": 722.5,
+          "y": 309.84375,
+          "width": 570,
+          "height": 350.15625
+        }
+      ],
+      "links": [
+        {
+          "text": "Explore our services\n↗",
+          "href": "#solutions",
+          "height": 46,
+          "withinViewport": true
+        },
+        {
+          "text": "Place an account",
+          "href": "/debt-placement/",
+          "height": 44,
+          "withinViewport": true
+        },
+        {
+          "text": "View payment options\n↗",
+          "href": "/payment-management/",
+          "height": 46,
+          "withinViewport": true
+        },
+        {
+          "text": "Talk to our team",
+          "href": "/contact-us/",
+          "height": 44,
+          "withinViewport": true
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "oldStatement": false,
+      "heading": "What brings you to Cloud?",
+      "panels": [
+        {
+          "x": 16,
+          "y": 296.78125,
+          "width": 343,
+          "height": 363.6875
+        },
+        {
+          "x": 16,
+          "y": 676.46875,
+          "width": 343,
+          "height": 363.6875
+        }
+      ],
+      "links": [
+        {
+          "text": "Explore our services\n↗",
+          "href": "#solutions",
+          "height": 46,
+          "withinViewport": true
+        },
+        {
+          "text": "Place an account",
+          "href": "/debt-placement/",
+          "height": 44,
+          "withinViewport": true
+        },
+        {
+          "text": "View payment options\n↗",
+          "href": "/payment-management/",
+          "height": 46,
+          "withinViewport": true
+        },
+        {
+          "text": "Talk to our team",
+          "href": "/contact-us/",
+          "height": 44,
+          "withinViewport": true
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "oldStatement": false,
+      "heading": "What brings you to Cloud?",
+      "panels": [
+        {
+          "x": 16,
+          "y": 296.78125,
+          "width": 273,
+          "height": 424.234375
+        },
+        {
+          "x": 16,
+          "y": 737.015625,
+          "width": 273,
+          "height": 424.234375
+        }
+      ],
+      "links": [
+        {
+          "text": "Explore our services\n↗",
+          "href": "#solutions",
+          "height": 46,
+          "withinViewport": true
+        },
+        {
+          "text": "Place an account",
+          "href": "/debt-placement/",
+          "height": 44,
+          "withinViewport": true
+        },
+        {
+          "text": "View payment options\n↗",
+          "href": "/payment-management/",
+          "height": 46,
+          "withinViewport": true
+        },
+        {
+          "text": "Talk to our team",
+          "href": "/contact-us/",
+          "height": 44,
+          "withinViewport": true
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,62 @@
+{
+  "task": "Replace redundant homepage intro statement with useful reference-led design",
+  "primary": "https://wise.com/",
+  "mobbinAccess": "Public browse attempted; no authenticated screen library available. No Mobbin-specific screen was claimed or copied.",
+  "references": [
+    {
+      "url": "https://mobbin.com/discover/sites",
+      "finding": "Tried public browse; only navigation/join links visible, library inaccessible in this session. Not used as a visual reference."
+    },
+    {
+      "url": "https://mercury.com/about",
+      "finding": "Read public content; browser render unavailable during capture. Not selected."
+    },
+    {
+      "url": "https://wise.com/",
+      "finding": "PRIMARY: visually inspected audience cards below the hero. Centered introduction, equal neutral rounded panels, short audience labels, prominent task headings, explanatory text and aligned outlined actions."
+    },
+    {
+      "url": "https://ramp.com/",
+      "finding": "Reviewed trust/logo section. Rejected because Cloud has no verified metrics or customer-logo permissions for an equivalent proof section."
+    },
+    {
+      "url": "https://www.brex.com/",
+      "finding": "Reviewed trust section and feature columns. Rejected because repeating an unverified metric would add a new claim rather than a useful next step."
+    },
+    {
+      "url": "https://stripe.com/au",
+      "finding": "Reviewed two-column capability section; useful functional grouping but product illustrations unavailable in capture. Not selected."
+    },
+    {
+      "url": "https://monzo.com/",
+      "finding": "Reviewed account categories below hero; task-specific copy useful, but four product categories do not map to this section."
+    },
+    {
+      "url": "https://gocardless.com/",
+      "finding": "Opened and attempted browser capture; section imagery did not resolve. Not selected."
+    },
+    {
+      "url": "https://www.airwallex.com/",
+      "finding": "Opened and attempted browser capture; section imagery did not resolve. Not selected."
+    },
+    {
+      "url": "https://www.checkout.com/",
+      "finding": "Opened and attempted browser capture; section imagery did not resolve. Not selected."
+    }
+  ],
+  "fidelityMap": {
+    "silhouette": "Centered short heading followed by equal audience panels",
+    "grid": "Two columns on desktop, one on mobile; adapts Wise audience grouping to Cloud\u2019s two audiences",
+    "imagery": "Text-first task cards; no unlicensed brand assets or invented proof metrics",
+    "typography": "Cloud Boska display and Switzer body; 50px heading and 44px panel titles on desktop",
+    "palette": "White section, neutral lightly bordered panels, Cloud ink and outlined pill links",
+    "motion": "Static navigation; only button color transition"
+  },
+  "implementation": [
+    "src/home-start.html",
+    "src/home-start.css",
+    "src/build.mjs",
+    "src/modern.css",
+    "src/styles.css"
+  ]
+}

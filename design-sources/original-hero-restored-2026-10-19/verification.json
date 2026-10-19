@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "states": [
+    {
+      "width": 1710,
+      "overflow": false,
+      "parallax": false,
+      "stray": false,
+      "messages": 2,
+      "heading": "A clearer path\nto payment.",
+      "scale": "none",
+      "buttons": true,
+      "audience": true
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "parallax": false,
+      "stray": false,
+      "messages": 2,
+      "heading": "A clearer path\nto payment.",
+      "scale": "none",
+      "buttons": true,
+      "audience": true
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "parallax": false,
+      "stray": false,
+      "messages": 2,
+      "heading": "A clearer path\nto payment.",
+      "scale": "none",
+      "buttons": true,
+      "audience": true
+    }
+  ],
+  "errors": []
+}

@@ -1,4 +1,4 @@
-.page-admin { --a-bg:#f3f6fa; --a-surface:#fff; --a-ink:#182b3c; --a-muted:#7c8da3; --a-border:#e7edf3; --a-blue:#167dad; --a-tint:#eaf4fb; --a-radius:14px; margin:0; overflow:hidden; background:var(--a-bg); color:var(--a-ink); font-family:'DM Sans',Arial,sans-serif; font-size:13px; line-height:1.4; }
+.page-admin { --a-bg:#f3f6fa; --a-surface:#fff; --a-ink:#182b3c; --a-muted:#7c8da3; --a-border:#e7edf3; --a-blue:#167dad; --a-tint:#eaf4fb; --a-radius:14px; margin:0; overflow:hidden; background:var(--a-bg); color:var(--a-ink); font-family:'Switzer',sans-serif; font-size:13px; line-height:1.4; }
 .page-admin *, .page-admin *::before,.page-admin *::after { box-sizing:border-box; }
 .page-admin button,.page-admin input,.page-admin select,.page-admin textarea { font:inherit; }
 .page-admin button { cursor:pointer; }

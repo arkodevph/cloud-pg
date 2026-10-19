@@ -1,0 +1,14 @@
+{
+  "source": "https://github.com/phosphor-icons/core",
+  "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+  "license": "MIT",
+  "weight": "duotone",
+  "icons": {
+    "commercial": "buildings",
+    "government": "bank",
+    "medical": "first-aid-kit",
+    "education": "graduation-cap",
+    "insurance": "shield-check"
+  },
+  "modifications": "Original SVG paths retained; inherited fill color applied for Cloud palette."
+}

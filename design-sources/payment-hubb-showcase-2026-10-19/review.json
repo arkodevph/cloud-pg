@@ -1,0 +1,74 @@
+{
+  "primary": "https://stripe.com/payments/checkout",
+  "references": [
+    {
+      "name": "stripe-checkout",
+      "url": "https://stripe.com/payments/checkout",
+      "title": "Stripe Checkout | Checkout Pages for Your Website",
+      "finding": "PRIMARY. Inspected large, straight-on checkout interface beside explanatory copy. Adopt readable product window, short introduction, and actions tied to the demonstration."
+    },
+    {
+      "name": "stripe-links",
+      "url": "https://stripe.com/payments/payment-links",
+      "title": "Stripe Payment Links | Simple Links to Accept Payments",
+      "finding": "Reviewed contextual messaging around a payment flow. Rejected free-floating message composition for this section."
+    },
+    {
+      "name": "wise-account",
+      "url": "https://wise.com/gb/account/",
+      "title": "Wise account: Multi-currency account | Foreign currency account",
+      "finding": "Reviewed lifestyle-backed product presentation. Would require new licensed contextual photography; not selected."
+    },
+    {
+      "name": "monzo-flex",
+      "url": "https://monzo.com/credit-cards/flex",
+      "title": "Monzo Flex | The Award-Winning Credit Card",
+      "finding": "Reviewed card over lifestyle photography and compact product copy. Distinctive branded card assets do not apply to Cloud\u2019s account portal."
+    },
+    {
+      "name": "paypal",
+      "url": "https://www.paypal.com/au/digital-wallet",
+      "title": "Digital Wallet | All-In-One Payment App | PayPal AU",
+      "finding": "Reviewed tall app UI with contextual purchase tiles. Avoid another isolated tall phone composition."
+    },
+    {
+      "name": "afterpay",
+      "url": "https://www.afterpay.com/en-AU/how-it-works",
+      "title": "How Pay in 4 Works",
+      "finding": "Reviewed hand-held device. More grounded than the old phone, but still depends on a specific device photograph and mobile-only framing."
+    },
+    {
+      "name": "revolut",
+      "url": "https://www.revolut.com/",
+      "title": "Just a moment...",
+      "finding": "Security challenge prevented a usable visual reference. Not selected."
+    },
+    {
+      "name": "affirm",
+      "url": "https://www.affirm.com/how-it-works",
+      "title": "How to use Affirm for flexible buy now pay later payment plans",
+      "finding": "Opened page; hero media did not resolve during capture. Not selected."
+    },
+    {
+      "name": "gocardless",
+      "url": "https://gocardless.com/",
+      "title": "Online Payment Processing Solution | GoCardless",
+      "finding": "Opened page; main imagery did not resolve during capture. Not selected."
+    }
+  ],
+  "fidelityMap": {
+    "silhouette": "Two-column product explanation and straight-on portal UI, replacing the old isolated device",
+    "grid": "Copy left; larger framed product stage right; stacked below 760px",
+    "imageTopology": "No device image, hardware casing, Safari chrome, angle or floating animation. Existing Cloud demo UI inside a neutral presentation panel.",
+    "type": "Cloud Boska display and Switzer text, readable UI labels; original licensed fonts retained",
+    "palette": "Light neutral section, pale blue-gray stage, white portal, Cloud ink/teal actions; no borrowed Stripe gradients",
+    "interaction": "Three keyboard-operable scene controls with selected state and accessible status. Selecting a scene pauses the demo; play/pause resumes. Automatic six-scene sequence remains; reduced motion stops autoplay and keeps scene selection usable."
+  },
+  "implementation": [
+    "src/build.mjs",
+    "src/payment-phone.html",
+    "src/payment-phone.css",
+    "src/payment-phone.js"
+  ],
+  "status": "REJECTED BY USER: changing the mobile-phone concept to a desktop portal is not authorized. Superseded by mobile-motion restoration."
+}

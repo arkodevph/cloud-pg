@@ -39,7 +39,7 @@
 .contact-paper__status:empty { display:none; }
 .contact-paper__signoff { display:flex; justify-content:space-between; gap:15px; margin-top:22px; padding-top:15px; border-top:1px solid #d9ddd6; }
 .contact-paper__signoff>span:first-child { color:#62777e; font-size:8px; font-weight:700; letter-spacing:.12em; }
-.contact-paper__signoff>span:last-child { color:#456371; font:italic 20px/1 'Instrument Serif',serif; }
+.contact-paper__signoff>span:last-child { color:#456371; font:italic 20px/1 'Boska',sans-serif; }
 @media(max-width:1000px) {
   .contact-paper__sheet { width:77%; padding-inline:32px; }
 }

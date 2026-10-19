@@ -1,62 +1,59 @@
-/* 18.11.06 recording: a centered stack with an upward perspective peel. */
-.page-home .sectors .section-heading__row { display:block; text-align:center; }
-.page-home .sectors .section-heading__row h2 { max-width:920px; margin-inline:auto; }
-.page-home .sectors .section-heading__row p { max-width:520px; margin:24px auto 0; }
-.page-home .sectors .industry-stack-track { margin-top:70px; }
+/* 20.26.44 layout and overlap, using Cloud's existing type and pale card palette. */
+.page-home .sectors { overflow:clip; }
+.industry-stack-stage { position:relative; isolation:isolate; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8%; align-items:center; }
+.page-home .sectors .section-heading { margin:0; }
+.page-home .sectors .section-heading__row { display:block; text-align:left; }
+.page-home .sectors .section-heading h2 { font-size:clamp(42px,4.5vw,70px); line-height:1.1; }
+.page-home .sectors .section-heading__row p { max-width:420px; margin:26px 0 0; }
 .page-home .sectors .sector-list { display:block; margin:0; border:0; }
-.page-home .sectors .sector-list a { display:flex; position:relative; width:100%; min-height:380px; margin:0 0 20px; padding:48px; border:1px solid #dbe5e7; border-radius:8px; background:#e9f5fa; transition:none; transform-origin:center top; }
+.page-home .sectors .sector-list a,.page-home .sectors .sector-list a:hover { position:relative; display:flex; flex-direction:column; align-items:stretch; width:100%; min-height:420px; margin:0 0 24px; padding:38px; overflow:hidden; isolation:isolate; border:1px solid #dbe5e7; border-radius:15px; background:#e9f5fa; color:#182b35; transform-origin:center top; transition:none; }
 .page-home .sectors .sector-list a:nth-child(2),.page-home .sectors .sector-list a:nth-child(5) { background:#fff0e8; }
 .page-home .sectors .sector-list a:nth-child(3) { background:#e8eef9; }
-.page-home .sectors .sector-list a:hover { padding:48px; box-shadow:none; }
-.page-home .sectors .sector-list strong { font-size:clamp(38px,4.8vw,76px); max-width:75%; line-height:1.06; }
-.page-home .sectors .sector-list__detail { font-size:clamp(15px,1.4vw,21px); margin-top:auto; padding-top:35px; }
-.page-home .sectors .sector-list a>span:last-child { font-size:32px; position:absolute; right:48px; bottom:38px; }
-.page-home .sectors .industry-stack-enhanced { height:420svh; position:relative; }
-.page-home .sectors .industry-stack-enhanced .industry-stack-viewport { position:sticky; top:20svh; width:min(100%,1040px); height:57svh; max-height:570px; min-height:320px; margin-inline:auto; perspective:1100px; }
-.page-home .sectors .industry-stack-enhanced .sector-list a { position:absolute; inset:0; height:100%; min-height:0; margin:0; will-change:transform; backface-visibility:hidden; }
-.page-home .sectors .industry-stack-enhanced+.button { margin-top:50px; }
-@media(max-width:700px) {
-.page-home .sectors .industry-stack-track { margin-top:38px; }
-.page-home .sectors .sector-list a,.page-home .sectors .sector-list a:hover { padding:28px; min-height:300px; }
-.page-home .sectors .sector-list strong { font-size:clamp(34px,9vw,52px); max-width:100%; }
-.page-home .sectors .sector-list__detail { font-size:14px; padding-right:20px; }
-.page-home .sectors .sector-list a>span:last-child { right:25px; bottom:27px; font-size:24px; }
-.page-home .sectors .industry-stack-enhanced .industry-stack-viewport { top:24svh; height:48svh; min-height:280px; }
-}
-/* Reference panel detail: headline/copy at left, substantial artwork at right. */
-.page-home .sectors .sector-list a { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; align-items:center; padding:48px; overflow:hidden; }
-.industry-panel-copy { min-width:0; align-self:stretch; display:flex; flex-direction:column; justify-content:center; }
-.page-home .sectors .sector-list strong { display:block; max-width:100%; font-size:clamp(36px,4vw,66px); line-height:1.03; margin-bottom:25px; }
-.industry-panel-description { max-width:390px; color:#4b6671; font-size:16px; line-height:1.6; margin:0 0 22px; }
-.page-home .sectors .sector-list__detail { display:block; font-size:12px; padding:0; margin:0; color:#597681; }
-.industry-panel-link { display:flex; align-items:center; gap:22px; margin-top:32px; padding-top:20px; border-top:1px solid #14344025; width:fit-content; font-size:12px; font-weight:600; }
+.page-home .sectors .sector-list .industry-panel-copy { position:relative; z-index:2; display:flex; flex-direction:column; justify-content:center; flex:1; min-width:0; }
+.page-home .sectors .sector-list strong { display:block; max-width:100%; font-size:clamp(32px,3.4vw,52px); line-height:1.06; }
+.industry-panel-description { max-width:380px; margin:20px 0 0; font-size:15px; line-height:1.6; color:#365361; }
+.page-home .sectors .sector-list__detail { display:block; margin:14px 0 0; padding:0; font-size:12px; color:#46636f; }
+.industry-panel-link { display:flex; align-items:center; gap:18px; width:fit-content; margin-top:24px; padding-top:15px; border-top:1px solid #14344035; font-size:12px; font-weight:600; }
 .industry-panel-link>span { font-size:20px; }
-.page-home .sectors .sector-list .industry-panel-number { position:absolute; right:35px; top:27px; font-size:11px; color:#526a75; }
-.industry-panel-art { position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; min-height:260px; }
-.industry-panel-art img { width:115%; max-width:none; height:85%; object-fit:contain; }
-.industry-panel-art>span { font-size:8px; letter-spacing:.12em; color:#56717d; margin-top:10px; }
+.page-home .sectors .sector-list .industry-panel-number { position:absolute; z-index:2; top:26px; right:28px; font-size:11px; color:#3f5c68; }
+.page-home .sectors .sector-list a>span.industry-panel-watermark { display:block; position:absolute; z-index:0; width:clamp(240px,25vw,350px); height:clamp(240px,25vw,350px); right:-25px; bottom:-20px; left:auto; top:auto; transform:rotate(-12deg); opacity:.22; color:#287c97; pointer-events:none; }
+.page-home .sectors .industry-panel-watermark svg { display:block; width:100%; height:100%; }
+.page-home .sectors .sector-list a:nth-child(2) .industry-panel-watermark,.page-home .sectors .sector-list a:nth-child(5) .industry-panel-watermark { color:#aa7044; }
+/* Reference: the shared center image sits OUTSIDE the solid cards. */
+.industry-stack-intro,.page-home .sectors .industry-stack-viewport { position:relative; z-index:1; }
+.industry-stage-image { position:absolute; z-index:0; left:50%; top:50%; width:70%; height:115%; transform:translate(-50%,-50%); pointer-events:none; overflow:hidden; mask-image:radial-gradient(ellipse,black 15%,transparent 72%); }
+.industry-stage-image .industry-stage-photo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; opacity:0; transition:opacity .35s; }
+.industry-stage-image .industry-stage-photo.is-active { opacity:.25; }
+.industry-stage-image::after { content:''; position:absolute; inset:0; background:#f4f7f738; }
+.page-home .sectors .industry-stack-enhanced { position:relative; height:380svh; }
+.industry-stack-enhanced .industry-stack-stage { position:sticky; top:16svh; min-height:66svh; }
+.page-home .sectors .industry-stack-enhanced .industry-stack-viewport { position:relative; height:clamp(400px,48svh,470px); overflow:visible; perspective:1100px; border-radius:15px; }
+.page-home .sectors .industry-stack-enhanced .sector-list a { position:absolute; inset:0; height:100%; min-height:0; margin:0; will-change:transform; }
+.page-home .sectors .industry-stack-track+.button { margin-top:60px; }
 @media(max-width:700px) {
-.page-home .sectors .sector-list a,.page-home .sectors .sector-list a:hover { grid-template-columns:1fr; gap:12px; padding:28px; }
-.page-home .sectors .industry-stack-enhanced .industry-stack-viewport { height:65svh; top:17svh; }
-.page-home .sectors .sector-list strong { font-size:35px; margin-bottom:12px; padding-right:18px; }
-.industry-panel-description { font-size:13px; line-height:1.5; margin-bottom:10px; }.industry-panel-link { margin-top:15px; padding-top:10px; }
-.industry-panel-art { min-height:0; height:150px; }.industry-panel-art img { height:135px; width:90%; }.industry-panel-art>span { font-size:6px; margin-top:0; }
-.page-home .sectors .sector-list .industry-panel-number { top:18px; right:20px; }
+  .industry-stage-image { width:125%; height:90%; }
+  .page-home .sectors .sector-list a>span.industry-panel-watermark { width:260px; height:260px; right:-25px; bottom:-20px; }
+  .industry-stack-stage { grid-template-columns:1fr; gap:26px; }
+  .page-home .sectors .section-heading h2 { font-size:clamp(35px,9vw,44px); }
+  .page-home .sectors .section-heading__row p { font-size:14px; margin-top:14px; }
+  .page-home .sectors .eyebrow { margin-bottom:12px; }
+  .industry-stack-enhanced .industry-stack-stage { top:85px; min-height:0; }
+  .page-home .sectors .industry-stack-enhanced .industry-stack-viewport { height:370px; overflow:clip; }
+  .page-home .sectors .sector-list a,.page-home .sectors .sector-list a:hover { padding:28px; min-height:370px; }
+  .page-home .sectors .sector-list strong { font-size:35px; padding-right:15px; }
+  .industry-panel-description { font-size:13px; margin-top:16px; }
+  .page-home .sectors .sector-list__detail { font-size:11px; margin-top:12px; }
+  .industry-panel-link { margin-top:18px; padding-top:12px; }
+  .page-home .sectors .sector-list .industry-panel-number { top:20px; right:24px; }
+}
+@media(max-height:760px) and (max-width:700px) {
+  .industry-stack-enhanced .industry-stack-stage { top:75px; gap:18px; }
+  .page-home .sectors .section-heading__row p { font-size:12px; line-height:1.5; }
+  .page-home .sectors .industry-stack-enhanced .industry-stack-viewport { height:330px; }
+  .page-home .sectors .sector-list strong { font-size:30px; }
+  .page-home .sectors .sector-list a { padding:24px; }
+  .industry-panel-description { font-size:12px; margin-top:12px; }
+  .page-home .sectors .sector-list__detail { display:none; }
 }
 
-/* Sector symbols sit beneath the copy as a quiet watermark. */
-.page-home .sectors .sector-list a { isolation:isolate; }
-.page-home .sectors .industry-panel-copy,.page-home .sectors .industry-panel-art { position:relative; z-index:1; }
-.page-home .sectors .sector-list a>span.industry-panel-watermark { position:absolute; z-index:0; left:50%; top:50%; width:520px; height:520px; transform:translate(-50%,-50%) rotate(-22deg); color:var(--blue); opacity:.085; pointer-events:none; }
-.page-home .sectors .industry-panel-watermark svg { display:block; width:100%; height:100%; stroke-width:.65; }
-.page-home .sectors .industry-panel-copy>span.industry-panel-icon { display:grid; place-items:center; width:42px; height:42px; flex:none; margin-bottom:20px; border:1px solid #338daa40; border-radius:11px; background:#ffffff80; color:#287c97; }
-.page-home .sectors .industry-panel-icon svg { width:23px; height:23px; }
-.page-home .sectors .sector-list a:nth-child(2) .industry-panel-watermark,
-.page-home .sectors .sector-list a:nth-child(5) .industry-panel-watermark { color:#a87543; }
-.page-home .sectors .sector-list a:nth-child(2) .industry-panel-icon,
-.page-home .sectors .sector-list a:nth-child(5) .industry-panel-icon { border-color:#df9f6266; color:#8b6038; }
-@media(max-width:700px) {
-  .page-home .sectors .industry-panel-copy>span.industry-panel-icon { width:32px; height:32px; margin-bottom:12px; border-radius:8px; }
-  .page-home .sectors .industry-panel-icon svg { width:19px; height:19px; }
-  .page-home .sectors .sector-list a>span.industry-panel-watermark { width:340px; height:340px; opacity:.065; }
-}
+@media(prefers-reduced-motion:reduce) { .industry-stage-image .industry-stage-photo { transition:none; } }

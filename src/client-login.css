@@ -38,7 +38,7 @@
 .login-visual-bottom { display:flex; justify-content:space-between; align-items:flex-end; gap:20px; }
 .login-visual-bottom p { margin:0 0 15px; color:#345b69; font-size:9px; font-weight:700; letter-spacing:.15em; }
 .login-visual-bottom h2 { margin:0; font-size:clamp(40px,4.2vw,62px); line-height:1.05; letter-spacing:-.055em; }
-.login-visual-bottom h2 em { font-family:'Instrument Serif',serif; font-weight:400; letter-spacing:-.03em; }
+.login-visual-bottom h2 em { font-family:'Boska',sans-serif; font-weight:400; letter-spacing:-.03em; }
 .login-motion-toggle { min-height:44px; padding:8px 0; border:0; background:transparent; color:#345b69; font-size:11px; white-space:nowrap; }
 .login-motion-toggle span { margin-left:6px; }
 .login-form-content input { transition:border-color 180ms,box-shadow 180ms; }

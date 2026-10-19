@@ -1,3 +1,6 @@
 dist/
 node_modules/
 .DS_Store
+
+# Fontshare permits own-site self-hosting, not font redistribution through repositories.
+/public/assets/fonts/fontshare/*.woff2

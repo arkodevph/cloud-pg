@@ -7,7 +7,7 @@
 .footer-editorial__nav a span { font-size:13px; }
 .footer-editorial__eyebrow { margin:0 0 22px; color:#4b6468; font-size:9px; letter-spacing:.1em; line-height:1.6; }
 .footer-editorial__invite h2 { margin:0; color:#173540; font-family:var(--font-display); font-size:clamp(32px,3.7vw,56px); line-height:1.06; letter-spacing:-.055em; font-weight:400; }
-.footer-editorial__invite h2 em { font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-weight:400; letter-spacing:-.035em; }
+.footer-editorial__invite h2 em { font-family:'Boska',sans-serif; font-style:italic; font-weight:400; letter-spacing:-.035em; }
 .footer-editorial__cta { display:flex; align-items:center; justify-content:space-between; gap:24px; width:100%; max-width:520px; min-height:64px; margin-top:27px; border-bottom:1px solid #173540; color:#173540; font-size:15px; }
 .footer-editorial__intro { margin:17px 0 0; color:#4b6468; font-size:12px; line-height:1.65; }
 .footer-editorial__details { display:grid; grid-template-columns:1fr 1fr 2fr; gap:48px; padding:29px 0 30px; border-top:1px solid #17354030; border-bottom:1px solid #17354030; }

@@ -39,4 +39,16 @@ Vercel can import this repository with the **Other** framework preset. `vercel.j
 
 ### Corporate photography
 
-Each of the 24 photo placements uses a distinct original image under `public/assets/photos/unique-v2/`. Homepage sector panels and the Industries page have separate images, as do both contact forms. The build rejects repeated photographic references across routes. Generation prompts and source-file provenance are recorded in `design-sources/corporate-photos-unique-v2/manifest.json`.
+Each photographic placement uses a distinct original image under `public/assets/photos/unique-v2/`. The homepage industry stage and the Industries page use separate images, as do both contact forms. The homepage photographs sit in a shared central layer outside the overlapping cards. The build rejects repeated photographic references across routes. Generation prompts and source-file provenance are recorded in `design-sources/corporate-photos-unique-v2/manifest.json`.
+
+### October motion references
+
+The industry section uses Cloud’s existing colors and typography with the fixed intro and original upward card peel from `recording_2026-10-19_20.26.44.mp4`. Immediately after them, a numbered globe with three held scroll stops adapts `recording_2026-10-19_20.27.43.mp4`, with the globe replacing its circular track as requested. The text-wipe reference was analyzed, then the effect was removed at the user’s request. Timings, observed transitions and verification limits are in [the frame analysis](design-sources/motion-2026-10-19/ANALYSIS.md).
+
+The five large sector SVGs are original Phosphor duotone assets, used under the MIT license included at `public/assets/icons/phosphor/LICENSE`. Their source commit and mapping are recorded in `design-sources/motion-2026-10-19/icons.json`.
+
+### Typography
+
+Exactly two families are used: **Boska** for display headings and **Switzer** for body text, navigation and controls, downloaded directly from [Fontshare](https://www.fontshare.com/). Original variable WOFF2 files are served locally with regular and italic styles. Both use the ITF Free Font License 2.0, included in `public/assets/fonts/`.
+
+Fontshare permits self-hosting for the website and restricts redistribution through repositories. The font binaries are therefore ignored by Git; `src/fetch-fonts.mjs` obtains the original files directly from Fontshare when a build lacks them and verifies their hashes. Source URLs are in `public/assets/fonts/fontshare-sources.json` and `design-sources/motion-2026-10-19/fonts.json`. The site makes no runtime request to a remote font service.

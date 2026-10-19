@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "moved": [
+    {
+      "depth": 0.25,
+      "translate": "8.24561px 5.55556px"
+    },
+    {
+      "depth": 0.85,
+      "translate": "28.0351px 18.8889px"
+    },
+    {
+      "depth": 0.9,
+      "translate": "29.6842px 20px"
+    }
+  ],
+  "checks": [
+    "depth response",
+    "fixed copy",
+    "clickable buttons",
+    "return to center",
+    "reduced motion",
+    "paused video",
+    "390/320 layouts"
+  ],
+  "errors": []
+}
