@@ -11,7 +11,7 @@ Read this section before any layout, styling, illustration, or motion change.
 - Apply only the feature and scope the user requests. A motion reference authorizes its motion, not a new interface, system demo, container, palette, or page redesign. Preserve the user's explicit layout requirements.
 - Compare the rendered result with the selected reference at matching viewport sizes and states. A passing build does not establish design fidelity. Report verification limits and remaining differences plainly.
 
-A standalone static implementation of the public Cloud Payment Group site. It is a local concept, not a replacement for the live site. The client login uses Three.js for its rotating 3D logo, bundled locally with esbuild.
+A standalone static implementation of the public Cloud Payment Group site. It is a local concept, not a replacement for the live site. The client login uses the user-provided blue and orange cloud mark.
 
 ```sh
 npm install
@@ -27,12 +27,16 @@ On `/client-login/`, **Enter admin demo** opens `/admin/` without entering crede
 
 The editable logo asset is `public/assets/3d/cloudpg-ribbon-globe.glb`. Regenerate it with `npm run build:logo`. The transparent rendered fallback and its Imagegen prompt are in the same directory.
 
-Mascot colours are applied at render time through the shared CSS filter in `src/mascot.css` and inline SVG colour definition in `src/mascot-color-filter.html`: muted blue-teal body (`#477f92` midtone), terracotta scarf (`#cf7c54`), original white eyes and transparency. The softer palette connects the logo colours with the peach, cream and gold section backgrounds. The original PNG poses remain unchanged.
+Site imagery uses three original generated corporate photographs from `design-sources/corporate-photos-v1/`, served as WebP files in `public/assets/photos/`. They replace the previous character illustrations throughout the public pages. The phone demo retains its interface without decorative characters; the supplied cloud mark also appears on the login page.
 
-The homepage uses original Cloud-colored line illustrations and a curved ribbon. Its visual scene is a placeholder for the planned Google Flow film; frame and motion prompts are in [GOOGLE_FLOW_PROMPTS.md](GOOGLE_FLOW_PROMPTS.md).
+The homepage hero uses the supplied eight-second Google Flow handshake film in `public/assets/video/cloudpg-idle-handshake.mp4`, with its audio track removed and fast-start metadata. It loops muted and inline, has a pause/play control, and shows the matching JPEG poster when reduced motion is enabled or playback is unavailable. The frame and generation prompt are in `design-sources/hero-real-people-v2/`; the original video remains in `/home/nami/Videos/Create_idle_handshake_animation_1080p_20261019135503.mp4`.
 
 Screenshots are in `previews/`. The design was checked at 1440 px desktop and 390/320 px mobile widths. The external live forms remain outside this project and must be integrated into any future production implementation.
 
 See `DESIGN_NOTES.md` for source links, design decisions, and publication checks.
 
 Vercel can import this repository with the **Other** framework preset. `vercel.json` runs the build and serves the generated `dist/` directory.
+
+### Corporate photography
+
+Each of the 24 photo placements uses a distinct original image under `public/assets/photos/unique-v2/`. Homepage sector panels and the Industries page have separate images, as do both contact forms. The build rejects repeated photographic references across routes. Generation prompts and source-file provenance are recorded in `design-sources/corporate-photos-unique-v2/manifest.json`.

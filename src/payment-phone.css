@@ -55,11 +55,8 @@
 /* Fresh gripping asset attaches to the actual device, sharing its tilt and float. */
 .hubb-motion { isolation:isolate; }
 .hubb-device { z-index:2; }
-.page-home .payment-highlight .hubb-device .hubb-gripping-mascot { position:absolute; z-index:4; width:180px; height:auto; max-width:none; left:calc(100% - 52px); top:47%; pointer-events:none; filter:var(--mascot-brand-filter) drop-shadow(3px 5px 3px #14344020); }
 .hubb-motion__caption { position:relative; z-index:3; }
 .hubb-motion:after { content:""; position:absolute; z-index:0; width:290px; height:20px; left:calc(50% - 140px); bottom:62px; border-radius:50%; background:#14344016; filter:blur(10px); pointer-events:none; }
-@media(max-width:600px) { .hubb-device { left:-24px; } .page-home .payment-highlight .hubb-device .hubb-gripping-mascot { width:120px; left:calc(100% - 34px); top:54%; } }
-@media(max-width:380px) { .page-home .payment-highlight .hubb-device .hubb-gripping-mascot { width:100px; left:calc(100% - 29px); } }
 
 .hubb-device { height:620px; }
 .hubb-device__screen { background:#f2f2f7; font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif; font-size:12px; line-height:1.35; }

@@ -1,0 +1,8 @@
+{
+  "library": "COBE",
+  "version": "2.0.1",
+  "source": "https://github.com/shuding/cobe",
+  "license": "MIT, Copyright (c) 2021 Shu Ding",
+  "implementation": "Locally bundled WebGL globe, slowly rotating and floating. No labels, markers, arcs or external runtime requests. Motion stops offscreen and under reduced-motion preference.",
+  "skill": "ui-design-index / ui-landing-patterns"
+}

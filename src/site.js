@@ -35,27 +35,35 @@ if (menuButton && navigation) {
   });
 }
 
-const heroScene = document.querySelector('.hero__scene');
-
-if (heroScene && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  let frame = 0;
-
-  const updateHeroCards = () => {
-    const { top, height } = heroScene.getBoundingClientRect();
-    const travel = window.innerHeight * .75 + height;
-    const progress = Math.max(0, Math.min(1, (window.innerHeight * .75 - top) / travel));
-    const scale = 1 + .16 * Math.sin(progress * Math.PI);
-    heroScene.style.setProperty('--hero-card-scale', scale.toFixed(3));
-    frame = 0;
+const heroVideo = document.querySelector('.hero-film__video');
+if (heroVideo) {
+  const hero = heroVideo.closest('.hero-film');
+  const preference = matchMedia('(prefers-reduced-motion: reduce)');
+  const messages = createHeroMessageMotion(hero);
+  let paused = preference.matches;
+  let visible = true;
+  const updateMotion = () => {
+    hero.classList.toggle('is-motion-paused', paused || document.hidden || !visible);
+    messages.setPaused(paused || document.hidden || !visible);
   };
-
-  const scheduleHeroCards = () => {
-    if (!frame) frame = requestAnimationFrame(updateHeroCards);
+  const play = () => heroVideo.play().catch(() => {});
+  const applyPreference = () => {
+    paused = preference.matches;
+    messages.setReduced(preference.matches);
+    heroVideo.autoplay = !paused;
+    if (paused) {
+      heroVideo.pause();
+      heroVideo.load();
+    } else play();
+    updateMotion();
   };
-
-  window.addEventListener('scroll', scheduleHeroCards, { passive: true });
-  window.addEventListener('resize', scheduleHeroCards);
-  scheduleHeroCards();
+  document.addEventListener('visibilitychange', updateMotion);
+  new IntersectionObserver(([entry]) => {
+    visible = entry.isIntersecting;
+    updateMotion();
+  }, { threshold:.05 }).observe(hero);
+  preference.addEventListener('change', applyPreference);
+  applyPreference();
 }
 
 const featureBook = document.querySelector('.page-home .feature-dark__right');
@@ -229,5 +237,48 @@ if (journey) {
     document.addEventListener('visibilitychange', sync);
     preference.addEventListener('change', sync);
     sync();
+  }
+}
+
+// Map the footer signature to the last stretch of page scrolling, in both directions.
+{
+  const track = document.querySelector('[data-footer-motion]');
+  if (track) {
+    const stage = track.querySelector('.footer-motion__stage');
+    const rail = track.querySelector('.footer-motion__rail');
+    const mask = track.querySelector('.footer-motion__mask');
+    const preference = matchMedia('(prefers-reduced-motion: reduce)');
+    let frame = 0, start = 0, end = 1, travel = 0;
+    const draw = () => {
+      frame = 0;
+      if (preference.matches) return;
+      const progress = Math.max(0, Math.min(1, (scrollY - start) / (end - start)));
+      rail.style.transform = `translate3d(${-travel * progress}px,0,0)`;
+      track.style.setProperty('--footer-progress', String(progress));
+    };
+    const schedule = () => { if (!frame) frame = requestAnimationFrame(draw); };
+    const measure = () => {
+      track.classList.remove('is-scroll-mapped');
+      rail.style.transform = '';
+      if (preference.matches) return;
+      track.style.setProperty('--footer-signature-width', `${mask.clientWidth}px`);
+      const height = stage.getBoundingClientRect().height;
+      const distance = Math.max(650, Math.min(1100, innerHeight));
+      track.style.setProperty('--footer-stage-height', `${height}px`);
+      track.style.setProperty('--footer-scroll-distance', `${distance}px`);
+      track.classList.add('is-scroll-mapped');
+      const top = track.getBoundingClientRect().top + scrollY;
+      start = top - (innerHeight - height);
+      end = document.documentElement.scrollHeight - innerHeight;
+      if (end <= start) end = start + distance;
+      travel = Math.max(0, rail.scrollWidth - mask.clientWidth);
+      draw();
+    };
+    addEventListener('scroll', schedule, { passive:true });
+    addEventListener('resize', measure);
+    addEventListener('load', measure, { once:true });
+    preference.addEventListener('change', measure);
+    document.fonts?.ready.then(measure);
+    measure();
   }
 }

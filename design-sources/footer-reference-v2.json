@@ -1,0 +1,23 @@
+{
+ "primary": {"title":"Secured finance — footer", "designer":"Victa Wille", "url":"https://dribbble.com/shots/24612998-Secured-finance-footer"},
+ "reviewed": [
+  "https://dribbble.com/shots/25515781-Finance-Business-Tool-Footer-Web-Design",
+  "https://dribbble.com/shots/26978503-Footer-design-for-a-financial-company-website",
+  "https://dribbble.com/shots/27612931-Bitora-Banking-Website-Footer",
+  "https://dribbble.com/shots/27420079-FluxPay-Footer-Section",
+  "https://dribbble.com/shots/23304362-Trading-Nest-Footer",
+  "https://dribbble.com/shots/27401115-Finova-AI-Footer-Section",
+  "https://dribbble.com/shots/27150502-Zedesh-Footer-Modern-Corporate-Website-Design",
+  "https://dribbble.com/shots/21223066-Contact-us-Footer-design-Corporate-website"
+ ],
+ "fidelityMap": {
+  "silhouette":"Unified rounded dark footer, CTA row above a ruled information grid.",
+  "grid":"Brand column at left, two navigation columns, direct contact at right. Additional row holds existing office information.",
+  "imagery":"Existing original Cloud logo only; gallery artwork is not used in production.",
+  "type":"Keep Cloud Archivo and DM Sans, large two-line closing statement with small uppercase column headings.",
+  "palette":"Cloud deep teal and warm orange replace the reference brown and coral; pale text maintains contrast.",
+  "motion":"Small arrow rotation on hover, disabled for reduced motion; visible keyboard focus. No animation runtime.",
+  "responsive":"Two navigation columns on phones, brand and direct contact span full width, 44px link targets."
+ },
+ "rejected":"Lana page image and the Finance SaaS shot did not show a useful footer. Finance Company Services and Business Finance shots were component/hero images rather than footer references. Neon effects and gallery forms were not adopted."
+}

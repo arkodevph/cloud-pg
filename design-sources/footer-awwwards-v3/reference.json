@@ -1,0 +1,22 @@
+{
+ "primary":"https://www.awwwards.com/inspiration/footer-interaction-depoly",
+ "reviewed":[
+  "https://www.awwwards.com/inspiration/rino-pelle-footer",
+  "https://www.awwwards.com/inspiration/for-moments-like-no-other-footer",
+  "https://www.awwwards.com/inspiration/cecchi-website-footer",
+  "https://www.awwwards.com/inspiration/footer-design-chowdeck-1",
+  "https://www.awwwards.com/inspiration/footer-submission-6785b75eabe1f400700070",
+  "https://www.awwwards.com/inspiration/fullscreen-footer-carl-gordon-portfolio-c-2024",
+  "https://www.awwwards.com/inspiration/the-fancy-fancy",
+  "https://www.awwwards.com/inspiration/contact-section-hung-design-studio"
+ ],
+ "fidelityMap":{
+  "composition":"Full-width pale blue-grey surface. Two compact navigation columns on left and a larger contact invitation on right. Thin-rule contact row, oversized brand signature, small legal baseline.",
+  "type":"Cloud Archivo for navigation and giant CLOUD signature; existing Instrument Serif for the brief editorial accent.",
+  "palette":"Light Cloud slate background and deep teal typography, replacing the rejected dark inset-panel footer.",
+  "assets":"All artwork remains original. Awwwards images are local reference material only. Existing logo stays transparent at the baseline.",
+  "interaction":"Plain underlined contact text, visible keyboard focus, static oversized typography. User explicitly rejected the diagonal CTA arrow, which was removed."
+ },
+ "validation":"Build and diff checks pass; browser widths1440,768,390,320 have no horizontal overflow; mobile navigation targets44px; keyboard focus visible; no console errors.",
+ "supersedes":"design-sources/footer-reference-v2.json"
+}

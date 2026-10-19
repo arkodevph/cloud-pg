@@ -59,3 +59,5 @@
   .login-logo-stage { min-height:380px; }
   .login-visual-bottom h2 { font-size:43px; }
 }
+
+.login-logo-fallback { width:70%; max-width:480px; border-radius:32px; }

@@ -1,0 +1,16 @@
+{
+  "reference": "https://remocn.dev/docs/ui",
+  "sources": [
+    "https://github.com/Remocn/remocn/blob/main/registry/remocn-ui/imessage-chat-flow/index.tsx",
+    "https://github.com/Remocn/remocn/blob/main/registry/remocn-ui/message-bubble/index.tsx",
+    "https://github.com/Remocn/remocn/blob/main/registry/remocn-ui/typing-indicator/index.tsx"
+  ],
+  "adaptation": "Ported the frame-driven entrance states, iMessage spring parameters and staggered sinusoidal typing dots to browser Web Animations. Added a typing-to-reply bubble expansion. No Remotion runtime required.",
+  "spring": {
+    "damping": 16,
+    "stiffness": 200,
+    "mass": 0.7
+  },
+  "license": "public/assets/remocn-LICENSE.txt",
+  "source_tree_sha": "fd2d3010a8183985553f9ddeb364313d57fb36b9"
+}
