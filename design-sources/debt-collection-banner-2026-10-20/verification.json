@@ -1,0 +1,27 @@
+{
+  "headline": "Debt Collection Specialists.",
+  "primary_action": {
+    "label": "Talk to a specialist",
+    "href": "/contact-us/"
+  },
+  "secondary_action": {
+    "label": "Our collection services",
+    "href": "/debt-collection/"
+  },
+  "retained": [
+    "Corrected Cloud Payment Group logo and brand name",
+    "Existing handshake video and mascots",
+    "Separate Make a payment account-holder link"
+  ],
+  "checks": [
+    "npm run build passed",
+    "git diff --check passed",
+    "Browser checked at 1440x1000, 390x844 and 320x740",
+    "No horizontal overflow at mobile widths",
+    "Both primary/secondary buttons clicked and correct destination pages verified"
+  ],
+  "observations": [
+    "Existing browser warnings about font preload timing; no JavaScript errors observed."
+  ],
+  "scope": "Local changes only; no commit, push or deployment in this turn."
+}

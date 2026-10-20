@@ -1,0 +1,107 @@
+{
+  "checked_on": "2026-10-20",
+  "sources": {
+    "home": "https://cloudpg.com.au/",
+    "about": "https://cloudpg.com.au/about-us/",
+    "collection": "https://cloudpg.com.au/debt-collection/",
+    "payment": "https://cloudpg.com.au/payment-management/",
+    "legal": "https://cloudpg.com.au/legal-services/",
+    "industries": "https://cloudpg.com.au/industries/",
+    "contact": "https://cloudpg.com.au/contact-us/",
+    "placement": "https://cloudpg.com.au/debt-placement/",
+    "blog": "https://cloudpg.com.au/blog/"
+  },
+  "method": "Read-only rendered-browser extraction of nine live pages, plus full DOM extraction for hidden service sections and office addresses. No forms submitted.",
+  "corrections": [
+    {
+      "item": "Contact form",
+      "before": "Last name optional",
+      "after": "First name, last name, email and phone required; message optional",
+      "source": "https://cloudpg.com.au/contact-us/"
+    },
+    {
+      "item": "Office visibility",
+      "before": "Auckland address only on contact page",
+      "after": "Published Auckland address also shown in shared footer; Perth and Sydney addresses retained",
+      "source": "https://cloudpg.com.au/contact-us/"
+    },
+    {
+      "item": "Company description",
+      "before": "Experience stated; licensing omitted",
+      "after": "Published fully licensed status and 50+ years of credit-industry experience included",
+      "source": "https://cloudpg.com.au/"
+    },
+    {
+      "item": "Debt collection",
+      "before": "General pre-action/contact wording",
+      "after": "Explicit pre-action checks, written demands, phone, two-way SMS, email and field calls",
+      "source": "https://cloudpg.com.au/debt-collection/"
+    },
+    {
+      "item": "DebtView",
+      "before": "Reports and documentation only",
+      "after": "24/7 access, real-time updates, specialised reports, documentation and online matter placement",
+      "source": "https://cloudpg.com.au/debt-collection/"
+    },
+    {
+      "item": "Payment Hubb",
+      "before": "Condensed feature summary",
+      "after": "White labelling, statement QR codes, smart-device access 24/7, major cards/direct debit, pre-approved arrangement rules, hardship requests, contact updates and email/SMS reminders",
+      "source": "https://cloudpg.com.au/payment-management/"
+    },
+    {
+      "item": "Education and insurance",
+      "before": "Generic sector descriptions",
+      "after": "Private primary/secondary/tertiary fee recovery and specific motor/property liability and workers compensation premium collections",
+      "source": "https://cloudpg.com.au/industries/"
+    },
+    {
+      "item": "Debt placement",
+      "before": "General preparation list",
+      "after": "ACN/ABN, account/contact fields, debt dates/amount, guarantee and cost-recovery clause questions, optional file upload",
+      "source": "https://cloudpg.com.au/debt-placement/"
+    }
+  ],
+  "matched_unchanged": {
+    "phone": "1300 549 192",
+    "email": "info@cloudpg.com.au",
+    "Perth": "Level 2, 2 Edward Street, East Perth WA 6004; PO Box 8229 Perth WA 6849",
+    "Sydney": "Suite 14.03, Level 14, 9 Hunter Street, Sydney NSW 2000",
+    "Auckland": "Floor 26, 188 Quay Street, Central Auckland 1010 NZ",
+    "other_locations": [
+      "Melbourne",
+      "Queensland"
+    ],
+    "services": [
+      "Debt collection",
+      "Payment management",
+      "Legal services"
+    ],
+    "industries": [
+      "Commercial",
+      "Local government",
+      "Medical",
+      "Education",
+      "Insurance"
+    ],
+    "customer_portal": "https://www.debtview.net.au/DebtrakCustomer/Login/Login",
+    "client_portal": "https://www.debtview.net.au/DebtrakClient/Login/Login",
+    "privacy_policy": "https://cloudpg.com.au/wp-content/uploads/2023/07/OM009-Privacy.pdf"
+  },
+  "notes": [
+    "Sydney address is present in the live DOM but hidden in rendered footer text. It was initially suspected to be unsupported; full source confirmed it, so no deletion was made.",
+    "Debt Collection Specialists headline and approved vector logo are intentional redesign choices based on client feedback.",
+    "Cloud Debt Recovery naming comes from client email, not the currently published pages; existing Cloud Payment Group name retained.",
+    "Local enquiry/login/admin remain explicitly labelled previews. Live contact, debt-placement and client/customer portal links remain available. This work does not add backend integrations.",
+    "Insights is a curated subset of live articles, not a complete blog migration. Article permalinks were checked against live blog index.",
+    "Licensing and experience are the company own published statements, not independently certified in this audit."
+  ],
+  "validation": [
+    "Site build passes",
+    "Diff whitespace check passes",
+    "Required contact fields verified in browser",
+    "Desktop 1440px and mobile 390px layouts checked",
+    "No mobile horizontal overflow on contact or payment pages"
+  ],
+  "status": "Local changes; not committed or pushed."
+}
