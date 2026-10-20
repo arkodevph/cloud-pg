@@ -1,0 +1,25 @@
+.hero-film__mascot {
+  position:absolute;
+  width:clamp(112px,10vw,160px);
+  pointer-events:none;
+}
+.hero-film__mascot img {
+  display:block;
+  width:100%;
+  height:auto;
+  filter:url("#cloudpg-brand-colors");
+}
+.hero-film__mascot--phone { right:calc(22% - 146px); bottom:calc(24% - 24px); }
+.hero-film__mascot--support { left:calc(24% - 146px); bottom:calc(7% - 24px); }
+@media (min-width:601px) and (max-width:1100px) {
+  .hero-film__mascot--phone { right:max(0px,calc(12% - 112px)); }
+  .hero-film__mascot--support { left:max(0px,calc(13% - 112px)); }
+  .hero-film__card--one { right:max(104px,12%); }
+  .hero-film__card--two { left:max(104px,13%); }
+}
+@media (max-width:600px) {
+  .hero-film__mascot { width:88px; }
+  .hero-film__mascot--phone { left:10px; right:auto; top:-12px; bottom:auto; }
+  .hero-film__mascot--support { left:auto; right:10px; top:108px; bottom:auto; }
+  .hero-film__card { --hero-message-width:min(250px,calc(100vw - 112px)); max-width:calc(100% - 112px); }
+}

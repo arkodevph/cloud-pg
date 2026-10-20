@@ -1,0 +1,37 @@
+[
+  {
+    "id": "commercial",
+    "prompt": "Create ONE original premium corporate 3D still-life visual for a financial services website, wide landscape 3:2. Photorealistic tactile materials, sophisticated art direction, matte ivory, frosted translucent glass, deep petroleum blue #183440, muted teal #338daa and tiny warm champagne orange #df9f62 accents. Soft studio side lighting, realistic ambient occlusion, broad grounded shadows, small highlights, physical depth. Very pale warm grey seamless background #f0f3f2. Composition concentrated in the right two thirds with generous negative space left. Entire objects comfortably within frame. No text, letters, numbers, logos, watermarks, borders, UI, people, hands, currency symbols, toy style, flat icons, giant symbols. Camera three-quarter angle above desk height, 80mm lens. This is an image asset, not a webpage mockup. Subject: a sculptural stack of folded ivory account documents and deep blue slim business folios, translucent smoked-glass dividers and three rising solid brass-and-glass bar columns. A realistic corporate desk still life evoking account review and cash flow.",
+    "method": "built-in imagegen",
+    "asset": "public/assets/industry-scenes/commercial.webp",
+    "output": "Generated images are saved to /home/nami/.codex/generated_images/01a1547f-4bbb-7681-8a0e-bdeadf63d70e as /home/nami/.codex/generated_images/01a1547f-4bbb-7681-8a0e-bdeadf63d70e/exec-b3a75986-b2f1-4bb6-9ec7-3ba239c0ce06.png"
+  },
+  {
+    "id": "government",
+    "prompt": "Create ONE original premium corporate 3D still-life visual for a financial services website, wide landscape 3:2. Photorealistic tactile materials, sophisticated art direction, matte ivory, frosted translucent glass, deep petroleum blue #183440, muted teal #338daa and tiny warm champagne orange #df9f62 accents. Soft studio side lighting, realistic ambient occlusion, broad grounded shadows, small highlights, physical depth. Very pale warm grey seamless background #f0f3f2. Composition concentrated in the right two thirds with generous negative space left. Entire objects comfortably within frame. No text, letters, numbers, logos, watermarks, borders, UI, people, hands, currency symbols, toy style, flat icons, giant symbols. Camera three-quarter angle above desk height, 80mm lens. This is an image asset, not a webpage mockup. Subject: an architectural scale model of a contemporary civic service building with ivory stone facade and deep blue glass windows, arranged on two softly layered pale platforms, a small smoked glass document folio behind. Refined real miniature architecture, not a building icon.",
+    "method": "built-in imagegen",
+    "asset": "public/assets/industry-scenes/government.webp",
+    "output": "Generated images are saved to /home/nami/.codex/generated_images/01a1547f-4bbb-7681-8a0e-bdeadf63d70e as /home/nami/.codex/generated_images/01a1547f-4bbb-7681-8a0e-bdeadf63d70e/exec-094a2066-ec47-452d-96d6-72ffcac3dabe.png"
+  },
+  {
+    "id": "medical",
+    "prompt": "Create ONE original premium corporate 3D still-life visual for a financial services website, wide landscape 3:2. Photorealistic tactile materials, sophisticated art direction, matte ivory, frosted translucent glass, deep petroleum blue #183440, muted teal #338daa and tiny warm champagne orange #df9f62 accents. Soft studio side lighting, realistic ambient occlusion, broad grounded shadows, small highlights, physical depth. Very pale warm grey seamless background #f0f3f2. Composition concentrated in the right two thirds with generous negative space left. Entire objects comfortably within frame. No text, letters, numbers, logos, watermarks, borders, UI, people, hands, currency symbols, toy style, flat icons, giant symbols. Camera three-quarter angle above desk height, 80mm lens. This is an image asset, not a webpage mockup. Subject: an elegant real white ceramic medical billing folder, translucent blue glass document tray, satin metal stethoscope gently resting across the tray and a small folded ivory fee statement without any readable writing. Premium healthcare administration still life.",
+    "method": "built-in imagegen",
+    "asset": "public/assets/industry-scenes/medical.webp",
+    "output": "Generated images are saved to /home/nami/.codex/generated_images/01a1547f-4bbb-7681-8a0e-bdeadf63d70e as /home/nami/.codex/generated_images/01a1547f-4bbb-7681-8a0e-bdeadf63d70e/exec-5a56f8c4-c183-4eba-a0b0-ff7f608e9ec2.png"
+  },
+  {
+    "id": "education",
+    "prompt": "Create ONE original premium corporate 3D still-life visual for a financial services website, wide landscape 3:2. Photorealistic tactile materials, sophisticated art direction, matte ivory, frosted translucent glass, deep petroleum blue #183440, muted teal #338daa and tiny warm champagne orange #df9f62 accents. Soft studio side lighting, realistic ambient occlusion, broad grounded shadows, small highlights, physical depth. Very pale warm grey seamless background #f0f3f2. Composition concentrated in the right two thirds with generous negative space left. Entire objects comfortably within frame. No text, letters, numbers, logos, watermarks, borders, UI, people, hands, currency symbols, toy style, flat icons, giant symbols. Camera three-quarter angle above desk height, 80mm lens. This is an image asset, not a webpage mockup. Subject: a pair of realistic ivory clothbound books slightly offset, a deep blue leather academic portfolio and a slim translucent glass document sheet propped at an angle, restrained brass bookmark detail. Sculptural editorial still life about education administration, no graduation cap icon.",
+    "method": "built-in imagegen",
+    "asset": "public/assets/industry-scenes/education.webp",
+    "output": "Generated images are saved to /home/nami/.codex/generated_images/01a1547f-4bbb-7681-8a0e-bdeadf63d70e as /home/nami/.codex/generated_images/01a1547f-4bbb-7681-8a0e-bdeadf63d70e/exec-8181ae9b-98c8-4cf6-89f6-18d6cb3b7d6d.png"
+  },
+  {
+    "id": "insurance",
+    "prompt": "Create ONE original premium corporate 3D still-life visual for a financial services website, wide landscape 3:2. Photorealistic tactile materials, sophisticated art direction, matte ivory, frosted translucent glass, deep petroleum blue #183440, muted teal #338daa and tiny warm champagne orange #df9f62 accents. Soft studio side lighting, realistic ambient occlusion, broad grounded shadows, small highlights, physical depth. Very pale warm grey seamless background #f0f3f2. Composition concentrated in the right two thirds with generous negative space left. Entire objects comfortably within frame. No text, letters, numbers, logos, watermarks, borders, UI, people, hands, currency symbols, toy style, flat icons, giant symbols. Camera three-quarter angle above desk height, 80mm lens. This is an image asset, not a webpage mockup. Subject: two overlapping curved upright frosted-glass protective panels with dark blue rounded frames sheltering a stack of ivory claim documents and a small brushed brass seal disk. Tactile material study of protection and considered claim review, no shield icon.",
+    "method": "built-in imagegen",
+    "asset": "public/assets/industry-scenes/insurance.webp",
+    "output": "Generated images are saved to /home/nami/.codex/generated_images/01a1547f-4bbb-7681-8a0e-bdeadf63d70e as /home/nami/.codex/generated_images/01a1547f-4bbb-7681-8a0e-bdeadf63d70e/exec-fac7a71b-835a-4d28-80a6-ba7a344f6620.png"
+  }
+]

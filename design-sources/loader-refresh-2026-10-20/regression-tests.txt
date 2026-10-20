@@ -1,0 +1,14 @@
+✔ refresh does not replay a completed session intro (4.666267ms)
+✔ page becomes usable when markup is ready even with video still loading (4.060465ms)
+✔ stalled resources cannot keep the overlay active indefinitely (1.692195ms)
+✔ back-forward restoration clears an in-progress intro immediately (1.979213ms)
+✔ reduced motion bypasses the loader (1.545955ms)
+✔ unavailable session storage still permits the page to open (1.785014ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 156.852697

@@ -1,0 +1,125 @@
+[
+  {
+    "route": "/",
+    "width": 1710,
+    "overflow": false,
+    "loaded": true,
+    "rect": {
+      "x": 489.796875,
+      "right": 909.796875,
+      "width": 420,
+      "height": 506.421875
+    },
+    "handGap": 1.006249999999909,
+    "filter": "url(\"#cloudpg-brand-colors\")",
+    "globe": false,
+    "filterDefined": true,
+    "pointerEvents": "none",
+    "industryColors": [
+      "rgb(233, 245, 250)",
+      "rgb(255, 240, 232)",
+      "rgb(232, 238, 249)",
+      "rgb(233, 245, 250)",
+      "rgb(255, 240, 232)"
+    ],
+    "form": "Preview submission passed",
+    "errors": []
+  },
+  {
+    "route": "/",
+    "width": 900,
+    "overflow": false,
+    "loaded": true,
+    "rect": {
+      "x": 197.0625,
+      "right": 485.0625,
+      "width": 288,
+      "height": 347.25
+    },
+    "handGap": 1.005625000000009,
+    "filter": "url(\"#cloudpg-brand-colors\")",
+    "globe": false,
+    "filterDefined": true,
+    "pointerEvents": "none",
+    "industryColors": [
+      "rgb(233, 245, 250)",
+      "rgb(255, 240, 232)",
+      "rgb(232, 238, 249)",
+      "rgb(233, 245, 250)",
+      "rgb(255, 240, 232)"
+    ],
+    "form": "Preview submission passed",
+    "errors": []
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "overflow": false,
+    "loaded": true,
+    "rect": {
+      "x": 0.703125,
+      "right": 110.703125,
+      "width": 110,
+      "height": 132.625
+    },
+    "handGap": 1.0031249999999972,
+    "filter": "url(\"#cloudpg-brand-colors\")",
+    "globe": false,
+    "filterDefined": true,
+    "pointerEvents": "none",
+    "industryColors": [
+      "rgb(233, 245, 250)",
+      "rgb(255, 240, 232)",
+      "rgb(232, 238, 249)",
+      "rgb(233, 245, 250)",
+      "rgb(255, 240, 232)"
+    ],
+    "form": "Preview submission passed",
+    "errors": []
+  },
+  {
+    "route": "/",
+    "width": 320,
+    "overflow": false,
+    "loaded": true,
+    "rect": {
+      "x": 0.703125,
+      "right": 110.703125,
+      "width": 110,
+      "height": 132.625
+    },
+    "handGap": 1.0031249999999972,
+    "filter": "url(\"#cloudpg-brand-colors\")",
+    "globe": false,
+    "filterDefined": true,
+    "pointerEvents": "none",
+    "industryColors": [
+      "rgb(233, 245, 250)",
+      "rgb(255, 240, 232)",
+      "rgb(232, 238, 249)",
+      "rgb(233, 245, 250)",
+      "rgb(255, 240, 232)"
+    ],
+    "form": "Preview submission passed",
+    "errors": []
+  },
+  {
+    "route": "/contact-us/",
+    "width": 390,
+    "overflow": false,
+    "loaded": true,
+    "rect": {
+      "x": 0.703125,
+      "right": 110.703125,
+      "width": 110,
+      "height": 132.625
+    },
+    "handGap": 1.0031249999999972,
+    "filter": "url(\"#cloudpg-brand-colors\")",
+    "globe": false,
+    "filterDefined": true,
+    "pointerEvents": "none",
+    "form": "Preview submission passed",
+    "errors": []
+  }
+]

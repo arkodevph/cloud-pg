@@ -1,0 +1,50 @@
+[
+  {
+    "width": 1440,
+    "refresh": 1,
+    "classes": "js",
+    "ready": "interactive",
+    "loaderVisible": "hidden",
+    "clickable": true
+  },
+  {
+    "width": 1440,
+    "refresh": 2,
+    "classes": "js",
+    "ready": "interactive",
+    "loaderVisible": "hidden",
+    "clickable": true
+  },
+  {
+    "width": 1440,
+    "refresh": 3,
+    "classes": "js",
+    "ready": "interactive",
+    "loaderVisible": "hidden",
+    "clickable": true
+  },
+  {
+    "width": 390,
+    "refresh": 1,
+    "classes": "js",
+    "ready": "interactive",
+    "loaderVisible": "hidden",
+    "clickable": true
+  },
+  {
+    "width": 390,
+    "refresh": 2,
+    "classes": "js",
+    "ready": "interactive",
+    "loaderVisible": "hidden",
+    "clickable": true
+  },
+  {
+    "width": 390,
+    "refresh": 3,
+    "classes": "js",
+    "ready": "interactive",
+    "loaderVisible": "hidden",
+    "clickable": true
+  }
+]

@@ -120,3 +120,14 @@
 .hubb-safari__tools svg { width:17px; height:17px; fill:none; stroke:currentColor; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
 .hubb-safari__tools .hubb-safari__disabled { color:#b8bdc3; }
 @media(max-width:860px) { .hubb-device { height:634px; } }
+
+/* The original gripping pose shares the phone’s tilt and breathing motion. */
+.page-home .payment-highlight .hubb-device .hubb-gripping-mascot { position:absolute; z-index:4; width:180px; height:auto; max-width:none; left:calc(100% - 52px); top:47%; pointer-events:none; filter:url("#cloudpg-brand-colors") drop-shadow(3px 5px 3px #14344020); }
+@media(max-width:600px) {
+  .hubb-device { left:-20px; scale:.9; }
+  .page-home .payment-highlight .hubb-device .hubb-gripping-mascot { width:110px; left:calc(100% - 32px); top:54%; }
+}
+@media(max-width:380px) {
+  .hubb-device { scale:.82; }
+  .page-home .payment-highlight .hubb-device .hubb-gripping-mascot { width:100px; left:calc(100% - 29px); }
+}

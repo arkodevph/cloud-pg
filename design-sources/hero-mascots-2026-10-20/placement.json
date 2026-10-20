@@ -1,0 +1,20 @@
+{
+  "request": "Add the old mascots to the current handshake design, matching the supplied screenshot.",
+  "reference": "/tmp/codex-clipboard-MoKi6e.png",
+  "scope": "Homepage handshake hero only.",
+  "assets": [
+    {
+      "path": "public/assets/mascot/cloudpg-06-phone.png",
+      "placement": "Beside account-holder message"
+    },
+    {
+      "path": "public/assets/mascot/cloudpg-01-wave.png",
+      "placement": "Beside Cloud support message"
+    }
+  ],
+  "palette": "Existing src/mascot-color-filter.html: muted blue-teal body with terracotta accessories; original white eyes retained.",
+  "motion": "Existing hero parallax with touch and reduced-motion safeguards; no additional animation or dependencies.",
+  "preview": "http://127.0.0.1:4173/",
+  "backup": "/home/nami/Backups/Projects/cloudpg-mascot-design-2026-10-20",
+  "publication": "Local changes only; deployment not performed."
+}

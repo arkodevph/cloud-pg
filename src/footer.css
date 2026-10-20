@@ -16,7 +16,8 @@
 .footer-editorial__details address { margin:0; font-size:12px; line-height:1.7; font-style:normal; }
 .footer-editorial__details address span { color:#4b6468; }
 .footer-editorial__details p { margin:8px 0 0; color:#4b6468; font-size:11px; line-height:1.6; }
-.footer-editorial__signature { padding-top:27px; }
+.footer-editorial__signature { position:relative; padding-top:27px; }
+.footer-editorial__mascot { position:absolute; right:0; bottom:calc(100% - 14px); display:block; width:210px; height:auto; pointer-events:none; }
 .footer-editorial__brandline { display:flex; justify-content:space-between; gap:18px; color:#4b6468; font-size:9px; letter-spacing:.1em; line-height:1.5; }
 .footer-editorial__wordmark { display:block; width:100%; height:auto; overflow:visible; margin:12px 0 0; fill:#173540; }
 .footer-editorial__wordmark text { font-family:var(--font-display); font-size:324px; font-weight:600; letter-spacing:-.07em; }
@@ -99,4 +100,9 @@
  .footer-motion .footer-editorial__wordmark { height:clamp(100px,23svh,250px); }
  .footer-motion .footer-motion__statement { font-size:clamp(68px,20svh,210px); }
  .footer-motion .footer-editorial__legal { padding-block:10px; margin-top:12px; }
+}
+
+@media(max-width:1100px) {
+ .footer-motion .footer-editorial__signature { padding-top:130px; }
+ .footer-editorial__mascot { top:0; bottom:auto; width:180px; }
 }

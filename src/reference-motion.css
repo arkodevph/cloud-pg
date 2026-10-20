@@ -18,15 +18,17 @@
 .process-globe__copy { position:absolute; z-index:1; top:132px; left:50%; width:min(470px,70%); transform:translateX(-50%); }
 .process-globe__copy h3 { font:500 clamp(27px,3vw,38px)/1.15 'Switzer',sans-serif; margin:0 0 20px; letter-spacing:-.03em; }
 .process-globe__copy p { font-size:15px; line-height:1.6; color:#3f5964; margin:0; }
+.process-globe__mascot { position:absolute; z-index:1; top:250px; left:50%; width:240px; height:auto; transform:translateX(-50%); pointer-events:none; }
 
 
 @media(max-width:700px) {
   .process-globe>.container { top:85px; padding-top:20px; }
   .process-globe h2 { font-size:40px; margin-bottom:48px; }
-  .process-globe__stage { width:620px; max-width:none; left:50%; margin-left:-310px; height:430px; }
+  .process-globe__stage { width:620px; max-width:none; left:50%; margin-left:-310px; height:460px; }
   .process-globe__copy { width:285px; top:124px; }
   .process-globe__copy p { font-size:14px; }
   .process-globe__node { width:40px; height:40px; left:calc(50% - 20px); top:calc(50% - 20px); }
+  .process-globe__mascot { top:245px; width:180px; }
 }
 @media(prefers-reduced-motion:reduce) {
   .process-globe { height:auto; }

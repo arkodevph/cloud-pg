@@ -1,0 +1,66 @@
+[
+  {
+    "width": 1440,
+    "run": 0,
+    "start": {
+      "loading": true,
+      "visible": "visible",
+      "seen": "1",
+      "type": "reload"
+    },
+    "end": {
+      "loading": false,
+      "exiting": false,
+      "pointer": "none",
+      "overflow": false
+    }
+  },
+  {
+    "width": 1440,
+    "run": 1,
+    "start": {
+      "loading": true,
+      "visible": "visible",
+      "seen": "1",
+      "type": "reload"
+    },
+    "end": {
+      "loading": false,
+      "exiting": false,
+      "pointer": "none",
+      "overflow": false
+    }
+  },
+  {
+    "width": 390,
+    "run": 0,
+    "start": {
+      "loading": true,
+      "visible": "visible",
+      "seen": "1",
+      "type": "reload"
+    },
+    "end": {
+      "loading": false,
+      "exiting": false,
+      "pointer": "none",
+      "overflow": false
+    }
+  },
+  {
+    "width": 390,
+    "run": 1,
+    "start": {
+      "loading": true,
+      "visible": "visible",
+      "seen": "1",
+      "type": "reload"
+    },
+    "end": {
+      "loading": false,
+      "exiting": false,
+      "pointer": "none",
+      "overflow": false
+    }
+  }
+]

@@ -6,7 +6,8 @@
   "scripts": {
     "build:logo": "node src/create-login-logo.mjs",
     "build": "node src/build.mjs",
-    "serve": "python3 -m http.server 4173 --directory dist"
+    "serve": "python3 -m http.server 4173 --directory dist",
+    "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
     "cobe": "2.0.1",

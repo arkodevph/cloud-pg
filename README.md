@@ -27,7 +27,9 @@ On `/client-login/`, **Enter admin demo** opens `/admin/` without entering crede
 
 The editable logo asset is `public/assets/3d/cloudpg-ribbon-globe.glb`. Regenerate it with `npm run build:logo`. The transparent rendered fallback and its Imagegen prompt are in the same directory.
 
-Site imagery uses three original generated corporate photographs from `design-sources/corporate-photos-v1/`, served as WebP files in `public/assets/photos/`. They replace the previous character illustrations throughout the public pages. The phone demo retains its interface without decorative characters; the supplied cloud mark also appears on the login page.
+Site imagery pairs the original corporate photography with Cloud mascots in the hero, industry cards, Payment Hubb phone, process globe, contact form and footer. A new pointing pose introduces the people in the “People + Tools” photo. The original photography sources remain in `design-sources/corporate-photos-v1/` and `design-sources/corporate-photos-unique-v2/`. Mascot generation prompts and browser checks are recorded in the dated `design-sources/` folders. The contact mascot grips the paper’s edge, and the phone mascot shares the device’s tilt and motion.
+
+The logo uses the supplied full-colour artwork and original lettering without CSS recolouring or replacement fonts. The earlier ribbon loader is restored; refresh replays it while DOM-ready completion and a timeout prevent slow assets from keeping the page covered. Run `npm test` for loader regression checks.
 
 The homepage hero uses the supplied eight-second Google Flow handshake film in `public/assets/video/cloudpg-idle-handshake.mp4`, with its audio track removed and fast-start metadata. It loops muted and inline, has a pause/play control, and shows the matching JPEG poster when reduced motion is enabled or playback is unavailable. The frame and generation prompt are in `design-sources/hero-real-people-v2/`; the original video remains in `/home/nami/Videos/Create_idle_handshake_animation_1080p_20261019135503.mp4`.
 

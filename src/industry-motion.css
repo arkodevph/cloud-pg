@@ -1,4 +1,4 @@
-/* 20.26.44 layout and overlap, using Cloud's existing type and pale card palette. */
+/* Original upward card peel with sector-specific Cloud mascots. */
 .page-home .sectors { overflow:clip; }
 .industry-stack-stage { position:relative; isolation:isolate; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8%; align-items:center; }
 .page-home .sectors .section-heading { margin:0; }
@@ -6,54 +6,58 @@
 .page-home .sectors .section-heading h2 { font-size:clamp(42px,4.5vw,70px); line-height:1.1; }
 .page-home .sectors .section-heading__row p { max-width:420px; margin:26px 0 0; }
 .page-home .sectors .sector-list { display:block; margin:0; border:0; }
-.page-home .sectors .sector-list a,.page-home .sectors .sector-list a:hover { position:relative; display:flex; flex-direction:column; align-items:stretch; width:100%; min-height:420px; margin:0 0 24px; padding:38px; overflow:hidden; isolation:isolate; border:1px solid #dbe5e7; border-radius:15px; background:#e9f5fa; color:#182b35; transform-origin:center top; transition:none; }
-.page-home .sectors .sector-list a:nth-child(2),.page-home .sectors .sector-list a:nth-child(5) { background:#fff0e8; }
-.page-home .sectors .sector-list a:nth-child(3) { background:#e8eef9; }
-.page-home .sectors .sector-list .industry-panel-copy { position:relative; z-index:2; display:flex; flex-direction:column; justify-content:center; flex:1; min-width:0; }
-.page-home .sectors .sector-list strong { display:block; max-width:100%; font-size:clamp(32px,3.4vw,52px); line-height:1.06; }
-.industry-panel-description { max-width:380px; margin:20px 0 0; font-size:15px; line-height:1.6; color:#365361; }
-.page-home .sectors .sector-list__detail { display:block; margin:14px 0 0; padding:0; font-size:12px; color:#46636f; }
-.industry-panel-link { display:flex; align-items:center; gap:18px; width:fit-content; margin-top:24px; padding-top:15px; border-top:1px solid #14344035; font-size:12px; font-weight:600; }
+.page-home .sectors .sector-list a,.page-home .sectors .sector-list a:hover { position:relative; display:flex; flex-direction:column; align-items:stretch; width:100%; min-height:530px; margin:0 0 24px; padding:34px; overflow:hidden; isolation:isolate; border:1px solid #d7dfe0; border-radius:16px; background:var(--industry-card-color,#e9f5fa); color:#182b35; box-shadow:0 26px 44px -28px #1834404a,0 5px 10px -7px #1834402e,inset 0 1px #fff; transform-origin:center top; transition:none; }
+.page-home .sectors .sector-list a:nth-child(2),.page-home .sectors .sector-list a:nth-child(5) { --industry-card-color:#fff0e8; }
+.page-home .sectors .sector-list a:nth-child(3) { --industry-card-color:#e8eef9; }
+.page-home .sectors .sector-list .industry-panel-copy { position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-end; flex:1; min-width:0; padding-top:280px; pointer-events:none; }
+.page-home .sectors .sector-list strong { display:block; max-width:100%; font-size:clamp(32px,3.1vw,48px); line-height:1.06; }
+.industry-panel-description { max-width:420px; margin:13px 0 0; font-size:14px; line-height:1.6; color:#365361; }
+.page-home .sectors .sector-list__detail { display:none; }
+.industry-panel-link { display:flex; align-items:center; gap:18px; width:fit-content; margin-top:16px; padding-top:12px; border-top:1px solid #14344035; font-size:12px; font-weight:600; }
 .industry-panel-link>span { font-size:20px; }
-.page-home .sectors .sector-list .industry-panel-number { position:absolute; z-index:2; top:26px; right:28px; font-size:11px; color:#3f5c68; }
-.page-home .sectors .sector-list a>span.industry-panel-watermark { display:block; position:absolute; z-index:0; width:clamp(240px,25vw,350px); height:clamp(240px,25vw,350px); right:-25px; bottom:-20px; left:auto; top:auto; transform:rotate(-12deg); opacity:.22; color:#287c97; pointer-events:none; }
-.page-home .sectors .industry-panel-watermark svg { display:block; width:100%; height:100%; }
-.page-home .sectors .sector-list a:nth-child(2) .industry-panel-watermark,.page-home .sectors .sector-list a:nth-child(5) .industry-panel-watermark { color:#aa7044; }
-/* Reference: the shared center image sits OUTSIDE the solid cards. */
+.page-home .sectors .sector-list .industry-panel-number { position:absolute; z-index:3; top:22px; right:24px; color:#3f5c68; font-size:10px; }
+.page-home .sectors .sector-list a>.industry-panel-art { position:absolute; inset:0 0 auto; display:block; width:100%; height:66%; overflow:hidden; pointer-events:none; }
+.industry-panel-art>img { display:block; width:100%; height:100%; padding:8px 36px 22px; object-fit:contain; filter:url("#cloudpg-brand-colors"); transition:transform 1s cubic-bezier(.22,1,.36,1); }
+.page-home .sectors .sector-list a:hover .industry-panel-art>img { transform:scale(1.045) translateY(-3px); }
+.industry-scene-signal { position:absolute; z-index:1; bottom:30px; left:24px; display:flex; align-items:center; gap:10px; padding:11px 14px; border:1px solid #ffffffdd; border-radius:9px; background:#ffffffdf; backdrop-filter:blur(10px); box-shadow:0 14px 26px #16344020,inset 0 1px #fff; transform:rotate(-4deg); font-size:10px; font-weight:500; color:#244550; }
+.industry-scene-signal small { display:block; margin-top:3px; color:#698089; font-size:6px; letter-spacing:.1em; }
+.industry-scene-signal__dot { display:block; width:7px; height:7px; border-radius:50%; background:#338daa; box-shadow:0 0 0 4px #338daa12; }
 .industry-stack-intro,.page-home .sectors .industry-stack-viewport { position:relative; z-index:1; }
 .industry-stage-image { position:absolute; z-index:0; left:50%; top:50%; width:70%; height:115%; transform:translate(-50%,-50%); pointer-events:none; overflow:hidden; mask-image:radial-gradient(ellipse,black 15%,transparent 72%); }
 .industry-stage-image .industry-stage-photo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; opacity:0; transition:opacity .35s; }
-.industry-stage-image .industry-stage-photo.is-active { opacity:.25; }
+.industry-stage-image .industry-stage-photo.is-active { opacity:.2; }
 .industry-stage-image::after { content:''; position:absolute; inset:0; background:#f4f7f738; }
-.page-home .sectors .industry-stack-enhanced { position:relative; height:380svh; }
-.industry-stack-enhanced .industry-stack-stage { position:sticky; top:16svh; min-height:66svh; }
-.page-home .sectors .industry-stack-enhanced .industry-stack-viewport { position:relative; height:clamp(400px,48svh,470px); overflow:visible; perspective:1100px; border-radius:15px; }
+.page-home .sectors .industry-stack-enhanced { position:relative; height:400svh; }
+.industry-stack-enhanced .industry-stack-stage { position:sticky; top:14svh; min-height:70svh; }
+.page-home .sectors .industry-stack-enhanced .industry-stack-viewport { position:relative; height:clamp(510px,57svh,580px); overflow:visible; perspective:1100px; border-radius:16px; }
 .page-home .sectors .industry-stack-enhanced .sector-list a { position:absolute; inset:0; height:100%; min-height:0; margin:0; will-change:transform; }
 .page-home .sectors .industry-stack-track+.button { margin-top:60px; }
+@media(max-width:1000px) and (min-width:701px) {
+  .industry-stack-stage { gap:5%; grid-template-columns:.9fr 1.1fr; }
+  .page-home .sectors .sector-list a,.page-home .sectors .sector-list a:hover { padding:26px; }
+  .industry-panel-description { font-size:13px; }
+}
 @media(max-width:700px) {
   .industry-stage-image { width:125%; height:90%; }
-  .page-home .sectors .sector-list a>span.industry-panel-watermark { width:260px; height:260px; right:-25px; bottom:-20px; }
-  .industry-stack-stage { grid-template-columns:1fr; gap:26px; }
+  .industry-stack-stage { grid-template-columns:1fr; gap:24px; }
   .page-home .sectors .section-heading h2 { font-size:clamp(35px,9vw,44px); }
-  .page-home .sectors .section-heading__row p { font-size:14px; margin-top:14px; }
-  .page-home .sectors .eyebrow { margin-bottom:12px; }
+  .page-home .sectors .section-heading__row p { font-size:14px; margin-top:12px; }
+  .page-home .sectors .eyebrow { margin-bottom:10px; }
   .industry-stack-enhanced .industry-stack-stage { top:85px; min-height:0; }
-  .page-home .sectors .industry-stack-enhanced .industry-stack-viewport { height:370px; overflow:clip; }
-  .page-home .sectors .sector-list a,.page-home .sectors .sector-list a:hover { padding:28px; min-height:370px; }
-  .page-home .sectors .sector-list strong { font-size:35px; padding-right:15px; }
-  .industry-panel-description { font-size:13px; margin-top:16px; }
-  .page-home .sectors .sector-list__detail { font-size:11px; margin-top:12px; }
-  .industry-panel-link { margin-top:18px; padding-top:12px; }
-  .page-home .sectors .sector-list .industry-panel-number { top:20px; right:24px; }
+  .page-home .sectors .industry-stack-enhanced .industry-stack-viewport { height:440px; overflow:clip; }
+  .page-home .sectors .sector-list a,.page-home .sectors .sector-list a:hover { padding:24px; min-height:440px; }
+  .page-home .sectors .sector-list .industry-panel-copy { padding-top:220px; }
+  .page-home .sectors .sector-list strong { font-size:34px; }
+  .industry-panel-description { font-size:12px; margin-top:10px; }
+  .industry-panel-link { margin-top:13px; padding-top:10px; font-size:11px; }
+  .page-home .sectors .sector-list .industry-panel-number { top:16px; right:20px; }
+  .industry-scene-signal { bottom:30px; left:18px; padding:9px 11px; font-size:9px; }
 }
 @media(max-height:760px) and (max-width:700px) {
-  .industry-stack-enhanced .industry-stack-stage { top:75px; gap:18px; }
-  .page-home .sectors .section-heading__row p { font-size:12px; line-height:1.5; }
-  .page-home .sectors .industry-stack-enhanced .industry-stack-viewport { height:330px; }
+  .industry-stack-enhanced .industry-stack-stage { top:75px; gap:16px; }
+  .page-home .sectors .section-heading__row p { display:none; }
+  .page-home .sectors .industry-stack-enhanced .industry-stack-viewport { height:400px; }
+  .page-home .sectors .sector-list .industry-panel-copy { padding-top:180px; }
   .page-home .sectors .sector-list strong { font-size:30px; }
-  .page-home .sectors .sector-list a { padding:24px; }
-  .industry-panel-description { font-size:12px; margin-top:12px; }
-  .page-home .sectors .sector-list__detail { display:none; }
 }
-
-@media(prefers-reduced-motion:reduce) { .industry-stage-image .industry-stage-photo { transition:none; } }
+@media(prefers-reduced-motion:reduce) { .industry-stage-image .industry-stage-photo,.industry-panel-art>img { transition:none; }.page-home .sectors .sector-list a:hover .industry-panel-art>img { transform:none; } }

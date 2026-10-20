@@ -8,6 +8,7 @@ const out = join(root, 'dist');
 await ensureFonts(root);
 const brandLogo = readFileSync(join(root, 'src', 'brand-logo.html'), 'utf8').trim();
 const homeHero = readFileSync(join(root, 'src', 'home-hero.html'), 'utf8');
+const mascotColorFilter = readFileSync(join(root, 'src', 'mascot-color-filter.html'), 'utf8');
 const serviceJourney = readFileSync(join(root, 'src', 'service-journey.html'), 'utf8');
 const paymentPhone = readFileSync(join(root, 'src', 'payment-phone.html'), 'utf8').replaceAll('{{brandLogo}}', brandLogo);
 const paymentUrl = 'https://www.debtview.net.au/DebtrakCustomer/Login/Login';
@@ -55,7 +56,7 @@ function footer() {
       <section aria-labelledby="footer-perth"><h3 id="footer-perth">Perth</h3><address>Level 2, 2 Edward Street<br>East Perth WA 6004<br><span>PO Box 8229 Perth WA 6849</span></address></section>
       <section aria-labelledby="footer-sydney"><h3 id="footer-sydney">Sydney</h3><address>Suite 14.03, Level 14<br>9 Hunter Street, Sydney NSW 2000</address><p>Also in Melbourne, Queensland and Auckland.</p></section>
     </div>
-    <div class="footer-editorial__signature" aria-label="Cloud Payment Group"><div class="footer-editorial__brandline"><span>PEOPLE. PAYMENTS. PERSPECTIVE.</span><span>AUSTRALIA & NEW ZEALAND</span></div><div class="footer-motion__mask"><div class="footer-motion__rail"><svg class="footer-editorial__wordmark" viewBox="0 0 1200 253" preserveAspectRatio="none" aria-hidden="true" focusable="false"><text x="-7" y="248" textLength="1210" lengthAdjust="spacingAndGlyphs">CLOUD</text></svg><span class="footer-motion__divider" aria-hidden="true"></span><span class="footer-motion__statement">A clearer path forward.</span></div></div><div class="footer-editorial__brandline footer-editorial__brandline--bottom"><span>PAYMENT GROUP</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div></div>
+    <div class="footer-editorial__signature" aria-label="Cloud Payment Group"><img class="footer-editorial__mascot" src="/assets/mascot/cloudpg-31-footer-recline.png" width="1536" height="1024" alt="" loading="lazy" decoding="async" aria-hidden="true"><div class="footer-editorial__brandline"><span>PEOPLE. PAYMENTS. PERSPECTIVE.</span><span>AUSTRALIA & NEW ZEALAND</span></div><div class="footer-motion__mask"><div class="footer-motion__rail"><svg class="footer-editorial__wordmark" viewBox="0 0 1200 253" preserveAspectRatio="none" aria-hidden="true" focusable="false"><text x="-7" y="248" textLength="1210" lengthAdjust="spacingAndGlyphs">CLOUD</text></svg><span class="footer-motion__divider" aria-hidden="true"></span><span class="footer-motion__statement">A clearer path forward.</span></div></div><div class="footer-editorial__brandline footer-editorial__brandline--bottom"><span>PAYMENT GROUP</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div></div>
     <div class="footer-editorial__legal"><a class="footer-editorial__logo" href="/" aria-label="Cloud Payment Group, home">${brandLogo}</a><span>© ${new Date().getFullYear()} Cloud Payment Group.</span><a href="${privacyUrl}"${external}>Privacy policy ${arrow}</a></div>
   </div></div></footer>`;
 }
@@ -71,53 +72,52 @@ const loaderScript = `<script>
   const root = document.documentElement;
   root.classList.add('js');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reload = performance.getEntriesByType('navigation')[0]?.type === 'reload';
   let intro = !reducedMotion;
   try {
-    intro = !reducedMotion && (performance.getEntriesByType('navigation')[0]?.type === 'reload' || !sessionStorage.getItem('cloud-loader-seen'));
+    intro = !reducedMotion && (reload || !sessionStorage.getItem('cloud-loader-seen'));
     if (intro) sessionStorage.setItem('cloud-loader-seen', '1');
   } catch {}
-  if (intro) root.classList.add('is-loading');
-  let shownAt = performance.now();
-  let shown = intro;
-  let done = false;
-  const showTimer = intro || reducedMotion ? null : setTimeout(() => {
-    if (document.readyState === 'complete') return;
-    shown = true;
-    shownAt = performance.now();
-    root.classList.add('is-loading');
-    const status = document.getElementById('page-load-status');
-    if (status) status.textContent = 'Loading page';
-  }, 180);
-  document.addEventListener('DOMContentLoaded', () => {
-    if (shown) document.getElementById('page-load-status').textContent = 'Loading page';
-  }, { once: true });
+  if (!intro) return;
+  root.classList.add('is-loading');
+  const startedAt = performance.now();
+  let done = false, fallback = 0, finishTimer = 0, exitTimer = 0;
+  const dismiss = () => {
+    done = true;
+    clearTimeout(fallback);
+    clearTimeout(finishTimer);
+    clearTimeout(exitTimer);
+    root.classList.remove('is-loading', 'is-exiting');
+  };
   const finish = (ready) => {
     if (done) return;
     done = true;
-    clearTimeout(showTimer);
-    const wait = shown ? Math.max(0, (intro ? 950 : 500) - (performance.now() - shownAt)) : 0;
-    setTimeout(() => {
-      if (shown) document.getElementById('page-load-status').textContent = ready ? 'Page ready' : 'Page available while remaining items load';
-      if (shown) root.classList.add('is-exiting');
-      setTimeout(() => root.classList.remove('is-loading', 'is-exiting'), shown && !reducedMotion ? 780 : 0);
-    }, wait);
+    clearTimeout(fallback);
+    finishTimer = setTimeout(() => {
+      const status = document.getElementById('page-load-status');
+      if (status) status.textContent = ready ? 'Page ready' : 'Page available while remaining items load';
+      root.classList.add('is-exiting');
+      exitTimer = setTimeout(dismiss, 780);
+    }, Math.max(0, 950 - (performance.now() - startedAt)));
   };
-  window.addEventListener('load', () => finish(true), { once: true });
-  window.addEventListener('pageshow', () => finish(true));
-  setTimeout(() => finish(false), 5000);
+  const ready = () => finish(true);
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ready, { once:true });
+  else ready();
+  window.addEventListener('pageshow', event => event.persisted ? dismiss() : finish(true));
+  window.addEventListener('pagehide', dismiss);
+  fallback = setTimeout(() => finish(false), 1800);
 })();
 </script>`;
 
 function page({ title, description, active = '', body, slug = '' }) {
   const canonical = `https://cloudpg.com.au/${slug ? `${slug}/` : ''}`;
-  return `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f7f4"><meta name="description" content="${description}"><title>${title} | Cloud Payment Group</title>${loaderScript}<link rel="icon" href="/assets/cloudpg-cloud-mark-brand.png" type="image/png"><link rel="preload" href="/assets/fonts/fontshare/boska-variable.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/fontshare/switzer-variable.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/modern.css?v=cloud-brand-palette"><link rel="stylesheet" href="/assets/photography.css?v=1"><link rel="stylesheet" href="/assets/contact-paper.css"><link rel="stylesheet" href="/assets/footer.css?v=4">${slug && slug !== 'client-login' ? '<link rel="stylesheet" href="/assets/inner-pages.css?v=1">' : ''}${slug === 'client-login' ? '<link rel="stylesheet" href="/assets/client-login.css?v=cloud-brand-palette">' : ''}${slug ? '' : '<link rel="stylesheet" href="/assets/hero-parallax.css"><link rel="stylesheet" href="/assets/home-start.css"><link rel="stylesheet" href="/assets/service-journey.css"><link rel="stylesheet" href="/assets/industry-motion.css"><link rel="stylesheet" href="/assets/payment-phone.css?v=floating-phone-restored-20261019">'}<link rel="stylesheet" href="/assets/reference-motion.css"><link rel="stylesheet" href="/assets/fonts.css"><link rel="stylesheet" href="/assets/brand.css?v=brighter-boska"><link rel="canonical" href="${canonical}"></head><body class="${slug ? 'page-inner' : 'page-home'}${slug === 'client-login' ? ' page-login' : ''}">${loaderMarkup}${slug === 'client-login' ? '' : header(active)}<main id="main">${body}</main>${slug === 'client-login' ? '' : footer()}<script src="/assets/site.js?v=original-layout-parallax-20261019" defer></script>${!slug || slug === 'contact-us' ? '<script type="module" src="/assets/contact-globe.js"></script>' : ''}${slug === 'client-login' ? '<script type="module" src="/assets/client-login.js?v=cloud-brand-palette"></script>' : ''}${slug ? '' : '<script src="/assets/payment-phone.js?v=floating-phone-restored-20261019" defer></script>'}</body></html>`;
+  return `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f7f4"><meta name="description" content="${description}"><title>${title} | Cloud Payment Group</title>${loaderScript}<link rel="icon" href="/assets/cloudpg-cloud-mark-cutout.png" type="image/png"><link rel="preload" href="/assets/fonts/fontshare/boska-variable.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/fontshare/switzer-variable.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/modern.css?v=original-loader-20261020"><link rel="stylesheet" href="/assets/photography.css?v=people-mascot-20261020"><link rel="stylesheet" href="/assets/contact-paper.css?v=holding-paper-20261020"><link rel="stylesheet" href="/assets/footer.css?v=reclining-mascot-20261020">${slug && slug !== 'client-login' ? '<link rel="stylesheet" href="/assets/inner-pages.css?v=1">' : ''}${slug === 'client-login' ? '<link rel="stylesheet" href="/assets/client-login.css?v=cloud-brand-palette">' : ''}${slug ? '' : '<link rel="stylesheet" href="/assets/hero-parallax.css"><link rel="stylesheet" href="/assets/hero-mascots.css?v=20261020"><link rel="stylesheet" href="/assets/home-start.css?v=slash-scenes-20261019"><link rel="stylesheet" href="/assets/service-journey.css"><link rel="stylesheet" href="/assets/industry-motion.css?v=pastel-mascots-20261020"><link rel="stylesheet" href="/assets/payment-phone.css?v=gripping-mascot-20261020">'}<link rel="stylesheet" href="/assets/reference-motion.css?v=globe-mascot-20261020"><link rel="stylesheet" href="/assets/fonts.css"><link rel="stylesheet" href="/assets/brand.css?v=original-logo-20261020"><link rel="canonical" href="${canonical}"></head><body class="${slug ? 'page-inner' : 'page-home'}${slug === 'client-login' ? ' page-login' : ''}">${!slug || slug === 'contact-us' ? mascotColorFilter : ''}${loaderMarkup}${slug === 'client-login' ? '' : header(active)}<main id="main">${body}</main>${slug === 'client-login' ? '' : footer()}<script src="/assets/site.js?v=slash-scenes-20261019" defer></script>${!slug ? '<script type="module" src="/assets/contact-globe.js"></script>' : ''}${slug === 'client-login' ? '<script type="module" src="/assets/client-login.js?v=cloud-brand-palette"></script>' : ''}${slug ? '' : '<script src="/assets/payment-phone.js?v=floating-phone-restored-20261019" defer></script>'}</body></html>`;
 }
 
-function industryIcon(sector) {
-  // Unmodified Phosphor duotone paths, MIT; provenance and license shipped with assets.
-  const icons = { commercial:'buildings', government:'bank', medical:'first-aid-kit', education:'graduation-cap', insurance:'shield-check' };
-  return readFileSync(join(root, 'public', 'assets', 'icons', 'phosphor', `${icons[sector]}-duotone.svg`), 'utf8')
-    .replace('<svg ', '<svg aria-hidden="true" focusable="false" ');
+function industryArt(sector) {
+  const labels = { commercial:'Account review', government:'Community context', medical:'Considered care', education:'Fee documentation', insurance:'Claims review' };
+  const mascots = { commercial:'20-commercial', government:'21-community', medical:'28-medical-bed', education:'23-education', insurance:'24-insurance' };
+  return `<span class="industry-panel-art" aria-hidden="true"><img src="/assets/mascot/cloudpg-${mascots[sector]}.png" width="1142" height="1378" alt="" loading="lazy"><span class="industry-scene-signal"><span class="industry-scene-signal__dot"></span><span>${labels[sector]}<small>PEOPLE + PERSPECTIVE</small></span></span></span>`;
 }
 
 function innerHero(kicker, title, intro, className = '', art = '') {
@@ -142,8 +142,8 @@ function contactBand(title = 'Let’s make the next step clearer.', text = 'Tell
 
 function contactPaper(photo = 'home-contact') {
   return `<section class="section contact-paper" id="contact-form" aria-labelledby="contact-paper-title"><div class="container contact-paper__stage">
-    <div class="contact-globe" aria-hidden="true"><div class="contact-globe__sphere"><canvas data-contact-globe></canvas></div></div>
-    <div class="contact-paper__sheet"><span class="contact-paper__fold" aria-hidden="true"></span>
+    <div class="contact-paper__character" aria-hidden="true"></div>
+    <div class="contact-paper__sheet"><img class="contact-paper__mascot" src="/assets/mascot/cloudpg-29-paper-carrier.png" width="1142" height="1377" alt="" loading="lazy" decoding="async" aria-hidden="true"><span class="contact-paper__fold" aria-hidden="true"></span>
       <div class="contact-paper__heading">${eyebrow('LET’S TALK', 'CONTACT US')}<h2 id="contact-paper-title">${photo === 'home-contact' ? 'A little note.<br><em>A clearer next step.</em>' : 'Talk to Cloud.<br><em>Tell us what you need.</em>'}</h2><p>Get in touch to see how we can help.</p></div>
       <form class="contact-paper__form" data-contact-preview>
         <div class="contact-paper__fields">
@@ -164,8 +164,8 @@ const home = page({ title: 'A clearer path to payment', description: 'Debt colle
   ${homeHero}
   ${readFileSync(join(root, 'src', 'home-start.html'), 'utf8')}
   ${serviceJourney}
-  <section class="section feature-dark"><div class="container feature-dark__grid"><div>${eyebrow('03', 'THE WAY WE WORK')}<h2>Practical for business.<br><em>Considerate of people.</em></h2><p>Cloud combines experienced people with digital tools to help organisations manage overdue accounts. The experience should remain clear for the people being contacted, too.</p>${button('/about-us/', 'Get to know Cloud', 'dark')}</div><div class="feature-dark__right"><div class="feature-dark__art"><span class="mini-label">PEOPLE + TOOLS</span><img class="feature-photo" src="/assets/photos/unique-v2/home-feature.webp" width="1536" height="1024" alt="Customer support colleagues collaborating in a bright office" loading="lazy"><div class="feature-dark__chips"><span>Experienced people</span><span>Digital tools</span><span>Payment options</span></div></div><aside class="feature-note"><span>OUR APPROACH</span><h3>Context comes first.</h3><p>Clear information and practical choices can make a difficult account easier to navigate.</p><a href="/about-us/">How Cloud works ↗</a></aside></div></div></section>
-  <section class="section sectors" id="industry-motion"><div class="container"><div class="industry-stack-track" data-industry-track><div class="industry-stack-stage"><div class="industry-stage-image" aria-hidden="true"><img class="industry-stage-photo is-active" src="/assets/photos/unique-v2/home-commercial.webp" width="1536" height="1024" alt="" loading="lazy"><img class="industry-stage-photo" src="/assets/photos/unique-v2/home-government.webp" width="1536" height="1024" alt="" loading="lazy"><img class="industry-stage-photo" src="/assets/photos/unique-v2/home-medical.webp" width="1536" height="1024" alt="" loading="lazy"><img class="industry-stage-photo" src="/assets/photos/unique-v2/home-education.webp" width="1536" height="1024" alt="" loading="lazy"><img class="industry-stage-photo" src="/assets/photos/unique-v2/home-insurance.webp" width="1536" height="1024" alt="" loading="lazy"></div><div class="industry-stack-intro">${sectionTitle('04', 'INDUSTRIES', 'Built around different needs.', 'Cloud works with organisations in several sectors, each with its own context and customers.')}</div><div class="sector-list industry-stack-viewport"><a data-industry-panel href="/industries/#commercial"><span class="industry-panel-number">(01)</span><span class="industry-panel-watermark" aria-hidden="true">${industryIcon('commercial')}</span><div class="industry-panel-copy"><strong>Commercial</strong><p class="industry-panel-description">Credit management support intended to help businesses protect cash flow and manage overdue accounts.</p><span class="sector-list__detail">Credit management and cash flow</span><span class="industry-panel-link">Explore commercial <span aria-hidden="true">↗</span></span></div></a><a data-industry-panel href="/industries/#government"><span class="industry-panel-number">(02)</span><span class="industry-panel-watermark" aria-hidden="true">${industryIcon('government')}</span><div class="industry-panel-copy"><strong>Local government</strong><p class="industry-panel-description">Services shaped around organisations and communities, with attention to respectful customer interactions.</p><span class="sector-list__detail">Community-aware service</span><span class="industry-panel-link">Explore local government <span aria-hidden="true">↗</span></span></div></a><a data-industry-panel href="/industries/#medical"><span class="industry-panel-number">(03)</span><span class="industry-panel-watermark" aria-hidden="true">${industryIcon('medical')}</span><div class="industry-panel-copy"><strong>Medical</strong><p class="industry-panel-description">Recovery support for outstanding fees where sensitivity and context matter.</p><span class="sector-list__detail">Sensitive account recovery</span><span class="industry-panel-link">Explore medical <span aria-hidden="true">↗</span></span></div></a><a data-industry-panel href="/industries/#education"><span class="industry-panel-number">(04)</span><span class="industry-panel-watermark" aria-hidden="true">${industryIcon('education')}</span><div class="industry-panel-copy"><strong>Education</strong><p class="industry-panel-description">Fee recovery support for primary, secondary, and tertiary education providers.</p><span class="sector-list__detail">Flexible fee recovery</span><span class="industry-panel-link">Explore education <span aria-hidden="true">↗</span></span></div></a><a data-industry-panel href="/industries/#insurance"><span class="industry-panel-number">(05)</span><span class="industry-panel-watermark" aria-hidden="true">${industryIcon('insurance')}</span><div class="industry-panel-copy"><strong>Insurance</strong><p class="industry-panel-description">Collections support informed by the requirements of general insurance claims.</p><span class="sector-list__detail">Specialist claims knowledge</span><span class="industry-panel-link">Explore insurance <span aria-hidden="true">↗</span></span></div></a></div></div></div>${button('/industries/', 'Explore industries', 'text')}</div></section>
+  <section class="section feature-dark"><div class="container feature-dark__grid"><div>${eyebrow('03', 'THE WAY WE WORK')}<h2>Practical for business.<br><em>Considerate of people.</em></h2><p>Cloud combines experienced people with digital tools to help organisations manage overdue accounts. The experience should remain clear for the people being contacted, too.</p>${button('/about-us/', 'Get to know Cloud', 'dark')}</div><div class="feature-dark__right"><div class="feature-dark__art"><span class="mini-label">PEOPLE + TOOLS</span><div class="feature-people"><img class="feature-photo" src="/assets/photos/unique-v2/home-feature.webp" width="1536" height="1024" alt="Customer support colleagues collaborating in a bright office" loading="lazy"><img class="feature-people__mascot" src="/assets/mascot/cloudpg-31-people-point.png" width="1142" height="1377" alt="" loading="lazy" decoding="async" aria-hidden="true"></div><div class="feature-dark__chips"><span>Experienced people</span><span>Digital tools</span><span>Payment options</span></div></div><aside class="feature-note"><span>OUR APPROACH</span><h3>Context comes first.</h3><p>Clear information and practical choices can make a difficult account easier to navigate.</p><a href="/about-us/">How Cloud works ↗</a></aside></div></div></section>
+  <section class="section sectors" id="industry-motion"><div class="container"><div class="industry-stack-track" data-industry-track><div class="industry-stack-stage"><div class="industry-stage-image" aria-hidden="true"><img class="industry-stage-photo is-active" src="/assets/photos/unique-v2/home-commercial.webp" width="1536" height="1024" alt="" loading="lazy"><img class="industry-stage-photo" src="/assets/photos/unique-v2/home-government.webp" width="1536" height="1024" alt="" loading="lazy"><img class="industry-stage-photo" src="/assets/photos/unique-v2/home-medical.webp" width="1536" height="1024" alt="" loading="lazy"><img class="industry-stage-photo" src="/assets/photos/unique-v2/home-education.webp" width="1536" height="1024" alt="" loading="lazy"><img class="industry-stage-photo" src="/assets/photos/unique-v2/home-insurance.webp" width="1536" height="1024" alt="" loading="lazy"></div><div class="industry-stack-intro">${sectionTitle('04', 'INDUSTRIES', 'Built around different needs.', 'Cloud works with organisations in several sectors, each with its own context and customers.')}</div><div class="sector-list industry-stack-viewport"><a data-industry-panel href="/industries/#commercial"><span class="industry-panel-number">(01)</span>${industryArt('commercial')}<div class="industry-panel-copy"><strong>Commercial</strong><p class="industry-panel-description">Credit management support intended to help businesses protect cash flow and manage overdue accounts.</p><span class="sector-list__detail">Credit management and cash flow</span><span class="industry-panel-link">Explore commercial <span aria-hidden="true">↗</span></span></div></a><a data-industry-panel href="/industries/#government"><span class="industry-panel-number">(02)</span>${industryArt('government')}<div class="industry-panel-copy"><strong>Local government</strong><p class="industry-panel-description">Services shaped around organisations and communities, with attention to respectful customer interactions.</p><span class="sector-list__detail">Community-aware service</span><span class="industry-panel-link">Explore local government <span aria-hidden="true">↗</span></span></div></a><a data-industry-panel href="/industries/#medical"><span class="industry-panel-number">(03)</span>${industryArt('medical')}<div class="industry-panel-copy"><strong>Medical</strong><p class="industry-panel-description">Recovery support for outstanding fees where sensitivity and context matter.</p><span class="sector-list__detail">Sensitive account recovery</span><span class="industry-panel-link">Explore medical <span aria-hidden="true">↗</span></span></div></a><a data-industry-panel href="/industries/#education"><span class="industry-panel-number">(04)</span>${industryArt('education')}<div class="industry-panel-copy"><strong>Education</strong><p class="industry-panel-description">Fee recovery support for primary, secondary, and tertiary education providers.</p><span class="sector-list__detail">Flexible fee recovery</span><span class="industry-panel-link">Explore education <span aria-hidden="true">↗</span></span></div></a><a data-industry-panel href="/industries/#insurance"><span class="industry-panel-number">(05)</span>${industryArt('insurance')}<div class="industry-panel-copy"><strong>Insurance</strong><p class="industry-panel-description">Collections support informed by the requirements of general insurance claims.</p><span class="sector-list__detail">Specialist claims knowledge</span><span class="industry-panel-link">Explore insurance <span aria-hidden="true">↗</span></span></div></a></div></div></div>${button('/industries/', 'Explore industries', 'text')}</div></section>
   ${readFileSync(join(root, 'src', 'process-globe.html'), 'utf8')}
   <section class="section payment-highlight" id="payment-hubb"><div class="container payment-highlight__grid"><div class="payment-highlight__art">${paymentPhone}</div><div class="payment-highlight__copy">${eyebrow('05', 'PAYMENT HUBB')}<h2>Payment options that meet people where they are.</h2><p>Cloud’s Payment Hubb gives people access to their account through a smart device. They can pay in full, propose an arrangement, update details, or request support for financial hardship.</p>${button('/payment-management/', 'See payment management', 'dark')}</div></div></section>
   ${contactPaper()}
@@ -226,7 +226,7 @@ const article = page({ title: 'Debt recovery in modern business', description: '
 
 const login = page({ title:'Client login', description:'Preview the Cloud Payment Group client login.', slug:'client-login', body:readFileSync(join(root, 'src', 'client-login.html'), 'utf8').replaceAll('{{brandLogo}}', brandLogo).replace('{{clientUrl}}', clientUrl) });
 
-const admin = `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Admin workspace | Cloud Payment Group</title><link rel="icon" href="/assets/cloudpg-cloud-mark-brand.png"><link rel="stylesheet" href="/assets/fonts.css"><link rel="stylesheet" href="/assets/brand.css?v=brighter-boska"><link rel="stylesheet" href="/assets/admin.css"></head><body class="page-admin">${readFileSync(join(root, 'src', 'admin.html'), 'utf8').replaceAll('{{brandLogo}}', brandLogo)}<script src="/assets/admin.js" defer></script></body></html>`;
+const admin = `<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Admin workspace | Cloud Payment Group</title><link rel="icon" href="/assets/cloudpg-cloud-mark-cutout.png"><link rel="stylesheet" href="/assets/fonts.css"><link rel="stylesheet" href="/assets/brand.css?v=original-logo-20261020"><link rel="stylesheet" href="/assets/admin.css"></head><body class="page-admin">${readFileSync(join(root, 'src', 'admin.html'), 'utf8').replaceAll('{{brandLogo}}', brandLogo)}<script src="/assets/admin.js" defer></script></body></html>`;
 
 const pages = new Map([
   ['', home], ['about-us', about], ['debt-collection', collection], ['payment-management', payment],
@@ -253,6 +253,7 @@ cpSync(join(root, 'src', 'styles.css'), join(out, 'assets', 'styles.css'));
 cpSync(join(root, 'src', 'brand.css'), join(out, 'assets', 'brand.css'));
 cpSync(join(root, 'src', 'fonts.css'), join(out, 'assets', 'fonts.css'));
 cpSync(join(root, 'src', 'hero-parallax.css'), join(out, 'assets', 'hero-parallax.css'));
+cpSync(join(root, 'src', 'hero-mascots.css'), join(out, 'assets', 'hero-mascots.css'));
 cpSync(join(root, 'src', 'home-start.css'), join(out, 'assets', 'home-start.css'));
 cpSync(join(root, 'src', 'modern.css'), join(out, 'assets', 'modern.css'));
 cpSync(join(root, 'src', 'service-journey.css'), join(out, 'assets', 'service-journey.css'));
@@ -269,7 +270,7 @@ buildSync({ entryPoints:[join(root, 'src', 'contact-globe.js')], outfile:join(ou
 buildSync({ entryPoints:[join(root, 'src', 'client-login.js')], outfile:join(out, 'assets', 'client-login.js'), bundle:true, minify:true, format:'esm', target:'es2022' });
 cpSync(join(root, 'src', 'payment-phone.css'), join(out, 'assets', 'payment-phone.css'));
 cpSync(join(root, 'src', 'payment-phone.js'), join(out, 'assets', 'payment-phone.js'));
-writeFileSync(join(out, 'assets', 'site.js'), readFileSync(join(root, 'src', 'hero-messages.js'), 'utf8') + '\n' + readFileSync(join(root, 'src', 'site.js'), 'utf8') + '\n' + readFileSync(join(root, 'src', 'hero-parallax.js'), 'utf8') + '\n' + readFileSync(join(root, 'src', 'reference-motion.js'), 'utf8'));
+writeFileSync(join(out, 'assets', 'site.js'), readFileSync(join(root, 'src', 'hero-messages.js'), 'utf8') + '\n' + readFileSync(join(root, 'src', 'site.js'), 'utf8') + '\n' + readFileSync(join(root, 'src', 'hero-parallax.js'), 'utf8') + '\n' + readFileSync(join(root, 'src', 'reference-motion.js'), 'utf8') + '\n' + readFileSync(join(root, 'src', 'home-start.js'), 'utf8'));
 for (const [slug, html] of pages) {
   const dir = join(out, slug);
   mkdirSync(dir, { recursive: true });

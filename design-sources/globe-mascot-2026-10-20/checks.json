@@ -1,0 +1,302 @@
+[
+  {
+    "width": 1710,
+    "height": 990,
+    "motion": "no-preference",
+    "active": "0",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 735,
+      "right": 975,
+      "top": 603.8125,
+      "bottom": 893.1875
+    },
+    "copy": {
+      "bottom": 597.5
+    },
+    "pressed": 1,
+    "canvas": 820
+  },
+  {
+    "width": 1710,
+    "height": 990,
+    "motion": "no-preference",
+    "active": "1",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 735,
+      "right": 975,
+      "top": 603.8125,
+      "bottom": 893.1875
+    },
+    "copy": {
+      "bottom": 597.5
+    },
+    "pressed": 1,
+    "canvas": 820
+  },
+  {
+    "width": 1710,
+    "height": 990,
+    "motion": "no-preference",
+    "active": "2",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 735,
+      "right": 975,
+      "top": 603.8125,
+      "bottom": 893.1875
+    },
+    "copy": {
+      "bottom": 597.5
+    },
+    "pressed": 1,
+    "canvas": 820
+  },
+  {
+    "width": 900,
+    "height": 900,
+    "motion": "no-preference",
+    "active": "0",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 330,
+      "right": 570,
+      "top": 546.71875,
+      "bottom": 836.09375
+    },
+    "copy": {
+      "bottom": 527.765625
+    },
+    "pressed": 1,
+    "canvas": 820
+  },
+  {
+    "width": 900,
+    "height": 900,
+    "motion": "no-preference",
+    "active": "1",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 330,
+      "right": 570,
+      "top": 546.71875,
+      "bottom": 836.09375
+    },
+    "copy": {
+      "bottom": 527.765625
+    },
+    "pressed": 1,
+    "canvas": 820
+  },
+  {
+    "width": 900,
+    "height": 900,
+    "motion": "no-preference",
+    "active": "2",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 330,
+      "right": 570,
+      "top": 546.71875,
+      "bottom": 836.09375
+    },
+    "copy": {
+      "bottom": 527.765625
+    },
+    "pressed": 1,
+    "canvas": 820
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "motion": "no-preference",
+    "active": "0",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 105,
+      "right": 285,
+      "top": 487.59375,
+      "bottom": 704.625
+    },
+    "copy": {
+      "bottom": 484.8125
+    },
+    "pressed": 1,
+    "canvas": 620
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "motion": "no-preference",
+    "active": "1",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 105,
+      "right": 285,
+      "top": 487.59375,
+      "bottom": 704.625
+    },
+    "copy": {
+      "bottom": 484.8125
+    },
+    "pressed": 1,
+    "canvas": 620
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "motion": "no-preference",
+    "active": "2",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 105,
+      "right": 285,
+      "top": 487.59375,
+      "bottom": 704.625
+    },
+    "copy": {
+      "bottom": 484.8125
+    },
+    "pressed": 1,
+    "canvas": 620
+  },
+  {
+    "width": 320,
+    "height": 740,
+    "motion": "no-preference",
+    "active": "0",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 70,
+      "right": 250,
+      "top": 577.1875,
+      "bottom": 794.21875
+    },
+    "copy": {
+      "bottom": 574.40625
+    },
+    "pressed": 1,
+    "canvas": 620
+  },
+  {
+    "width": 320,
+    "height": 740,
+    "motion": "no-preference",
+    "active": "1",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 70,
+      "right": 250,
+      "top": 577.1875,
+      "bottom": 794.21875
+    },
+    "copy": {
+      "bottom": 574.40625
+    },
+    "pressed": 1,
+    "canvas": 620
+  },
+  {
+    "width": 320,
+    "height": 740,
+    "motion": "no-preference",
+    "active": "2",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 70,
+      "right": 250,
+      "top": 577.1875,
+      "bottom": 794.21875
+    },
+    "copy": {
+      "bottom": 574.40625
+    },
+    "pressed": 1,
+    "canvas": 620
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "motion": "reduce",
+    "active": "0",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 105,
+      "right": 285,
+      "top": 560.8125,
+      "bottom": 777.84375
+    },
+    "copy": {
+      "bottom": 558.03125
+    },
+    "pressed": 1,
+    "canvas": 620
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "motion": "reduce",
+    "active": "1",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 105,
+      "right": 285,
+      "top": 560.8125,
+      "bottom": 777.84375
+    },
+    "copy": {
+      "bottom": 558.03125
+    },
+    "pressed": 1,
+    "canvas": 620
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "motion": "reduce",
+    "active": "2",
+    "loaded": true,
+    "src": "/assets/mascot/cloudpg-30-globe-guide.png",
+    "overflow": false,
+    "mascot": {
+      "left": 105,
+      "right": 285,
+      "top": 560.8125,
+      "bottom": 777.84375
+    },
+    "copy": {
+      "bottom": 558.03125
+    },
+    "pressed": 1,
+    "canvas": 620
+  }
+]

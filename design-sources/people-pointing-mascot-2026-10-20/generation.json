@@ -1,0 +1,11 @@
+{
+  "asset": "public/assets/mascot/cloudpg-31-people-point.png",
+  "tool": "built-in imagegen",
+  "source": "/home/nami/.codex-accounts/kaydenmilesien@gmail.com/generated_images/01a15721-58b3-7162-831f-58fb263b3a82/exec-df885236-c440-4f00-8c1b-2d8c9b42d34b.png",
+  "references": [
+    "public/assets/mascot/cloudpg-30-globe-guide.png",
+    "public/assets/mascot/cloudpg-02-point.png"
+  ],
+  "placement": "Lower left of existing People + Tools photograph, pointing upward-right toward human team; human faces remain clear.",
+  "transparency": "Original generated PNG alpha retained."
+}

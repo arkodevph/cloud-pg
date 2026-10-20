@@ -1,0 +1,59 @@
+{
+  "primary_reference": {
+    "url": "https://www.slash.com/",
+    "recording": "/home/nami/Videos/recording_2026-10-19_22.33.05.mp4",
+    "duration_seconds": 5.166856,
+    "observations": [
+      "Three photographic panels sit in a single horizontal row. Pointer movement expands one panel while the others narrow.",
+      "Supporting information changes below the selected panel.",
+      "Separate financial product imagery uses tangible materials, overlapping layers and soft directional light."
+    ]
+  },
+  "fidelity_map": {
+    "silhouette": "Three photographic audience panels immediately below the unchanged hero, followed by a shared contextual information strip. Existing industry scroll-peel composition retained.",
+    "grid": "Desktop selected panel 2.1fr, others 1fr, 16px gaps; mobile vertical accordion.",
+    "images": "Three separate existing photographic assets with full-bleed cover crops. Five original generated industry still lifes replace oversized duotone icons.",
+    "type": "Existing Boska display and Switzer body retained, with audience labels, large panel headlines and smaller explanatory copy.",
+    "palette": "Cloud ivory and white surfaces, petroleum blue, muted teal and champagne orange. Neutral continuous borders and soft grounded shadows.",
+    "motion": "Pointer hover, button activation and focus select a panel. Width/height ease over 600\u2013700ms; image settles and layered UI resolves; client preview line reveals. Original upward industry peel is unchanged.",
+    "fallbacks": "All audience actions available without JavaScript. Reduced motion uses immediate state changes. Controls support Tab, arrows and touch."
+  },
+  "scope": {
+    "audiences": [
+      "Organisations",
+      "Account holders",
+      "Existing clients"
+    ],
+    "industry_art": [
+      "Commercial account review",
+      "Civic services",
+      "Healthcare administration",
+      "Education documentation",
+      "Insurance claims"
+    ],
+    "loader": "Reference research only. No loader source edits.",
+    "publication": "Local changes only; not committed or pushed in this task."
+  },
+  "image_generation": {
+    "tool": "built-in imagegen",
+    "prompts": "image-prompts.json",
+    "assets": "public/assets/industry-scenes/"
+  },
+  "loader_references": [
+    {
+      "name": "Amaterasu",
+      "url": "https://www.awwwards.com/inspiration/splash-to-hero-animation-amaterasu",
+      "clip": "https://assets.awwwards.com/awards/element/2024/10/671286d2f05f5740419751.mp4"
+    },
+    {
+      "name": "Techint Labs",
+      "url": "https://www.awwwards.com/inspiration/pre-loader-and-hero-screen-loading-animation-techint-labs",
+      "clip": "https://assets.awwwards.com/awards/element/2024/10/67067cb994850943790040.mp4"
+    },
+    {
+      "name": "Amir Arhami",
+      "url": "https://www.awwwards.com/inspiration/loading-to-hero-transition-amir-arhami-2026",
+      "clip": "https://assets.awwwards.com/awards/element/2026/02/699b931eb02b1169425641.mp4"
+    }
+  ]
+}

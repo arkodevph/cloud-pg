@@ -1,28 +1,39 @@
 <section class="cloud-start" id="start-here" aria-labelledby="start-title">
   <div class="container">
     <div class="cloud-start__heading">
-      <p class="cloud-start__eyebrow">START HERE</p>
-      <h2 id="start-title">What brings you to Cloud?</h2>
+      <div><p class="cloud-start__eyebrow">YOUR NEXT STEP</p><h2 id="start-title">What brings you to Cloud?</h2></div>
+      <p>Different circumstances.<br>The same considered approach.</p>
     </div>
-    <div class="cloud-start__paths">
-      <article class="cloud-start__path" aria-labelledby="business-path-title">
-        <p class="cloud-start__label">FOR ORGANISATIONS <span aria-hidden="true">01</span></p>
-        <h3 id="business-path-title">I’m managing<br>overdue accounts.</h3>
-        <p class="cloud-start__description">Find collection and payment management support for your organisation.</p>
-        <div class="cloud-start__actions">
-          <a class="cloud-start__link" href="#solutions">Explore our services <span aria-hidden="true">↗</span></a>
-          <a class="cloud-start__secondary" href="/debt-placement/">Place an account</a>
+    <div class="cloud-start__paths" data-audience-panels data-active="0">
+      <article class="cloud-start__path is-active">
+        <img class="cloud-start__photo" src="/assets/photos/debt-management.webp" width="1536" height="1024" alt="Account paperwork being reviewed at a desk" loading="lazy">
+        <div class="cloud-start__presentation cloud-start__presentation--accounts" aria-hidden="true">
+          <div class="start-ledger"><span class="start-ui-label">ACCOUNT OVERVIEW <i>↗</i></span><strong>A clearer picture.</strong><div><span>Account information</span><b>Reviewed</b></div><div><span>Correspondence</span><b>Connected</b></div><div><span>The next step</span><b>Considered</b></div><small>ILLUSTRATIVE ACCOUNT VIEW</small></div>
+          <div class="start-floating-note"><span>✓</span><div>People + perspective<small>Every account has context.</small></div></div>
         </div>
+        <button class="cloud-start__select" type="button" aria-expanded="true" aria-controls="start-business"><span class="cloud-start__label">FOR ORGANISATIONS <i>01</i></span><span class="cloud-start__title">Managing<br> overdue accounts.</span><span class="cloud-start__open" aria-hidden="true">↗</span></button>
       </article>
-      <article class="cloud-start__path" aria-labelledby="account-path-title">
-        <p class="cloud-start__label">FOR ACCOUNT HOLDERS <span aria-hidden="true">02</span></p>
-        <h3 id="account-path-title">I’ve received a<br>message from Cloud.</h3>
-        <p class="cloud-start__description">Understand your payment options, discuss an arrangement, or ask for support.</p>
-        <div class="cloud-start__actions">
-          <a class="cloud-start__link" href="/payment-management/">View payment options <span aria-hidden="true">↗</span></a>
-          <a class="cloud-start__secondary" href="/contact-us/">Talk to our team</a>
+      <article class="cloud-start__path">
+        <img class="cloud-start__photo" src="/assets/photos/about-payment.webp" width="1536" height="1024" alt="An account holder reviewing information on a phone" loading="lazy">
+        <div class="cloud-start__presentation cloud-start__presentation--payment" aria-hidden="true">
+          <div class="start-payment"><span class="start-ui-label">PAYMENT HUBB <i>↗</i></span><strong>A way forward.<br>At your pace.</strong><div><i>01</i><span>Make a payment</span><b>↗</b></div><div><i>02</i><span>Discuss an arrangement</span><b>↗</b></div><div><i>03</i><span>Ask for support</span><b>↗</b></div></div>
+          <div class="start-floating-note"><span>↗</span><div>Your account. Your options.<small>Find the appropriate next step.</small></div></div>
         </div>
+        <button class="cloud-start__select" type="button" aria-expanded="false" aria-controls="start-account"><span class="cloud-start__label">FOR ACCOUNT HOLDERS <i>02</i></span><span class="cloud-start__title">Received a<br> message from us?</span><span class="cloud-start__open" aria-hidden="true">↗</span></button>
       </article>
+      <article class="cloud-start__path">
+        <img class="cloud-start__photo" src="/assets/photos/industries-people.webp" width="1536" height="1024" alt="Colleagues looking through account information together" loading="lazy">
+        <div class="cloud-start__presentation cloud-start__presentation--clients" aria-hidden="true">
+          <div class="start-report"><span class="start-ui-label">CLIENT WORKSPACE <i>↗</i></span><strong>The detail.<br>All together.</strong><div class="start-report__tabs"><span>Accounts</span><span>Activity</span><span>Documents</span></div><svg viewBox="0 0 300 85" fill="none"><path d="M0 20H300M0 45H300M0 70H300" stroke="#dbe5e7"/><path class="start-report__line" d="M2 70C27 70 23 56 52 57S86 37 112 42S142 24 170 28S204 17 230 21S270 7 298 10" stroke="#338daa" stroke-width="3"/></svg><small>CONNECTED ACCOUNT INFORMATION</small></div>
+          <div class="start-floating-note"><span>▤</span><div>Stay close to your accounts<small>Reporting, documents and updates.</small></div></div>
+        </div>
+        <button class="cloud-start__select" type="button" aria-expanded="false" aria-controls="start-client"><span class="cloud-start__label">FOR EXISTING CLIENTS <i>03</i></span><span class="cloud-start__title">Your portfolio.<br> A clearer view.</span><span class="cloud-start__open" aria-hidden="true">↗</span></button>
+      </article>
+    </div>
+    <div class="cloud-start__details">
+      <div class="cloud-start__detail" id="start-business"><div><span class="cloud-start__detail-label">COLLECTION & ACCOUNT MANAGEMENT</span><p>Find collection and payment management support shaped around your organisation.</p></div><div class="cloud-start__actions"><a class="cloud-start__link" href="#solutions">Explore our services <span aria-hidden="true">↗</span></a><a class="cloud-start__secondary" href="/debt-placement/">Place an account</a></div></div>
+      <div class="cloud-start__detail" id="start-account"><div><span class="cloud-start__detail-label">PAYMENTS & PERSONAL SUPPORT</span><p>Understand your payment options, discuss an arrangement, or ask for support.</p></div><div class="cloud-start__actions"><a class="cloud-start__link" href="/payment-management/">View payment options <span aria-hidden="true">↗</span></a><a class="cloud-start__secondary" href="/contact-us/">Talk to our team</a></div></div>
+      <div class="cloud-start__detail" id="start-client"><div><span class="cloud-start__detail-label">CLIENT TOOLS & REPORTING</span><p>Access account reporting, review documentation, or place a new account with Cloud.</p></div><div class="cloud-start__actions"><a class="cloud-start__link" href="/client-login/">Open client workspace <span aria-hidden="true">↗</span></a><a class="cloud-start__secondary" href="/debt-placement/">Place an account</a></div></div>
     </div>
   </div>
 </section>

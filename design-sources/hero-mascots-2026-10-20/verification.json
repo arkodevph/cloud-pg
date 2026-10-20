@@ -1,0 +1,542 @@
+[
+  {
+    "width": 1710,
+    "height": 990,
+    "motion": "no-preference",
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 1710,
+      "height": 990,
+      "right": 1710,
+      "bottom": 990
+    },
+    "copy": {
+      "x": 585,
+      "y": 0,
+      "width": 540,
+      "height": 488.046875,
+      "right": 1125,
+      "bottom": 488.046875
+    },
+    "mascots": [
+      {
+        "rect": {
+          "x": 1319.8125,
+          "y": 583.34375,
+          "width": 160,
+          "height": 193.0625,
+          "right": 1479.8125,
+          "bottom": 776.40625
+        },
+        "loaded": true,
+        "filter": "url(\"#cloudpg-brand-colors\")",
+        "translate": "none"
+      },
+      {
+        "rect": {
+          "x": 264.390625,
+          "y": 751.640625,
+          "width": 160,
+          "height": 193.0625,
+          "right": 424.390625,
+          "bottom": 944.703125
+        },
+        "loaded": true,
+        "filter": "url(\"#cloudpg-brand-colors\")",
+        "translate": "none"
+      }
+    ],
+    "cards": [
+      {
+        "x": 1053.8125,
+        "y": 650.0284423828125,
+        "width": 280,
+        "height": 97.078125,
+        "right": 1333.8125,
+        "bottom": 747.1065673828125
+      },
+      {
+        "x": 410.390625,
+        "y": 825.0028076171875,
+        "width": 280,
+        "height": 97,
+        "right": 690.390625,
+        "bottom": 922.0028076171875
+      }
+    ],
+    "buttons": [
+      {
+        "url": "/debt-collection/",
+        "x": 630.78125,
+        "y": 408.859375,
+        "width": 193.859375,
+        "height": 48,
+        "right": 824.640625,
+        "bottom": 456.859375
+      },
+      {
+        "url": "/payment-management/",
+        "x": 836.640625,
+        "y": 408.859375,
+        "width": 242.578125,
+        "height": 48,
+        "right": 1079.21875,
+        "bottom": 456.859375
+      }
+    ],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "motion": "no-preference",
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900,
+      "right": 1440,
+      "bottom": 900
+    },
+    "copy": {
+      "x": 450,
+      "y": 0,
+      "width": 540,
+      "height": 457.828125,
+      "right": 990,
+      "bottom": 457.828125
+    },
+    "mascots": [
+      {
+        "rect": {
+          "x": 1125.203125,
+          "y": 534.25,
+          "width": 144,
+          "height": 173.75,
+          "right": 1269.203125,
+          "bottom": 708
+        },
+        "loaded": true,
+        "filter": "url(\"#cloudpg-brand-colors\")",
+        "translate": "none"
+      },
+      {
+        "rect": {
+          "x": 199.59375,
+          "y": 687.25,
+          "width": 144,
+          "height": 173.75,
+          "right": 343.59375,
+          "bottom": 861
+        },
+        "loaded": true,
+        "filter": "url(\"#cloudpg-brand-colors\")",
+        "translate": "none"
+      }
+    ],
+    "cards": [
+      {
+        "x": 843.203125,
+        "y": 581.6328125,
+        "width": 280,
+        "height": 97.078125,
+        "right": 1123.203125,
+        "bottom": 678.7109375
+      },
+      {
+        "x": 345.59375,
+        "y": 741.2890625,
+        "width": 280,
+        "height": 97,
+        "right": 625.59375,
+        "bottom": 838.2890625
+      }
+    ],
+    "buttons": [
+      {
+        "url": "/debt-collection/",
+        "x": 495.78125,
+        "y": 378.640625,
+        "width": 193.859375,
+        "height": 48,
+        "right": 689.640625,
+        "bottom": 426.640625
+      },
+      {
+        "url": "/payment-management/",
+        "x": 701.640625,
+        "y": 378.640625,
+        "width": 242.578125,
+        "height": 48,
+        "right": 944.21875,
+        "bottom": 426.640625
+      }
+    ],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "width": 900,
+    "height": 900,
+    "motion": "no-preference",
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 900,
+      "height": 900,
+      "right": 900,
+      "bottom": 900
+    },
+    "copy": {
+      "x": 180,
+      "y": 0,
+      "width": 540,
+      "height": 412.328125,
+      "right": 720,
+      "bottom": 412.328125
+    },
+    "mascots": [
+      {
+        "rect": {
+          "x": 788,
+          "y": 572.859375,
+          "width": 112,
+          "height": 135.140625,
+          "right": 900,
+          "bottom": 708
+        },
+        "loaded": true,
+        "filter": "url(\"#cloudpg-brand-colors\")",
+        "translate": "none"
+      },
+      {
+        "rect": {
+          "x": 4.984375,
+          "y": 725.859375,
+          "width": 112,
+          "height": 135.140625,
+          "right": 116.984375,
+          "bottom": 861
+        },
+        "loaded": true,
+        "filter": "url(\"#cloudpg-brand-colors\")",
+        "translate": "none"
+      }
+    ],
+    "cards": [
+      {
+        "x": 532,
+        "y": 590.6439208984375,
+        "width": 260,
+        "height": 97.078125,
+        "right": 792,
+        "bottom": 687.7220458984375
+      },
+      {
+        "x": 116.984375,
+        "y": 741.2779541015625,
+        "width": 260,
+        "height": 97,
+        "right": 376.984375,
+        "bottom": 838.2779541015625
+      }
+    ],
+    "buttons": [
+      {
+        "url": "/debt-collection/",
+        "x": 225.78125,
+        "y": 333.140625,
+        "width": 193.859375,
+        "height": 48,
+        "right": 419.640625,
+        "bottom": 381.140625
+      },
+      {
+        "url": "/payment-management/",
+        "x": 431.640625,
+        "y": 333.140625,
+        "width": 242.578125,
+        "height": 48,
+        "right": 674.21875,
+        "bottom": 381.140625
+      }
+    ],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "motion": "no-preference",
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844,
+      "right": 390,
+      "bottom": 844
+    },
+    "copy": {
+      "x": 18,
+      "y": 0,
+      "width": 354,
+      "height": 402.90625,
+      "right": 372,
+      "bottom": 402.90625
+    },
+    "mascots": [
+      {
+        "rect": {
+          "x": 10,
+          "y": 418.90625,
+          "width": 88,
+          "height": 106.171875,
+          "right": 98,
+          "bottom": 525.078125
+        },
+        "loaded": true,
+        "filter": "url(\"#cloudpg-brand-colors\")",
+        "translate": "none"
+      },
+      {
+        "rect": {
+          "x": 292,
+          "y": 538.90625,
+          "width": 88,
+          "height": 106.171875,
+          "right": 380,
+          "bottom": 645.078125
+        },
+        "loaded": true,
+        "filter": "url(\"#cloudpg-brand-colors\")",
+        "translate": "none"
+      }
+    ],
+    "cards": [
+      {
+        "x": 124,
+        "y": 425.6379089355469,
+        "width": 250,
+        "height": 94.17190551757812,
+        "right": 374,
+        "bottom": 519.809814453125
+      },
+      {
+        "x": 16,
+        "y": 552.174560546875,
+        "width": 250,
+        "height": 94,
+        "right": 266,
+        "bottom": 646.174560546875
+      }
+    ],
+    "buttons": [
+      {
+        "url": "/debt-collection/",
+        "x": 24.125,
+        "y": 323.71875,
+        "width": 142.546875,
+        "height": 48,
+        "right": 166.671875,
+        "bottom": 371.71875
+      },
+      {
+        "url": "/payment-management/",
+        "x": 176.671875,
+        "y": 323.71875,
+        "width": 189.203125,
+        "height": 48,
+        "right": 365.875,
+        "bottom": 371.71875
+      }
+    ],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "width": 320,
+    "height": 740,
+    "motion": "no-preference",
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 740,
+      "right": 320,
+      "bottom": 740
+    },
+    "copy": {
+      "x": 18,
+      "y": 0,
+      "width": 284,
+      "height": 458.96875,
+      "right": 302,
+      "bottom": 458.96875
+    },
+    "mascots": [
+      {
+        "rect": {
+          "x": 10,
+          "y": 474.96875,
+          "width": 88,
+          "height": 106.171875,
+          "right": 98,
+          "bottom": 581.140625
+        },
+        "loaded": true,
+        "filter": "url(\"#cloudpg-brand-colors\")",
+        "translate": "none"
+      },
+      {
+        "rect": {
+          "x": 222,
+          "y": 594.96875,
+          "width": 88,
+          "height": 106.171875,
+          "right": 310,
+          "bottom": 701.140625
+        },
+        "loaded": true,
+        "filter": "url(\"#cloudpg-brand-colors\")",
+        "translate": "none"
+      }
+    ],
+    "cards": [
+      {
+        "x": 96,
+        "y": 481.6866760253906,
+        "width": 208,
+        "height": 94.17190551757812,
+        "right": 304,
+        "bottom": 575.8585815429688
+      },
+      {
+        "x": 16,
+        "y": 608.2507934570312,
+        "width": 208,
+        "height": 94,
+        "right": 224,
+        "bottom": 702.2507934570312
+      }
+    ],
+    "buttons": [
+      {
+        "url": "/debt-collection/",
+        "x": 88.71875,
+        "y": 321.78125,
+        "width": 142.546875,
+        "height": 48,
+        "right": 231.265625,
+        "bottom": 369.78125
+      },
+      {
+        "url": "/payment-management/",
+        "x": 65.390625,
+        "y": 379.78125,
+        "width": 189.203125,
+        "height": 48,
+        "right": 254.59375,
+        "bottom": 427.78125
+      }
+    ],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "motion": "reduce",
+    "overflow": false,
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844,
+      "right": 390,
+      "bottom": 844
+    },
+    "copy": {
+      "x": 18,
+      "y": 0,
+      "width": 354,
+      "height": 402.90625,
+      "right": 372,
+      "bottom": 402.90625
+    },
+    "mascots": [
+      {
+        "rect": {
+          "x": 10,
+          "y": 418.90625,
+          "width": 88,
+          "height": 106.171875,
+          "right": 98,
+          "bottom": 525.078125
+        },
+        "loaded": true,
+        "filter": "url(\"#cloudpg-brand-colors\")",
+        "translate": "none"
+      },
+      {
+        "rect": {
+          "x": 292,
+          "y": 538.90625,
+          "width": 88,
+          "height": 106.171875,
+          "right": 380,
+          "bottom": 645.078125
+        },
+        "loaded": true,
+        "filter": "url(\"#cloudpg-brand-colors\")",
+        "translate": "none"
+      }
+    ],
+    "cards": [
+      {
+        "x": 124,
+        "y": 430.90625,
+        "width": 250,
+        "height": 94.171875,
+        "right": 374,
+        "bottom": 525.078125
+      },
+      {
+        "x": 16,
+        "y": 550.90625,
+        "width": 250,
+        "height": 94.171875,
+        "right": 266,
+        "bottom": 645.078125
+      }
+    ],
+    "buttons": [
+      {
+        "url": "/debt-collection/",
+        "x": 24.125,
+        "y": 323.71875,
+        "width": 142.546875,
+        "height": 48,
+        "right": 166.671875,
+        "bottom": 371.71875
+      },
+      {
+        "url": "/payment-management/",
+        "x": 176.671875,
+        "y": 323.71875,
+        "width": 189.203125,
+        "height": 48,
+        "right": 365.875,
+        "bottom": 371.71875
+      }
+    ],
+    "errors": [],
+    "failed": []
+  }
+]

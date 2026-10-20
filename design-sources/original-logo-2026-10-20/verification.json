@@ -1,0 +1,168 @@
+[
+  {
+    "route": "/",
+    "width": 1440,
+    "overflow": false,
+    "logos": [
+      {
+        "src": "/assets/cloudpg-logo-cutout.png",
+        "filter": "none",
+        "loaded": true,
+        "visible": false,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/assets/cloudpg-logo-cutout.png",
+        "filter": "none",
+        "loaded": true,
+        "visible": true,
+        "width": 158,
+        "height": 56.78125
+      },
+      {
+        "src": "/assets/cloudpg-logo-cutout.png",
+        "filter": "none",
+        "loaded": true,
+        "visible": true,
+        "width": 110,
+        "height": 39.53125
+      },
+      {
+        "src": "/assets/cloudpg-logo-cutout.png",
+        "filter": "none",
+        "loaded": true,
+        "visible": true,
+        "width": 128,
+        "height": 46
+      }
+    ],
+    "reconstructedText": 0,
+    "marks": [],
+    "mascots": 2,
+    "errors": []
+  },
+  {
+    "route": "/",
+    "width": 320,
+    "overflow": false,
+    "logos": [
+      {
+        "src": "/assets/cloudpg-logo-cutout.png",
+        "filter": "none",
+        "loaded": true,
+        "visible": false,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/assets/cloudpg-logo-cutout.png",
+        "filter": "none",
+        "loaded": true,
+        "visible": true,
+        "width": 132,
+        "height": 47.4375
+      },
+      {
+        "src": "/assets/cloudpg-logo-cutout.png",
+        "filter": "none",
+        "loaded": true,
+        "visible": true,
+        "width": 110,
+        "height": 39.53125
+      },
+      {
+        "src": "/assets/cloudpg-logo-cutout.png",
+        "filter": "none",
+        "loaded": true,
+        "visible": true,
+        "width": 120,
+        "height": 43.125
+      }
+    ],
+    "reconstructedText": 0,
+    "marks": [],
+    "mascots": 2,
+    "errors": []
+  },
+  {
+    "route": "/client-login/",
+    "width": 390,
+    "overflow": false,
+    "logos": [
+      {
+        "src": "/assets/cloudpg-logo-cutout.png",
+        "filter": "none",
+        "loaded": true,
+        "visible": false,
+        "width": 0,
+        "height": 0
+      },
+      {
+        "src": "/assets/cloudpg-logo-cutout.png",
+        "filter": "none",
+        "loaded": true,
+        "visible": true,
+        "width": 200,
+        "height": 71.890625
+      }
+    ],
+    "reconstructedText": 0,
+    "marks": [
+      {
+        "src": "/assets/cloudpg-cloud-mark-cutout.png",
+        "filter": "none"
+      }
+    ],
+    "mascots": 0,
+    "errors": []
+  },
+  {
+    "route": "/admin/",
+    "width": 1440,
+    "overflow": false,
+    "logos": [
+      {
+        "src": "/assets/cloudpg-logo-cutout.png",
+        "filter": "none",
+        "loaded": true,
+        "visible": true,
+        "width": 174,
+        "height": 62.53125
+      }
+    ],
+    "reconstructedText": 0,
+    "marks": [
+      {
+        "src": "/assets/cloudpg-cloud-mark-cutout.png",
+        "filter": "none"
+      }
+    ],
+    "mascots": 0,
+    "errors": []
+  },
+  {
+    "route": "/admin/",
+    "width": 390,
+    "overflow": false,
+    "logos": [
+      {
+        "src": "/assets/cloudpg-logo-cutout.png",
+        "filter": "none",
+        "loaded": true,
+        "visible": false,
+        "width": 0,
+        "height": 0
+      }
+    ],
+    "reconstructedText": 0,
+    "marks": [
+      {
+        "src": "/assets/cloudpg-cloud-mark-cutout.png",
+        "filter": "none"
+      }
+    ],
+    "mascots": 0,
+    "errors": []
+  }
+]

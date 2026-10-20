@@ -1,0 +1,204 @@
+{
+  "passed": true,
+  "states": [
+    {
+      "width": 1440,
+      "active": "0",
+      "panels": 3,
+      "visibleDetails": 1,
+      "widths": [
+        619,
+        295,
+        295
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "active": "1",
+      "panels": 3,
+      "visibleDetails": 1,
+      "widths": [
+        295,
+        619,
+        295
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "active": "2",
+      "panels": 3,
+      "visibleDetails": 1,
+      "widths": [
+        295,
+        295,
+        619
+      ],
+      "images": true,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "active": "0",
+      "overflow": false,
+      "hidden": 1,
+      "links": true
+    },
+    {
+      "width": 768,
+      "active": "1",
+      "overflow": false,
+      "hidden": 1,
+      "links": true
+    },
+    {
+      "width": 768,
+      "active": "2",
+      "overflow": false,
+      "hidden": 1,
+      "links": true
+    },
+    {
+      "width": 390,
+      "active": "0",
+      "overflow": false,
+      "hidden": 1,
+      "links": true
+    },
+    {
+      "width": 390,
+      "active": "1",
+      "overflow": false,
+      "hidden": 1,
+      "links": true
+    },
+    {
+      "width": 390,
+      "active": "2",
+      "overflow": false,
+      "hidden": 1,
+      "links": true
+    },
+    {
+      "width": 320,
+      "active": "0",
+      "overflow": false,
+      "hidden": 1,
+      "links": true
+    },
+    {
+      "width": 320,
+      "active": "1",
+      "overflow": false,
+      "hidden": 1,
+      "links": true
+    },
+    {
+      "width": 320,
+      "active": "2",
+      "overflow": false,
+      "hidden": 1,
+      "links": true
+    }
+  ],
+  "industries": [
+    {
+      "index": 0,
+      "src": "/assets/industry-scenes/commercial.webp",
+      "loaded": true,
+      "icons": 0,
+      "copyBounds": {
+        "top": 240.421875,
+        "bottom": 740.421875
+      },
+      "panelBounds": {
+        "top": 205.421875,
+        "bottom": 775.421875
+      },
+      "linkVisible": true,
+      "overflows": false
+    },
+    {
+      "index": 1,
+      "src": "/assets/industry-scenes/government.webp",
+      "loaded": true,
+      "icons": 0,
+      "copyBounds": {
+        "top": 240.00003051757812,
+        "bottom": 740
+      },
+      "panelBounds": {
+        "top": 205.00003051757812,
+        "bottom": 775.0000305175781
+      },
+      "linkVisible": true,
+      "overflows": false
+    },
+    {
+      "index": 2,
+      "src": "/assets/industry-scenes/medical.webp",
+      "loaded": true,
+      "icons": 0,
+      "copyBounds": {
+        "top": 240.00003051757812,
+        "bottom": 740
+      },
+      "panelBounds": {
+        "top": 205.00003051757812,
+        "bottom": 775.0000305175781
+      },
+      "linkVisible": true,
+      "overflows": false
+    },
+    {
+      "index": 3,
+      "src": "/assets/industry-scenes/education.webp",
+      "loaded": true,
+      "icons": 0,
+      "copyBounds": {
+        "top": 240.00003051757812,
+        "bottom": 740
+      },
+      "panelBounds": {
+        "top": 205.00003051757812,
+        "bottom": 775.0000305175781
+      },
+      "linkVisible": true,
+      "overflows": false
+    },
+    {
+      "index": 4,
+      "src": "/assets/industry-scenes/insurance.webp",
+      "loaded": true,
+      "icons": 0,
+      "copyBounds": {
+        "top": 240.00003051757812,
+        "bottom": 740
+      },
+      "panelBounds": {
+        "top": 205.00003051757812,
+        "bottom": 775.0000305175781
+      },
+      "linkVisible": true,
+      "overflows": false
+    }
+  ],
+  "keyboard": {
+    "active": "1",
+    "focused": true
+  },
+  "reduced": {
+    "transition": "1e-05s",
+    "industries": true,
+    "overflow": false
+  },
+  "fallback": {
+    "actions": 3,
+    "industryImages": 5,
+    "overflow": false
+  },
+  "errors": []
+}
