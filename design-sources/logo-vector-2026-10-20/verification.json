@@ -1,0 +1,33 @@
+{
+  "source": "public/assets/cloudpg-logo-cutout.png",
+  "source_sha256": "f6371f141d8766e92590d25baaa0e25afd68f8539558d601c976844afc1e3300",
+  "guide": "/home/nami/Downloads/CloudCollections_logo guide.pdf",
+  "tools": [
+    "Potrace 1.16",
+    "Pillow",
+    "fontTools"
+  ],
+  "evaluated": "VTracer 1.0.0-alpha.4: gradient detail insufficient in tested configurations",
+  "method": "Six smooth symbol paths with continuous gradients; cloud lobe proportions and rounded payment tab revised against user-supplied original reference. Dedicated dark-blue outline/shadow band removed. Outlined Montserrat wordmark retained.",
+  "website_asset": "public/assets/cloudpg-logo.svg",
+  "source_colour_reference": "public/assets/cloudpg-logo-source-trace.svg",
+  "palette": {
+    "tangerine": "#ef4136",
+    "turquoise": "#00c0f3",
+    "grey": "#58595b",
+    "orange": "#f26922",
+    "blue": "#1b75bc"
+  },
+  "font": "Montserrat Regular, weight 400, converted to paths",
+  "clear_space": "Full logo viewBox retains at least 68 source units around visible artwork, the PAYMENT GROUP capital E height.",
+  "limits": [
+    "Not 100% identical to raster source: tracing changes edge pixels.",
+    "Guide-compliant version intentionally changes palette and lettering from current PNG.",
+    "Source-colour trace retains original lettering and approximate gradients.",
+    "No original vector file for the website cloud-folder logo was found.",
+    "Dimensional shading includes derived colours beyond the five solid guide swatches; the guide does not specify a shaded cloud-folder variant."
+  ],
+  "website_colours": "Guide palette anchors, with continuous intermediate shading and deeper blue shadow tones.",
+  "sharpness_fix": "Smooth Bezier contours and continuous gradients; no noisy raster-derived region contours.",
+  "shape_reference": "/tmp/codex-clipboard-3oHts1.png"
+}
